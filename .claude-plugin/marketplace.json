@@ -1,0 +1,15 @@
+{
+  "name": "manifold",
+  "description": "Manifold's marketing skills for AI agents, with the Manifold MCP connector.",
+  "owner": {
+    "name": "Manifold",
+    "email": "jesse@manifoldmcp.com"
+  },
+  "plugins": [
+    {
+      "name": "manifold",
+      "source": "./",
+      "description": "Nineteen groups of marketing playbooks on Manifold's read-only marketing data tools, and the connector they run on."
+    }
+  ]
+}

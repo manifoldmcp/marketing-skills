@@ -1,0 +1,45 @@
+{
+  "name": "manifold",
+  "version": "1.0.1790407781",
+  "description": "Marketing playbooks for SEO, AI search, link building, paid ads, influencers, leads, Reddit, TikTok, Instagram, YouTube, LinkedIn, Facebook, competitors, customers, content, monitoring and agencies, on the Manifold MCP server's marketing data tools.",
+  "author": {
+    "name": "Manifold",
+    "email": "jesse@manifoldmcp.com",
+    "url": "https://www.manifoldmcp.com"
+  },
+  "homepage": "https://www.manifoldmcp.com",
+  "repository": "https://github.com/manifoldmcp/marketing-skills",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "seo",
+    "geo",
+    "aeo",
+    "ai-search",
+    "link-building",
+    "leads",
+    "paid-ads",
+    "influencers",
+    "social-media",
+    "reddit",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Manifold",
+    "shortDescription": "Marketing playbooks on live SEO, AI and social data",
+    "longDescription": "Nineteen groups of marketing playbooks (SEO, AI search, link building, paid ads, influencers, leads, Reddit and five social platforms, competitors, customers, content, monitoring and agency work) with the Manifold MCP server they run on. Each playbook names the read-only data calls it makes, says what a run costs in Manifold credits before the first paid call, and ends in a table you act on. Nothing is sent, posted or bought for you.",
+    "developerName": "Manifold",
+    "category": "Business & Operations",
+    "capabilities": [],
+    "websiteURL": "https://www.manifoldmcp.com",
+    "privacyPolicyURL": "https://www.manifoldmcp.com/privacy",
+    "termsOfServiceURL": "https://www.manifoldmcp.com/terms",
+    "defaultPrompt": [
+      "Does ChatGPT recommend us for our category, and which sources does it cite instead?",
+      "Find 30 sites that link to our competitor but not to us, with a verified contact at each.",
+      "Build me a growth plan for the next 90 days."
+    ]
+  }
+}
