@@ -27,6 +27,10 @@ codex mcp login manifold
 
 The last command signs you in to Manifold. Run `codex plugin marketplace upgrade manifold` to take a new release.
 
+**Cline**:
+
+See [llms-install.md](llms-install.md) for MCP server configuration and authentication (OAuth or API key).
+
 **Other agents** (Cursor, Gemini CLI and the rest that read skills):
 
 ```sh

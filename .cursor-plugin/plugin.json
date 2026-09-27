@@ -1,6 +1,6 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "manifold",
-  "displayName": "Manifold",
   "version": "1.0.1790529906",
   "description": "Marketing playbooks for SEO, AI search, link building, paid ads, influencers, leads, Reddit, TikTok, Instagram, YouTube, LinkedIn, Facebook, competitors, customers, content, monitoring and agencies, on the Manifold MCP server's marketing data tools.",
   "author": {
@@ -24,5 +24,12 @@
     "social-media",
     "reddit",
     "mcp"
-  ]
+  ],
+  "extensions": {
+    "com.cursor": {
+      "icon": ".claude-plugin/icon.png",
+      "skills": "./skills/",
+      "mcpServers": "./.mcp.json"
+    }
+  }
 }
