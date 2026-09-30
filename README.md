@@ -1,6 +1,6 @@
 # Manifold skills
 
-Marketing playbooks for AI agents, built on [Manifold](https://www.manifoldmcp.com): one MCP server of read-only marketing data tools (SEO, AI answer visibility, leads, Reddit, six social platforms and the ad libraries), sold on prepaid credits.
+Marketing playbooks for AI agents, built on [Manifold](https://www.manifoldmcp.com): one hosted MCP server of marketing data tools (SEO, AI answer visibility, leads, Reddit, six social platforms and the ad libraries), sold on prepaid credits.
 
 Each skill is a group of playbooks for one kind of marketing job. Its `SKILL.md` is a router: it checks that the Manifold connector is there, picks the playbook for the request, and holds the rules the group shares. Each playbook in `references/` names the exact tools to call, what each call costs, the judgment calls, and the table it hands back. Nothing here sends, posts or schedules: the result is yours to act on.
 
