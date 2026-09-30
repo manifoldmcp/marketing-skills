@@ -1,0 +1,10 @@
+{
+  "name": "manifold",
+  "version": "1.0.1790800392",
+  "description": "Manifold MCP: hosted marketing data for Gemini CLI, with no API keys of your own and pay per call. SEO, AI search, Reddit, social, ads and work emails, plus marketing skills.",
+  "mcpServers": {
+    "manifold": {
+      "httpUrl": "https://mcp.manifoldmcp.com/mcp"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "manifold",
-  "version": "1.0.1790791340",
+  "version": "1.0.1790800392",
   "description": "Marketing playbooks for SEO, AI search, link building, paid ads, influencers, leads, Reddit, TikTok, Instagram, YouTube, LinkedIn, Facebook, competitors, customers, content, monitoring and agencies, on the Manifold MCP server's marketing data tools.",
   "author": {
     "name": "Manifold",
