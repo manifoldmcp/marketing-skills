@@ -11,35 +11,21 @@ Questions, bugs and skill requests go to [issues](https://github.com/manifoldmcp
 ## Quick start
 
 ```sh
+npx skills add manifoldmcp/marketing-skills
+```
+
+[npx skills](https://github.com/vercel-labs/skills) installs every skill in Claude Code, Codex, Cursor and the other agents it supports, or only the ones you name with `--skill`. It does not add the connector: add the Manifold MCP server at `https://mcp.manifoldmcp.com/mcp` with the steps for your client at https://www.manifoldmcp.com/docs/clients. Every skill checks for the connector first and tells you if it is missing.
+
+Then run `/manifold-get-started`. It writes down what your business sells and to whom, drafting from your site so you only fill the gaps, then picks three to five skills for your goal in the order to run them.
+
+In Claude Code, Codex and Gemini CLI, the plugin installs the skills and the connector together. In Claude Code:
+
+```sh
 /plugin marketplace add manifoldmcp/marketing-skills
 /plugin install manifold@manifold
 ```
 
-In Claude Code, run `/mcp` to sign in to Manifold, then `/manifold-get-started`. It writes down what your business sells and to whom, drafting from your site so you only fill the gaps, then picks three to five skills for your goal in the order to run them. Other agents are under [Install](#install).
-
-## What a run looks like
-
-```
-"Why did our signups from Google drop in March?"
-        │
-        ▼
- diagnose-traffic-drop ──reads──▶ .agents/product-marketing.md
-        │
-        ▼
- Manifold tools: Search Console, rankings, SERPs, page crawl
-        │  (cost stated before the first paid call)
-        ▼
- A table: which pages lost what, the likely cause, what to fix first
-```
-
-Every skill follows the same pattern:
-
-- **Context first.** `manifold-get-started` writes what you sell, who buys it, your competitors, positioning and goals to `.agents/product-marketing.md` once, and every skill reads it before it asks you anything. It works for B2B software, shops, local services, apps, creators, agencies, marketplaces and nonprofits. The path and sections match other marketing skill libraries, so one file serves them all.
-- **Exact tools, known cost.** The skill names the Manifold tools to call and what each costs, says the total before it spends anything, and caps every call at your budget.
-- **Judgment, written down.** How to read the results: which numbers to trust, what to filter out, when a signal is too thin to act on. Where a job differs by platform, the skill's `references/` folder holds the detail.
-- **A table at the end.** Nothing here sends, posts, buys or schedules. You decide what to do with the result.
-
-Plans hand off to the skills that do the work: `create-seo-plan` leads into `find-seo-quick-wins` and `write-seo-brief`, and `find-pain-points` pulls from `find-reddit-pain-points` and the comment skills. Each skill's **Related skills** section lists its neighbours.
+Then run `/mcp` to sign in to Manifold. The other agents are under [Install](#install).
 
 ## Ask it like this
 
@@ -77,13 +63,7 @@ gemini extensions install https://github.com/manifoldmcp/marketing-skills
 
 Run `/mcp auth manifold` in Gemini CLI to sign in, and `gemini extensions update manifold` for a new release.
 
-**Cursor and other agents.** [npx skills](https://github.com/vercel-labs/skills) installs every skill, or only the ones you name with `--skill`:
-
-```sh
-npx skills add manifoldmcp/marketing-skills
-```
-
-These hosts get the skills without the connector. Add the Manifold MCP server at `https://mcp.manifoldmcp.com/mcp` with the steps for your client at https://www.manifoldmcp.com/docs/clients. Every skill checks for the connector first and tells you if it is missing.
+**Cursor and other agents.** Use `npx skills add` and add the connector yourself; see [Quick start](#quick-start).
 
 **Cline.** See [llms-install.md](llms-install.md) for the server configuration and sign-in (OAuth or API key).
 
