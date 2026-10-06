@@ -46,7 +46,7 @@ Pick one job from the request, open its playbook and follow it. If the request n
 ### Credits
 
 - Say the estimate before the first paid call; each playbook gives its default. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free.
-- Cheap first. `seo_get_page` is free but rate limited; ad library pages, social profiles and listings are 1 credit each; the SEO domain calls are 5 to 10. The expensive calls are `aeo_run_ai_answers` (18 credits per prompt on the default five engines), `leads_get_company` (10 credits each) and `seo_get_traffic_estimates` (50 plus 50 per 100 domains). Keep AI answers to two or three prompts outside the `ai-search` group.
+- Cheap first. `seo_get_page` is free but rate limited; ad library pages, social profiles, listings and company records (`leads_get_company`) are 1 credit each; the SEO domain calls are 5 to 10. The expensive calls are `aeo_run_ai_answers` (18 credits per prompt on the default five engines) and `seo_get_traffic_estimates` (50 plus 50 per 100 domains). Keep AI answers to two or three prompts outside the `ai-search` group.
 - A result this account already paid for is free while cached: 7 days for SEO data, 24 hours for ad libraries and profiles, 30 days for company records. A second competitor in the same week costs only its own calls.
 
 ### Handoff

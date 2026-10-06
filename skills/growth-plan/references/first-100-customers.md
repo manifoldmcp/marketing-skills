@@ -10,14 +10,14 @@ The first customers come from conversations the founder starts by hand, one at a
 - **Hours**: a week for outreach and replies. Default: 5.
 - **Network**: people the founder already knows in the ICP. No tool sees it, and it is usually where the first ten come from; ask.
 - **Competitors**: two or three the buyers use now, including workarounds.
-- **Budget**: about 3 + 5 + 3 + 2 + 10 = 23 credits here, plus the playbooks chosen in step 5, which state their own. Say so before starting; pass `max_credits` if the user gave a budget.
+- **Budget**: about 3 + 5 + 3 + 2 + 4 = 17 credits here, plus the playbooks chosen in step 5, which state their own. Say so before starting; pass `max_credits` if the user gave a budget.
 
 ## Steps
 
 1. **Count the people asking on Reddit.** `reddit_search_subreddits` with each problem phrase (1 credit each) for the communities where it comes up. Then `reddit_get_new_posts` on the top five with `since: "7d"` and `match` set to the phrases (1 credit per subreddit): every post about the problem there in the last week. Count the ones that ask for help or a tool. Search would give a sample, not a count; the [reddit router](../../reddit/SKILL.md) says why.
 2. **Count the people posting about it on LinkedIn.** `linkedin_search_posts` with each phrase and `since: "month"` (1 credit each). Count the posts by people in the ICP who describe the problem. The search is ranked, so the count is a floor.
 3. **Find the unhappy customers of competitors.** `reddit_search_comments` with "<competitor> alternative" at the default relevance sort (1 credit each). People asking what to switch to are the warmest conversations there are.
-4. **Size the list (B2B).** `leads_search_companies` with the ICP's industry, headcount and location (10 credits). `meta.rows_available` says whether a hand-picked list of a few hundred accounts is there to be built.
+4. **Size the list (B2B).** `leads_search_companies` with the ICP's industry, headcount and location (4 credits). `meta.rows_available` says whether a hand-picked list of a few hundred accounts is there to be built.
 5. **Pick two sources, and open their playbooks.** Rank the sources by conversations a week times fit, and keep the two the founder's hours allow:
    - Reddit threads asking now: [threads to reply](../../reddit/references/threads-to-reply.md), in the communities from [find subreddits](../../reddit/references/find-subreddits.md).
    - LinkedIn posts about the problem: [people posting about your problem](../../linkedin/references/problem-posts.md).

@@ -6,7 +6,7 @@ compatibility: Requires the Manifold MCP connector, signed in with a Manifold ac
 
 # Leads
 
-Every job here runs the same funnel: count, search, fill, reveal, verify. Search rows are cheap stubs and each step after them costs more, so each step cuts the list before the next one.
+Every job here runs the same funnel: count, search, fill, reveal, verify. Search rows are cheap and each step after them costs more, so each step cuts the list before the next one.
 
 ## Connector check
 
@@ -34,19 +34,21 @@ Pick one job from the request, open its playbook and follow it. If the request f
 
 ## Shared rules
 
-### Stubs and counts
+### Search rows and counts
 
-- Search rows are stubs. `leads_search_people` masks `last_name` and leaves seniority, company domain, location and LinkedIn URL null; `leads_search_companies` leaves industry, employees and location null. The filters still applied: a null `industry` on a row from an industry search is not a miss.
-- `leads_get_company` (10 credits) and `leads_get_person` (10 credits, 1 on `NoData`) fill one stub each. Decide on the stub (title, company, `has_email`) and fill only what a decision or the deliverable needs.
-- `rows_available` on the first page is the provider's total for the filters. Read it instead of paging: counting accounts costs 10 credits a query and counting people 1.
-- For a size and industry check on many companies, `linkedin_get_company` with the stub's LinkedIn URL (1 credit) gives LinkedIn's `employees`, `industry` and `location` at a tenth of `leads_get_company`. Keep `leads_get_company` for the fields only it has: `keywords[]`, `technologies[]`, `funding_stage`, `total_funding`, `revenue`.
+- `leads_search_people` rows carry the real `first_name` and `last_name`, `title`, `company`, `company_domain`, `location` and `linkedin_url` when the provider holds them; `seniority` and `has_email` are always null. A row's `id` is the person's LinkedIn profile URL, or null when the person has no profile. `leads_search_companies` rows carry `industry`, `employees` and `location` when the provider holds them. The filters still applied: a null `industry` on a row from an industry search is not a miss.
+- On `leads_search_people`, a title-like word in `keywords` ("marketing", "sales") with no `titles` is matched against the current job title: it finds marketing people, not anyone whose profile mentions marketing.
+- `leads_get_company` (1 credit) and `leads_get_person` (3 credits, 1 on `NoData`) fill one row each. Decide on the row (title, company, location) and fill only what a decision or the deliverable needs.
+- `leads_get_person` and `leads_get_email` take a row's `id` as the search returned it: a full LinkedIn profile URL (`https://www.linkedin.com/in/<public-id>`). A bare public id or any other string is refused as `InvalidTarget` at 0 credits. For a row whose `id` is null, pass `first_name`, `last_name` and `domain`.
+- `rows_available` on the first page is the provider's total for the filters. Read it instead of paging: counting accounts or people costs 4 credits a query.
+- `leads_get_company` adds `description`, `keywords[]` (the company's LinkedIn specialties), `founded_year` and `phone` to what the row has. `linkedin_get_company` with the row's LinkedIn URL (1 credit, the same price) gives LinkedIn's own `employees`, `industry`, `location`, `followers` and `bio`. Neither holds funding, revenue or a tech stack: `revenue`, `total_funding`, `funding_stage` and `technologies[]` on `leads_get_company` are always empty, and `leads_get_person` has no `employment_history` or `seniority`. [Buying intent](references/buying-intent.md) says where those signals come from instead.
 - The provider's index is not the whole market. It is strongest on companies with a website and a LinkedIn presence, and thinner on small local businesses and on markets outside English-speaking tech. Say so whenever a count or a list is read as the market.
 
 ### Emails
 
 - Reveal last, and only for people worth contacting. `leads_get_email` is the paid reveal: 6 credits on a hit, 1 on `NoData`. Do not retry a `NoData`: misses are not cached, so asking again pays again for the same answer.
-- Pass the stub's `id` to `leads_get_email`: it fills the real name and domain, so there is no need to buy `leads_get_person` first just to unmask a last name.
-- `has_email: true` on a stub means the provider already holds an address, so put those people first. `false` only means that provider has none; the waterfall behind `leads_get_email` may still find one.
+- Pass the row's `id` to `leads_get_email`: it fills the name and domain, so there is no need to buy `leads_get_person` first. The row's own name and `company_domain` work as well.
+- Search rows do not say who has a findable email (`has_email` is null). The waterfall behind `leads_get_email` checks several sources, so a miss costs 1 credit and says nothing about the next person.
 - Person records never carry an email. With no name, only a company (anyone at a small firm), the address comes from a domain search: run the [contact steps](../link-building/SKILL.md#contact-steps) with the departments the buyer sits in.
 - Verify before any send. `leads_get_email` verifies as it finds, so read its `verification_status`. Every other address (the user's file, a pattern guess, a domain search) gets `leads_get_email_status` (1 credit). Re-check a revealed address that came back `cached: true`: a reveal is cached 90 days and people change jobs. Read the status as the contact steps do: drop `invalid`, keep `accept_all` marked unproven, keep `unknown` with a note.
 
@@ -60,7 +62,7 @@ Pick one job from the request, open its playbook and follow it. If the request f
 ### Credits
 
 - Say the estimate before the first paid call; each playbook gives its default. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free.
-- Spend in funnel order: count (1 or 10), search (1 or 10 a page), fill (10), reveal (6), verify (1). Never reveal an email for a row a cheaper step could have dropped.
+- Spend in funnel order: count (4), search (4 a page), fill (1 or 3), reveal (6), verify (1). Never reveal an email for a row a cheaper step could have dropped.
 - A result this account already paid for is free while cached: people searches 7 days, company searches, company and person records and verifications 30 days, reveals 90 days. A second pass over the same accounts costs little.
 - The leads tools take one company or person per call. For a long list, run a few calls at a time; on `ConcurrencyLimit`, wait `retry_after_s` and send fewer at once.
 

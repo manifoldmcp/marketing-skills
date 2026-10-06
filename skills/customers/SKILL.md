@@ -49,7 +49,7 @@ Pick one job from the request, open its playbook and follow it. If the request f
 ### Credits
 
 - Say the estimate before the first paid call; each playbook gives its default. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free.
-- Cheap first: Reddit, TikTok, YouTube and LinkedIn searches, comment pages and `leads_search_people` cost 1 credit a page; `seo_search_keywords` costs 10. The expensive calls are `aeo_search_prompts` (45 at the default 50 rows), `aeo_run_ai_answers` (18 credits per prompt on the default engines), `leads_search_companies` (10 a page), `leads_get_company` (10 each) and `seo_get_traffic_estimates` (50 plus 50 per 100 domains).
+- Cheap first: Reddit, TikTok, YouTube and LinkedIn searches, comment pages and `leads_get_company` cost 1 credit; `leads_search_people` and `leads_search_companies` cost 4 a page; `seo_search_keywords` costs 10. The expensive calls are `aeo_search_prompts` (45 at the default 50 rows), `aeo_run_ai_answers` (18 credits per prompt on the default engines) and `seo_get_traffic_estimates` (50 plus 50 per 100 domains).
 - A result this account already paid for is free while cached, so rerunning a playbook on the same topic within the cache window costs little.
 
 ### Handoff

@@ -26,5 +26,5 @@ A list the user already has, checked before it is sent to: every address verifie
 - `accept_all` is common in B2B: many company mail servers accept every address. Send flagged catch-all rows last, in small batches, and stop if they bounce.
 - `unknown` does not improve with a quick retry: the check is cached 30 days. Treat it like `accept_all`.
 - Verification is not permission. A valid address still needs a legal basis to receive cold email; see the router's [personal data](../SKILL.md#personal-data) rules.
-- An address that went `invalid` usually means the person left. If they matter, `leads_get_person` (10 credits) shows their current company, and `leads_get_email` (6 credits on a hit) finds the new address; that is [enrichment](enrichment.md), and it needs the user's go-ahead.
+- An address that went `invalid` usually means the person left. If they matter, `leads_get_person` (3 credits) shows their current company, and `leads_get_email` (6 credits on a hit) finds the new address; that is [enrichment](enrichment.md), and it needs the user's go-ahead.
 - Re-verify a cleaned list that waits more than about a month before the send.

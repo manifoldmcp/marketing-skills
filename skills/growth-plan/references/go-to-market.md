@@ -11,15 +11,15 @@ Ask for these in one message. For anything the user does not answer, use the def
 - **Competitors and alternatives**: products and workarounds (spreadsheets, an agency, doing nothing). Default: the ones the market check finds.
 - **Market**: the country and language. Default: the United States, English.
 - **Launch date**: if there is one.
-- **Team and budget**: who sells, who writes, money for ads or creators, and credits (this playbook costs about 40).
+- **Team and budget**: who sells, who writes, money for ads or creators, and credits (this playbook costs about 35).
 
 ## Steps
 
-1. **Check the market.** About 40 credits.
+1. **Check the market.** About 35 credits.
    - Demand: `seo_search_keywords` with the category as `seed` (10 credits). Read `volume` and `trend[12]`: demand that exists and can be captured, or a new category where demand has to be made.
    - Who wins now: `seo_get_serp` for "best <category>" and "<leading competitor> alternatives" (1 credit each), and `aeo_run_ai_answers` with "best <category> for <ICP>" and the competitors as `brands` (18 credits), then `get_task`.
    - The problem in the buyer's words: `reddit_search_posts` with the problem at the default relevance sort (1 credit).
-   - B2B size: `leads_search_companies` with the ICP's industry, headcount and location (10 credits); read `meta.rows_available`.
+   - B2B size: `leads_search_companies` with the ICP's industry, headcount and location (4 credits); read `meta.rows_available`.
 
    For depth: [demand check](../../customers/references/demand-check.md), [market size](../../leads/references/market-size.md), [find competitors](../../competitors/references/find-competitors.md) and [market map](../../customers/references/market-map.md).
 2. **Settle the ICP.** Run [personas](../../customers/references/personas.md) with the hypothesis, and [pain points](../../customers/references/pain-points.md) for the problem in the buyer's own words. Choose one segment to win first.

@@ -17,11 +17,11 @@ Ask for these in one message. For anything the user does not answer, use the def
 ## Steps
 
 1. **Intake.** Settle the inputs above and restate them in one short list, marking the defaults.
-2. **Baseline.** Say the cost first: about 98 credits for the site and three competitors.
+2. **Baseline.** Say the cost first: about 75 credits for the site and three competitors.
    - Search: `seo_get_domain_overview` on the site and each competitor (5 credits each): `domain_rank`, `organic_traffic`, `organic_keywords`.
    - Paid: `ads_get_advertiser_ads` with `active_only: true` on `facebook` and `google` for each (1 credit a page): active ads, and the oldest still running. Only Facebook applies `active_only`; on the other libraries keep the rows whose `active` is true or whose `last_shown` is recent.
    - AI answers: `aeo_run_ai_answers` with two category prompts and `brands` holding the site and the competitors, on the default engines (18 credits per prompt, 36); `get_task` (free) after `poll_after_s`. Count the cells that mention each brand.
-   - Company: `leads_get_company` on each competitor (10 credits each) for `employees`, `total_funding` and `funding_stage`, and `linkedin_get_company` on all four (1 credit each) for `followers`.
+   - Company: `leads_get_company` on each competitor (1 credit each) for `employees`, and `linkedin_get_company` on all four (1 credit each) for `followers`. Neither holds funding; a round a competitor announced shows in its LinkedIn posts (`linkedin_get_company_posts`, 1 credit a page).
 3. **Gaps.** About 33 credits more.
    - Search: `seo_get_keyword_gap` with the site as `target` and each competitor as `competitor` (10 credits each). Keep the commercial and transactional keywords: the searches where each rival meets buyers the site never sees.
    - Message: `seo_get_page` on each homepage (free). List the claims all of them make, and the ones none of them make.

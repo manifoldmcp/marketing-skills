@@ -9,7 +9,7 @@ Ask for these in one message. For anything the user does not answer, use the def
 - **Goal**: one of traffic, signups, leads, awareness, first customers. Default: signups. The KPI for each is in the [router](../SKILL.md#goal-first); ask for its current number.
 - **Stage**: pre-launch, fewer than 100 customers, or growing. Default: fewer than 100 customers.
 - **ICP**: who buys, B2B or B2C, and the problem in their words.
-- **Budget**: credits for the research (this playbook costs about 80), money for ads or creators, and hours a week. Default: 1,000 credits, no ad budget, 5 hours a week.
+- **Budget**: credits for the research (this playbook costs about 75), money for ads or creators, and hours a week. Default: 1,000 credits, no ad budget, 5 hours a week.
 - **Team**: who does the work: writing, video, sales calls, design. Default: one founder who can write.
 - **Competitors**: two or three. Default: the top real businesses from `seo_get_serp_competitors` (10 credits, only when the user names none), or the brands the AI answers name in step 2.
 - **Horizon**: default 90 days.
@@ -17,13 +17,13 @@ Ask for these in one message. For anything the user does not answer, use the def
 ## Steps
 
 1. **Intake.** Settle the inputs above and restate them in one short list, marking the defaults.
-2. **Baseline.** Say the cost first: about 80 credits. One cheap reading per channel:
+2. **Baseline.** Say the cost first: about 75 credits. One cheap reading per channel:
    - Search: `seo_get_domain_overview` on the site and two competitors (5 credits each), and `seo_search_keywords` with the category as `seed` (10 credits) for demand.
    - AI answers: `aeo_run_ai_answers` with two buyer questions and `brands` set to the user and the competitors (18 credits a prompt), then `get_task`.
    - Communities: `reddit_search_subreddits` with the problem (1 credit), then `reddit_get_new_posts` on the top five with `since: "7d"` and `match` set to the problem words (5 credits): every post about the problem there in the last week.
    - Social: `tiktok_search_videos`, `youtube_search_videos` and `linkedin_search_posts` with the category and `since: "month"` (1 credit each).
    - Paid: `ads_get_advertiser_ads` with `platform: "facebook"` on each competitor (1 credit each).
-   - B2B only: `leads_search_companies` with the ICP's industry, headcount and location (10 credits); `meta.rows_available` sizes the market.
+   - B2B only: `leads_search_companies` with the ICP's industry, headcount and location (4 credits); `meta.rows_available` sizes the market.
 3. **Gaps.** For each channel, set the user against the competitors and against the [channel signals](../SKILL.md#channel-signals): where buyers are active and competitors show up but the user does not. Rank the gaps by fit to the goal and by what the team can do.
 4. **Tactics.** Choose two or three, and say why each fits the goal and the gaps:
    - [First 100 customers](first-100-customers.md) when the stage is pre-launch or under 100 customers, whatever the goal: channels that scale come after.

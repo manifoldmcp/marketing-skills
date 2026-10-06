@@ -8,11 +8,11 @@ One competitor, every channel, one table: how big the company is, how strong it 
 - **The user's site**: optional. With it, the search row gets a "you" column for comparison.
 - **Category**: the words a buyer uses for what the competitor sells, for the AI check. Default: from the `description` and `keywords[]` of the company record in step 1.
 - **Market**: `location` and `language` if not the United States and English; `country` for the ad libraries.
-- **Budget**: a default run costs about 11 + 25 + 4 + 11 + 36 = 87 credits, plus 25 for the user's own site in the search row. Say so before starting; pass `max_credits` if the user gave a budget.
+- **Budget**: a default run costs about 2 + 25 + 4 + 11 + 36 = 78 credits, plus 25 for the user's own site in the search row. Say so before starting; pass `max_credits` if the user gave a budget.
 
 ## Steps
 
-1. **Company.** `leads_get_company` on the domain (10 credits, 1 on `NoData`): `industry`, `employees`, `founded_year`, `total_funding`, `funding_stage`, `description`, `keywords[]`, `technologies[]` and `linkedin_url`. Then `linkedin_get_company` with that URL (1 credit): LinkedIn's own `employees`, `followers` and `bio`. The description names the category for step 5; the funding says what the competitor can outspend.
+1. **Company.** `leads_get_company` on the domain (1 credit, 1 on `NoData`): `industry`, `employees`, `founded_year`, `description`, `keywords[]` and `linkedin_url`. Then `linkedin_get_company` with that URL (1 credit): LinkedIn's own `employees`, `followers` and `bio`. The description names the category for step 5. The record holds no funding; a round the competitor announced shows in its LinkedIn posts in step 4, and says what it can outspend.
 2. **Search.** About 25 credits.
    - `seo_get_domain_overview` (5 credits): `domain_rank`, `organic_traffic`, `organic_keywords`, `positions` and `top_pages[]`.
    - `seo_get_ranked_keywords` with `limit: 100` (10 credits). Split the rows into branded (the keyword holds the brand name) and non-branded. From the non-branded ones, name the three topics and the pages that bring the most `traffic`, and count the keywords with commercial or transactional `intent`: those are the searches where the competitor meets buyers.
@@ -34,4 +34,4 @@ One competitor, every channel, one table: how big the company is, how strong it 
 - Impressions and spend are the ranges a library publishes, and null where it publishes none. Count ads and read how long they run; do not turn ranges into a spend figure.
 - A channel with an account but no post in 90 days is inactive. Report it as absent, since that is the gap the user can take.
 - AI answers are live and non-deterministic: two prompts on five engines is ten samples, enough to see presence or absence, not a share of voice.
-- The tools cannot see pricing (see [messaging and pricing](messaging-pricing.md)), product quality, the sales team, email marketing, or real revenue; `revenue` in the company record is the provider's figure and often null.
+- The tools cannot see pricing (see [messaging and pricing](messaging-pricing.md)), product quality, the sales team, email marketing, or real revenue; `revenue` and the funding fields in the company record are always empty.
