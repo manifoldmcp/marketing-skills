@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the competitor's domain and handles from the competitors and accounts sections, the user's own site, the category and the market) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the product, offer [create-product-context](../create-product-context/SKILL.md) first.
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the competitor's domain and handles from the competitors and accounts sections, the user's own site, the category and the market) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the business, offer [manifold-get-started](../manifold-get-started/SKILL.md) first.
 
 ## Inputs to settle first
 
@@ -54,7 +54,7 @@ Before the first question, look for the product marketing context file: `.agents
 - The tools cannot see pricing (see [compare-messaging](../compare-messaging/SKILL.md)), product quality, the sales team, email marketing, or revenue and funding: the company record carries neither. No manifold tool reads a page's body text; never fill a price, a feature or a customer count from memory.
 - Every claim carries its source: the tool and field, or the URL. Mark an inference as an inference. Quote the competitor's copy only as short evidence (a headline, a tagline), with the URL.
 - Credits: say the estimate before the first paid call. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free. A result this account already paid for is free while cached: 7 days for most SEO data, 24 hours for ad lists and profiles, 30 days for company records.
-- Never contact anyone. After delivering, offer to write the findings into `.agents/product-marketing.md` with [create-product-context](../create-product-context/SKILL.md).
+- Never contact anyone. After delivering, offer to write the findings into `.agents/product-marketing.md` with [manifold-get-started](../manifold-get-started/SKILL.md).
 
 ## Related skills
 

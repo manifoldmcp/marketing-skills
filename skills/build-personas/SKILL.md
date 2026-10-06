@@ -1,6 +1,6 @@
 ---
 name: build-personas
-description: When the user wants buyer personas built from evidence rather than imagination. Sizes the job titles and seniority that buy in a company database, hears their public voice in LinkedIn posts and their frank voice on Reddit, and groups them into two to four personas where every field is evidence or marked as inference. Also use when the user mentions buyer personas, persona research, who is our ideal customer, who buys a tool like ours, which roles buy, personas by role and seniority, who decides and who uses it, or audience research on the buyers themselves. Writing the product context file goes to create-product-context, a list of people to contact to build-lead-list, how many companies could buy to size-market, the problems buyers name to find-pain-points, the doubts they raise to find-objections.
+description: When the user wants buyer personas built from evidence rather than imagination. Sizes the job titles and seniority that buy in a company database, hears their public voice in LinkedIn posts and their frank voice on Reddit, and groups them into two to four personas where every field is evidence or marked as inference. Also use when the user mentions buyer personas, persona research, who is our ideal customer, who buys a tool like ours, which roles buy, personas by role and seniority, who decides and who uses it, or audience research on the buyers themselves. Writing the product context file goes to manifold-get-started, a list of people to contact to build-lead-list, how many companies could buy to size-market, the problems buyers name to find-pain-points, the doubts they raise to find-objections.
 compatibility: Requires the Manifold MCP connector, signed in with a Manifold account that has credits. Without it the skill stops and tells the user how to connect.
 ---
 
@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the product and the problem it solves, the target audience, the personas already written, current customers, customer language) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the product, offer [create-product-context](../create-product-context/SKILL.md) first. After delivering, offer to write the personas into `.agents/product-marketing.md` with [create-product-context](../create-product-context/SKILL.md).
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the product and the problem it solves, the target audience, the personas already written, current customers, customer language) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the business, offer [manifold-get-started](../manifold-get-started/SKILL.md) first. After delivering, offer to write the personas into `.agents/product-marketing.md` with [manifold-get-started](../manifold-get-started/SKILL.md).
 
 ## Inputs to settle first
 
@@ -51,4 +51,4 @@ Before the first question, look for the product marketing context file: `.agents
 - A list of people in a persona to contact: [build-lead-list](../build-lead-list/SKILL.md). How many companies could buy: [size-market](../size-market/SKILL.md).
 - The problems these buyers name, ranked: [find-pain-points](../find-pain-points/SKILL.md). The doubts that stop them buying: [find-objections](../find-objections/SKILL.md).
 - Positioning for the persona that signs: [find-positioning](../find-positioning/SKILL.md).
-- The context file every skill reads: [create-product-context](../create-product-context/SKILL.md).
+- The context file every skill reads: [manifold-get-started](../manifold-get-started/SKILL.md).

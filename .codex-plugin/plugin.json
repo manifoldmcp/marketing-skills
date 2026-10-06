@@ -1,6 +1,6 @@
 {
   "name": "manifold",
-  "version": "1.0.1791311552",
+  "version": "1.0.1791313687",
   "description": "Marketing skills for SEO, AI search, link building, paid ads, influencers, leads, Reddit, TikTok, Instagram, YouTube, LinkedIn, Facebook, competitors, customers, content, monitoring and agencies, on the Manifold MCP server's marketing data tools.",
   "author": {
     "name": "Manifold",
@@ -29,7 +29,7 @@
   "interface": {
     "displayName": "Manifold",
     "shortDescription": "Marketing skills on live SEO, AI and social data",
-    "longDescription": "117 marketing skills, one per job and each named for what it does (audit-technical-seo, diagnose-traffic-drop, check-ai-visibility, find-backlink-targets, find-tiktok-creators, research-meta-ads, build-lead-list, find-pain-points, tear-down-competitor, track-rankings and more), a product-context skill they all read first, and the Manifold MCP server they run on. Each skill names the data calls it makes, says what a run costs in Manifold credits before the first paid call, and ends in a table you act on. Nothing is sent, posted or bought for you.",
+    "longDescription": "More than 100 marketing skills, one per job and each named for what it does (audit-technical-seo, diagnose-traffic-drop, check-ai-visibility, find-backlink-targets, find-tiktok-creators, research-meta-ads, build-lead-list, find-pain-points, tear-down-competitor, track-rankings and more), a get-started skill that writes the business context they all read first, and the Manifold MCP server they run on. Each skill names the data calls it makes, says what a run costs in Manifold credits before the first paid call, and ends in a table you act on. Nothing is sent, posted or bought for you.",
     "developerName": "Manifold",
     "category": "Business & Operations",
     "capabilities": [],

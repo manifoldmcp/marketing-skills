@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the topic in the buyer's words, the audience, the competitors with their domains and handles, the team and the market) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the product, offer [create-product-context](../create-product-context/SKILL.md) first.
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the topic in the buyer's words, the audience, the competitors with their domains and handles, the team and the market) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the business, offer [manifold-get-started](../manifold-get-started/SKILL.md) first.
 
 ## Inputs to settle first
 
@@ -67,4 +67,4 @@ Before the first question, look for the product marketing context file: `.agents
 - Paid channels (Meta, Google, LinkedIn, TikTok ads): [create-paid-ads-plan](../create-paid-ads-plan/SKILL.md).
 - The strategy for the chosen channel: [create-tiktok-plan](../create-tiktok-plan/SKILL.md), [create-instagram-plan](../create-instagram-plan/SKILL.md), [create-youtube-plan](../create-youtube-plan/SKILL.md), [create-linkedin-plan](../create-linkedin-plan/SKILL.md), [create-facebook-plan](../create-facebook-plan/SKILL.md), [create-reddit-plan](../create-reddit-plan/SKILL.md), [create-seo-plan](../create-seo-plan/SKILL.md) or [create-ai-search-plan](../create-ai-search-plan/SKILL.md).
 - What to post there: [find-content-ideas](../find-content-ideas/SKILL.md) and [create-content-calendar](../create-content-calendar/SKILL.md).
-- The product, the audience and the competitors written down once: [create-product-context](../create-product-context/SKILL.md).
+- The product, the audience and the competitors written down once: [manifold-get-started](../manifold-get-started/SKILL.md).

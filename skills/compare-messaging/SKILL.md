@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the user's own site, the competitors and their domains, the pricing and the market) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the product, offer [create-product-context](../create-product-context/SKILL.md) first.
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the user's own site, the competitors and their domains, the pricing and the market) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the business, offer [manifold-get-started](../manifold-get-started/SKILL.md) first.
 
 ## Inputs to settle first
 
@@ -49,7 +49,7 @@ Before the first question, look for the product marketing context file: `.agents
 - Quote short. A headline or a tagline is evidence, with its URL; a copied paragraph is not needed. Every other claim carries its tool and field, or the URL.
 - Two headcounts or bios can disagree (`leads_get_company` against `linkedin_get_company`); report both.
 - Credits: say the estimate before the first paid call. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free. Ad lists and profiles are cached 24 hours, company records 30 days.
-- Never contact anyone. After delivering, offer to write the competitors' claims and pricing into `.agents/product-marketing.md` with [create-product-context](../create-product-context/SKILL.md).
+- Never contact anyone. After delivering, offer to write the competitors' claims and pricing into `.agents/product-marketing.md` with [manifold-get-started](../manifold-get-started/SKILL.md).
 
 ## Related skills
 

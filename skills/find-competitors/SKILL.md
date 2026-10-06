@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the product and its domain, the category words, the competitors the user already knows and the market) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the product, offer [create-product-context](../create-product-context/SKILL.md) first.
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the product and its domain, the category words, the competitors the user already knows and the market) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the business, offer [manifold-get-started](../manifold-get-started/SKILL.md) first.
 
 ## Inputs to settle first
 
@@ -49,7 +49,7 @@ Before the first question, look for the product marketing context file: `.agents
 - Traffic sizes SEO-led competitors well and sales-led ones badly: an enterprise vendor can have little traffic and a large sales team. `organic_traffic` is an estimate modelled from rankings: good for comparing sites with each other, not a visit count.
 - Every claim about a competitor carries its source: the tool and field, or the URL. Mark an inference as an inference.
 - Credits: say the estimate before the first paid call. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free. `aeo_run_ai_answers` is never cached, so put every known competitor in `brands[]` (up to 10) on the one run. Other results this account already paid for are free while cached: 7 days for most SEO data (24 hours for `seo_get_serp`), 24 hours for ad lists, 30 days for company records.
-- Never contact anyone. The deliverable is the table. After delivering, offer to write the classes, domains and handles into `.agents/product-marketing.md` with [create-product-context](../create-product-context/SKILL.md).
+- Never contact anyone. The deliverable is the table. After delivering, offer to write the classes, domains and handles into `.agents/product-marketing.md` with [manifold-get-started](../manifold-get-started/SKILL.md).
 
 ## Real competitors
 

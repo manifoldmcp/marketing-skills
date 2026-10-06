@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the goal, the stage, the ICP, the competitors and their domains, the differentiation and the team) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the product, offer [create-product-context](../create-product-context/SKILL.md) first.
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the goal, the stage, the ICP, the competitors and their domains, the differentiation and the team) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the business, offer [manifold-get-started](../manifold-get-started/SKILL.md) first.
 
 ## Inputs to settle first
 
@@ -66,7 +66,7 @@ Ask for these in one message. For anything the user does not answer, use the def
 - `organic_traffic` is an estimate modelled from rankings: good for comparing sites, not a visit count. Every claim about a competitor carries its source; mark an inference as an inference.
 - Credits: say the estimate before the first paid call. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free. `aeo_run_ai_answers` is never cached, so put every competitor in `brands[]` on the first run and keep that result for the day-90 comparison.
 - The server keeps no state. The host keeps the baseline table for the day-90 re-measure; a weekly watch of the same competitors is [monitor-competitors](../monitor-competitors/SKILL.md).
-- Never contact anyone. After delivering, offer to write the findings into `.agents/product-marketing.md` with [create-product-context](../create-product-context/SKILL.md).
+- Never contact anyone. After delivering, offer to write the findings into `.agents/product-marketing.md` with [manifold-get-started](../manifold-get-started/SKILL.md).
 
 ## Real competitors
 

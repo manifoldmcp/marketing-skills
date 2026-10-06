@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the product, the best customers, the competitors, the differentiation, the customer language and the objections) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the product, offer [create-product-context](../create-product-context/SKILL.md) first.
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the product, the best customers, the competitors, the differentiation, the customer language and the objections) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the business, offer [manifold-get-started](../manifold-get-started/SKILL.md) first.
 
 ## Inputs to settle first
 
@@ -48,7 +48,7 @@ Before the first question, look for the product marketing context file: `.agents
 - The output is positioning, not copy. The homepage, ads and comparison pages follow from the chosen option in a separate request.
 - Every piece of evidence carries its source: the tool and field, or the URL. Quote competitors only as short evidence (a headline, a tagline), with the URL.
 - Credits: say the estimate before the first paid call. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free. `aeo_run_ai_answers` is never cached, so put every competitor in `brands[]` (up to 10) on the one run.
-- After delivering, offer to write the chosen option into `.agents/product-marketing.md` with [create-product-context](../create-product-context/SKILL.md).
+- After delivering, offer to write the chosen option into `.agents/product-marketing.md` with [manifold-get-started](../manifold-get-started/SKILL.md).
 
 ## Related skills
 

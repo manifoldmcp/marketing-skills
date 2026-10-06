@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the product, the ICP, the competitors, the goal, the conversion that counts and the budget) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the product, offer [create-product-context](../create-product-context/SKILL.md) first.
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the product, the ICP, the competitors, the goal, the conversion that counts and the budget) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the business, offer [manifold-get-started](../manifold-get-started/SKILL.md) first.
 
 ## Inputs to settle first
 
@@ -92,4 +92,4 @@ The tools see public signals, not conversion. Ask for the current number of the 
 - Content ideas and a calendar for the chosen channels: [find-content-ideas](../find-content-ideas/SKILL.md) and [create-content-calendar](../create-content-calendar/SKILL.md).
 - Tracking the plan's KPIs every week: [write-weekly-report](../write-weekly-report/SKILL.md).
 - A plan for an agency's client: [onboard-client](../onboard-client/SKILL.md).
-- The product, the ICP and the goal written down once for every skill: [create-product-context](../create-product-context/SKILL.md).
+- The product, the ICP and the goal written down once for every skill: [manifold-get-started](../manifold-get-started/SKILL.md).

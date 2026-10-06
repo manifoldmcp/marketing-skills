@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the agency's services and its own voice for client-facing documents) from it; ask only for what it lacks. The file describes the agency, not the prospect: the prospect's details come from the user. If it does not exist and the job needs more than two answers about the agency, offer [create-product-context](../create-product-context/SKILL.md) first.
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the agency's services and its own voice for client-facing documents) from it; ask only for what it lacks. The file describes the agency, not the prospect: the prospect's details come from the user. If it does not exist and the job needs more than two answers about the agency, offer [manifold-get-started](../manifold-get-started/SKILL.md) first.
 
 ## Inputs to settle first
 

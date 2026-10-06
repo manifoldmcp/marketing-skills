@@ -17,7 +17,7 @@ This skill runs on the manifold MCP server. Before the first step, confirm that 
 
 ## Product context
 
-Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the competitor's domain, the user's differentiation and proof points, and the objections sales hears) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the product, offer [create-product-context](../create-product-context/SKILL.md) first.
+Before the first question, look for the product marketing context file: `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, read it and take every input it answers (the competitor's domain, the user's differentiation and proof points, and the objections sales hears) from it; ask only for what it lacks. If it does not exist and the job needs more than two answers about the business, offer [manifold-get-started](../manifold-get-started/SKILL.md) first.
 
 ## Inputs to settle first
 
@@ -52,7 +52,7 @@ Before the first question, look for the product marketing context file: `.agents
 - Quote the competitor's copy only as short evidence (a headline, a tagline), with the URL.
 - Refresh the card when the competitor changes its pricing or homepage claims; [monitor-competitors](../monitor-competitors/SKILL.md) flags both.
 - Credits: say the estimate before the first paid call. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free.
-- Never send the card or contact anyone; hand it to the user. After delivering, offer to write the objections and counters into `.agents/product-marketing.md` with [create-product-context](../create-product-context/SKILL.md).
+- Never send the card or contact anyone; hand it to the user. After delivering, offer to write the objections and counters into `.agents/product-marketing.md` with [manifold-get-started](../manifold-get-started/SKILL.md).
 
 ## Related skills
 
