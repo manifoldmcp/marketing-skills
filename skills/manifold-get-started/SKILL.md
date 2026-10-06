@@ -1,0 +1,55 @@
+---
+name: manifold-get-started
+description: When the user is new to the Manifold marketing skills, asks where to start, what these skills can do, or which skill fits a goal. Asks about the goal, the stage and the budget in one message, then recommends three to five skills in the order to run them, with what each hands back and what a run costs, and offers to run the first. Makes no tool calls and costs nothing. Also use when the user mentions getting started, help me choose, what can Manifold do, which skill should I use, list the skills, or I just installed this. A growth plan built on real data goes to create-growth-plan, and writing the product context file to create-product-context.
+compatibility: Works without the Manifold MCP connector. The skills it recommends need it, except create-product-context.
+---
+
+# Manifold get started
+
+Picks the right skills for the user's goal from the whole library, so they do not have to read every name. It asks a few questions, then hands back three to five skills in the order to run them, each with what it returns and what it costs. It runs no tools and spends no credits.
+
+## Steps
+
+1. **Check the context file.** Read `.agents/product-marketing.md` (in older setups `.claude/product-marketing.md` or `product-marketing-context.md`). If it exists, take the product, the goal, the accounts and the budget from it and skip those questions. If it does not exist, say that [create-product-context](../create-product-context/SKILL.md) writes it once for every skill, and offer to run it first or after this skill.
+2. **Skip ahead when the job is clear.** If the request already names a job that one skill does ("audit our TikTok", "why did traffic drop"), name that skill, say what it costs from its Budget line, and offer to run it. Do not ask the questions below.
+3. **Ask once.** In one message, ask at most four questions, each with the default you will use:
+   - The goal, from the list in the map below (more Google traffic, AI answers, links and press, social growth, communities, creators, paid ads, leads, customer research, competitors, growth in general, monitoring, agency work). Default: growth in general.
+   - The stage: idea, pre-launch, launched, or growing.
+   - What is in place: the site, a connected Search Console, the social accounts, an ad budget, the hours a week for marketing.
+   - The credit budget for the first runs. Default: about 300 credits.
+4. **Pick three to five skills** from the map for that goal, in order: a cheap reading of where the user stands first, then the plan, then the jobs the plan will call. Before you quote a cost, open each skill's SKILL.md and take the figure from its Budget line; do not guess it.
+5. **Deliver** a short table: order, skill (as `/name`), why it fits this user, what it hands back, and the cost of a default run. Then offer to run the first one now.
+
+## The map
+
+| Goal | Start with | Then |
+|---|---|---|
+| Set up | [create-product-context](../create-product-context/SKILL.md) | Every other skill reads its file. |
+| Growth with no channel in mind | [create-growth-plan](../create-growth-plan/SKILL.md) | [pick-channels](../pick-channels/SKILL.md), [find-first-customers](../find-first-customers/SKILL.md), [create-gtm-plan](../create-gtm-plan/SKILL.md), [create-market-entry-plan](../create-market-entry-plan/SKILL.md), [measure-brand-awareness](../measure-brand-awareness/SKILL.md), [create-launch-plan](../create-launch-plan/SKILL.md) |
+| More traffic from Google | [audit-technical-seo](../audit-technical-seo/SKILL.md) or, if traffic fell, [diagnose-traffic-drop](../diagnose-traffic-drop/SKILL.md) | [create-seo-plan](../create-seo-plan/SKILL.md), [find-seo-quick-wins](../find-seo-quick-wins/SKILL.md), [refresh-content](../refresh-content/SKILL.md), [create-seo-content-plan](../create-seo-content-plan/SKILL.md), [write-seo-brief](../write-seo-brief/SKILL.md), [optimize-page](../optimize-page/SKILL.md), [plan-comparison-pages](../plan-comparison-pages/SKILL.md), [fix-keyword-cannibalization](../fix-keyword-cannibalization/SKILL.md), [create-migration-plan](../create-migration-plan/SKILL.md) |
+| Show up in AI answers | [check-ai-visibility](../check-ai-visibility/SKILL.md) and [check-ai-crawler-access](../check-ai-crawler-access/SKILL.md) (free) | [create-ai-search-plan](../create-ai-search-plan/SKILL.md), [build-ai-citations](../build-ai-citations/SKILL.md), [check-ai-overviews](../check-ai-overviews/SKILL.md), [fix-wrong-ai-answers](../fix-wrong-ai-answers/SKILL.md), [find-best-of-lists](../find-best-of-lists/SKILL.md) |
+| Links and press | [create-link-building-plan](../create-link-building-plan/SKILL.md) | [find-backlink-targets](../find-backlink-targets/SKILL.md), [find-unlinked-mentions](../find-unlinked-mentions/SKILL.md), [reclaim-lost-links](../reclaim-lost-links/SKILL.md), [find-affiliate-partners](../find-affiliate-partners/SKILL.md), [create-digital-pr-plan](../create-digital-pr-plan/SKILL.md), [find-journalists](../find-journalists/SKILL.md), [find-podcasts](../find-podcasts/SKILL.md) |
+| Grow on one social platform | The platform's plan: [create-tiktok-plan](../create-tiktok-plan/SKILL.md), [create-instagram-plan](../create-instagram-plan/SKILL.md), [create-youtube-plan](../create-youtube-plan/SKILL.md), [create-linkedin-plan](../create-linkedin-plan/SKILL.md), [create-facebook-plan](../create-facebook-plan/SKILL.md) | Audits: [audit-tiktok-account](../audit-tiktok-account/SKILL.md), [audit-instagram-account](../audit-instagram-account/SKILL.md), [audit-youtube-channel](../audit-youtube-channel/SKILL.md), [audit-facebook-page](../audit-facebook-page/SKILL.md), [audit-linkedin-page](../audit-linkedin-page/SKILL.md), [audit-x-account](../audit-x-account/SKILL.md). Hooks and trends: [find-tiktok-hooks](../find-tiktok-hooks/SKILL.md), [find-instagram-hooks](../find-instagram-hooks/SKILL.md), [find-tiktok-trends](../find-tiktok-trends/SKILL.md), [find-reels-trends](../find-reels-trends/SKILL.md). Viral videos: [analyze-viral-tiktok](../analyze-viral-tiktok/SKILL.md), [analyze-viral-reel](../analyze-viral-reel/SKILL.md), [analyze-viral-youtube-video](../analyze-viral-youtube-video/SKILL.md) |
+| Know what to post | [find-content-ideas](../find-content-ideas/SKILL.md) | [find-youtube-video-ideas](../find-youtube-video-ideas/SKILL.md), [find-linkedin-post-formats](../find-linkedin-post-formats/SKILL.md), [create-content-calendar](../create-content-calendar/SKILL.md), [repurpose-content](../repurpose-content/SKILL.md) |
+| Show up in communities | [find-subreddits](../find-subreddits/SKILL.md) | [create-reddit-plan](../create-reddit-plan/SKILL.md), [find-reddit-threads](../find-reddit-threads/SKILL.md), [find-linkedin-posts-to-comment](../find-linkedin-posts-to-comment/SKILL.md), [find-linkedin-buyer-posts](../find-linkedin-buyer-posts/SKILL.md), [find-linkedin-topic-leaders](../find-linkedin-topic-leaders/SKILL.md) |
+| Work with creators | [create-influencer-plan](../create-influencer-plan/SKILL.md) | [find-creators](../find-creators/SKILL.md), [find-tiktok-creators](../find-tiktok-creators/SKILL.md), [find-instagram-creators](../find-instagram-creators/SKILL.md), [find-youtube-creators](../find-youtube-creators/SKILL.md), [find-ugc-creators](../find-ugc-creators/SKILL.md), [find-brand-fans](../find-brand-fans/SKILL.md), [vet-creator](../vet-creator/SKILL.md), [write-creator-brief](../write-creator-brief/SKILL.md) |
+| Paid ads | [create-paid-ads-plan](../create-paid-ads-plan/SKILL.md) | [research-meta-ads](../research-meta-ads/SKILL.md), [research-google-ads](../research-google-ads/SKILL.md), [research-tiktok-ads](../research-tiktok-ads/SKILL.md), [research-linkedin-ads](../research-linkedin-ads/SKILL.md), [write-ad-brief](../write-ad-brief/SKILL.md), [find-google-ads-keywords](../find-google-ads-keywords/SKILL.md), [check-google-brand-bidding](../check-google-brand-bidding/SKILL.md) |
+| Leads and outbound | [size-market](../size-market/SKILL.md) | [create-outbound-plan](../create-outbound-plan/SKILL.md), [build-lead-list](../build-lead-list/SKILL.md), [find-lookalike-companies](../find-lookalike-companies/SKILL.md), [find-buying-signals](../find-buying-signals/SKILL.md), [track-job-changes](../track-job-changes/SKILL.md), [research-account](../research-account/SKILL.md), [write-first-lines](../write-first-lines/SKILL.md), [clean-email-list](../clean-email-list/SKILL.md), [enrich-lead-list](../enrich-lead-list/SKILL.md) |
+| Understand customers | [find-pain-points](../find-pain-points/SKILL.md) | [check-demand](../check-demand/SKILL.md), [build-personas](../build-personas/SKILL.md), [find-objections](../find-objections/SKILL.md), [map-market](../map-market/SKILL.md), [find-reddit-pain-points](../find-reddit-pain-points/SKILL.md), [mine-facebook-groups](../mine-facebook-groups/SKILL.md), [mine-tiktok-comments](../mine-tiktok-comments/SKILL.md), [mine-instagram-comments](../mine-instagram-comments/SKILL.md), [mine-youtube-comments](../mine-youtube-comments/SKILL.md), [mine-facebook-comments](../mine-facebook-comments/SKILL.md) |
+| Beat competitors | [find-competitors](../find-competitors/SKILL.md) | [create-competitor-plan](../create-competitor-plan/SKILL.md), [tear-down-competitor](../tear-down-competitor/SKILL.md), [compare-messaging](../compare-messaging/SKILL.md), [find-positioning](../find-positioning/SKILL.md), [write-battlecard](../write-battlecard/SKILL.md), [find-competitor-complaints](../find-competitor-complaints/SKILL.md) |
+| Keep watch | [monitor-search-console](../monitor-search-console/SKILL.md) (free) | [monitor-brand-mentions](../monitor-brand-mentions/SKILL.md), [monitor-competitors](../monitor-competitors/SKILL.md), [track-rankings](../track-rankings/SKILL.md), [write-weekly-report](../write-weekly-report/SKILL.md) |
+| Agency work | [prepare-client-pitch](../prepare-client-pitch/SKILL.md) | [onboard-client](../onboard-client/SKILL.md), [write-client-report](../write-client-report/SKILL.md) |
+
+## Judgment
+
+- One goal at a time. If the user names several, ask which matters most this month and plan for that one; name the next goal's first skill in one line.
+- Free and cheap first: the product context file, Search Console and AI crawler checks cost nothing, and a reading of where the user stands costs less than a plan built on guesses.
+- Three to five skills, not more. A long list is the problem this skill exists to solve.
+- Match the stage: before launch, demand and customer research come before SEO or ads; a site with traffic and Search Console starts from its own data.
+- If the user cannot say what the goal is, recommend [create-growth-plan](../create-growth-plan/SKILL.md): it measures every channel and picks two or three.
+- If the Manifold connector is missing, say that every recommended skill except create-product-context needs it, and how to connect: https://www.manifoldmcp.com/docs/clients.
+
+## Related skills
+
+- Write the product context every skill reads: [create-product-context](../create-product-context/SKILL.md).
+- A growth plan built on real data across channels: [create-growth-plan](../create-growth-plan/SKILL.md).

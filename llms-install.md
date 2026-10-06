@@ -1,6 +1,6 @@
 # Install Manifold in Cline
 
-Configure the Manifold MCP server in Cline to access marketing data tools (SEO, AI search visibility, leads, Reddit, social platforms and ad libraries) through the marketing playbooks.
+Configure the Manifold MCP server in Cline to access marketing data tools (SEO, AI search visibility, leads, Reddit, social platforms and ad libraries) through the marketing skills.
 
 ## Server configuration
 
@@ -55,13 +55,13 @@ Then configure the server with the API key in the authorization header:
 
 ## Usage
 
-Every tool call costs Manifold credits (100 credits equal one US dollar). The marketing skills in this repository provide playbooks that show the cost before making paid calls. Install the skills with:
+Every tool call costs Manifold credits (100 credits equal one US dollar). The marketing skills in this repository show the cost before making paid calls. Install the skills with:
 
 ```bash
 npx skills add manifoldmcp/marketing-skills
 ```
 
-The skills run as `/manifold:seo`, `/manifold:ai-search`, and so on, or load automatically when a request matches.
+Start with `/manifold-get-started`: it asks about your goal and picks the skills to run. Run any skill by its name, such as `/audit-technical-seo` or `/find-tiktok-creators`, or let it load automatically when a request matches. If another plugin has a skill with the same name, use `/manifold:audit-technical-seo`.
 
 ## What the server provides
 
@@ -74,4 +74,4 @@ Read-only marketing data tools:
 - Social platforms (Reddit, TikTok, Instagram, YouTube, LinkedIn, Facebook)
 - Ad libraries (Meta, TikTok, LinkedIn, Google ads)
 
-Nothing is sent, posted or bought for you. Every playbook ends with a table you act on.
+Nothing is sent, posted or bought for you. Every skill ends with a table you act on.

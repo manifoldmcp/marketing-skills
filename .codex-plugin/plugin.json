@@ -1,7 +1,7 @@
 {
   "name": "manifold",
-  "version": "1.0.1791308838",
-  "description": "Marketing playbooks for SEO, AI search, link building, paid ads, influencers, leads, Reddit, TikTok, Instagram, YouTube, LinkedIn, Facebook, competitors, customers, content, monitoring and agencies, on the Manifold MCP server's marketing data tools.",
+  "version": "1.0.1791311552",
+  "description": "Marketing skills for SEO, AI search, link building, paid ads, influencers, leads, Reddit, TikTok, Instagram, YouTube, LinkedIn, Facebook, competitors, customers, content, monitoring and agencies, on the Manifold MCP server's marketing data tools.",
   "author": {
     "name": "Manifold",
     "email": "jesse@manifoldmcp.com",
@@ -28,8 +28,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Manifold",
-    "shortDescription": "Marketing playbooks on live SEO, AI and social data",
-    "longDescription": "Nineteen groups of marketing playbooks (SEO, AI search, link building, paid ads, influencers, leads, Reddit and five social platforms, competitors, customers, content, monitoring and agency work) with the Manifold MCP server they run on. Each playbook names the data calls it makes, says what a run costs in Manifold credits before the first paid call, and ends in a table you act on. Nothing is sent, posted or bought for you.",
+    "shortDescription": "Marketing skills on live SEO, AI and social data",
+    "longDescription": "117 marketing skills, one per job and each named for what it does (audit-technical-seo, diagnose-traffic-drop, check-ai-visibility, find-backlink-targets, find-tiktok-creators, research-meta-ads, build-lead-list, find-pain-points, tear-down-competitor, track-rankings and more), a product-context skill they all read first, and the Manifold MCP server they run on. Each skill names the data calls it makes, says what a run costs in Manifold credits before the first paid call, and ends in a table you act on. Nothing is sent, posted or bought for you.",
     "developerName": "Manifold",
     "category": "Business & Operations",
     "capabilities": [],
@@ -37,9 +37,9 @@
     "privacyPolicyURL": "https://www.manifoldmcp.com/privacy",
     "termsOfServiceURL": "https://www.manifoldmcp.com/terms",
     "defaultPrompt": [
-      "Does ChatGPT recommend us for our category, and which sources does it cite instead?",
-      "Find 30 sites that link to our competitor but not to us, with a verified contact at each.",
-      "Build me a growth plan for the next 90 days."
+      "Where should I start with Manifold?",
+      "Does ChatGPT recommend us, and who does it cite?",
+      "Find sites that link to rivals but not to us."
     ]
   }
 }
