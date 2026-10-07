@@ -26,7 +26,7 @@ Sections, in this order. Keep each short: bullets, the user's own words, no fill
 10. **Brand voice**: tone, style and personality, with one example line.
 11. **Proof points**: numbers, customer names, reviews and testimonials the user can stand behind.
 12. **Goals**: the business goal now, the conversion that counts (a purchase, a booking, a signup, a demo, a donation), the stage (idea, pre-launch, launched, growing) and the monthly marketing budget.
-13. **Accounts and markets**: the site's domain, the Search Console property if any, each social account's handle or URL, store or app listings, the competitors' domains and handles, the countries, cities and languages that matter.
+13. **Accounts and markets**: the site's domain, the Search Console property and Google Analytics property if any, each social account's handle or URL, store or app listings, the competitors' domains and handles, the countries, cities and languages that matter.
 14. **Tracking set**: the 10 to 20 keywords and the AI prompts the business wants to win, with the date they were chosen.
 
 The file opens with a version number and the date, and ends with a changelog, newest first: one line per change, with what changed and why.
@@ -51,7 +51,7 @@ The file opens with a version number and the date, and ends with a changelog, ne
 7. **Settle the goal.** Take what the file already answers. Ask the rest in one message, at most four questions, each with the default you will use:
    - The goal, from the map below (more Google traffic, AI answers, links and press, social growth, communities, creators, paid ads, leads, customer research, competitors, growth in general, monitoring, agency work). Default: the usual first goal for the business type, or growth in general.
    - The stage: idea, pre-launch, launched, or growing.
-   - What is in place: the site, a connected Search Console, the social accounts, an ad budget, the hours a week for marketing.
+   - What is in place: the site, a connected Search Console or Google Analytics, the social accounts, an ad budget, the hours a week for marketing.
    - The credit budget for the first runs. Default: about 300 credits.
 8. **Pick three to five skills** from the map for that goal, in order: a cheap reading of where the user stands first, then the plan, then the jobs the plan will call. Before you quote a cost, open each skill's SKILL.md and take the figure from its Budget line; do not guess it.
 9. **Deliver** a short table: order, skill (as `/name`), why it fits this business, what it hands back, and the cost of a default run. Then offer to run the first one now.

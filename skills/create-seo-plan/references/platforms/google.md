@@ -1,11 +1,12 @@
 # Google search notes
 
-What every skill that reads Google organic search shares: which tools it needs, Search Console against estimates, the keyword floors, the credits and the handoff. Every skill that calls a `seo_*` or `console_*` tool follows these notes.
+What every skill that reads Google organic search shares: which tools it needs, Search Console against estimates, Google Analytics, the keyword floors, the credits and the handoff. Every skill that calls a `seo_*`, `console_*` or `analytics_*` tool follows these notes.
 
 ## Tools
 
 - If other manifold tools are there but the `seo_*` tools are not, the SEO tool group is switched off on the app's Tools page (https://www.manifoldmcp.com/docs/authentication#turn-tool-groups-off). Say so and stop: every Google search skill needs it.
 - The `console_*` tools (the user's own Google Search Console and Bing Webmaster data) are optional, and most accounts do not have them yet. Their absence never blocks a skill; see [Search Console](#search-console).
+- The `analytics_*` tools (the user's own Google Analytics 4 data) are optional too, and ride the same Google connection; see [Google Analytics](#google-analytics).
 
 ## Search Console
 
@@ -14,6 +15,14 @@ Search Console holds the user's real clicks, impressions, CTR and average positi
 - **With it.** If the `console_*` tools are present, call `console_list_properties` first (free). Pick the property that covers the site: `sc-domain:example.com` covers every host and protocol, a URL property only that prefix. If it returns `NotConnected`, give the user its `connect_url` once, then carry on with the estimates. The console tools are free, limited to 60 calls a minute per workspace; Google's data lags about two days and goes back 16 months.
 - **Without it.** If the tools are absent, go straight to the estimates and do not ask the user to connect anything. The estimate path runs on DataForSEO: `seo_get_ranked_keywords` on the user's domain or one URL (rank, volume and estimated `traffic` per keyword), `seo_get_domain_overview` with `history: true` (+56 credits, 12 months of estimated traffic and keyword counts), `seo_get_position` (one live rank, 6 credits) and `seo_get_serp` (the live page one, 1 credit per 10 results).
 - **Label every number.** Search Console is measured; `traffic` and `organic_traffic` are models built from rank, volume and a click curve. Estimates are good for direction and for comparing sites, and can be far off for one site, most of all on long-tail and brand queries. Never mix the two in one column, and say which one each table uses.
+
+## Google Analytics
+
+Google Analytics holds what visitors did once they arrived: sessions, engaged sessions, key events (GA4's conversions) and revenue, by channel, landing page, source and date. Search Console says how the site did in Google before the click; Analytics says what organic visitors did after it, and how organic compares with every other channel.
+
+- **With it.** If the `analytics_*` tools are present, call `analytics_list_properties` first (free) and pick the property whose name matches the site; ask if two could. Then `analytics_get_report`. Organic search alone is a `filters` entry on `sessionDefaultChannelGroup` equal to `Organic Search`; landing pages are `landingPage`. Pass `compare_start_date` and `compare_end_date` for a period against the one before. If a call returns `NotConnected`, give the user its `connect_url` once (it may only need a reconnect to grant Analytics) and carry on without it. Free, under the same 60 calls a minute as the console tools; data settles within about a day.
+- **Without it.** Do not ask the user to connect it unless the job is about conversions or revenue. Ask them for the numbers from their analytics instead.
+- **Analytics sessions are not Search Console clicks.** Consent banners, ad blockers and redirects drop sessions, and one click can make no session or several. Compare the shape of the two lines (when each broke, which pages lead), never the totals.
 
 ## Keyword floors
 
@@ -26,7 +35,7 @@ Search Console holds the user's real clicks, impressions, CTR and average positi
 ## Credits
 
 - Say the estimate before the first paid call; each skill gives its default. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free.
-- Free first: `seo_get_page`, `get_task` and every `console_*` tool cost nothing (they are rate limited, so many URLs take time rather than credits). `seo_get_serp` is 1 credit per 10 results.
+- Free first: `seo_get_page`, `get_task` and every `console_*` and `analytics_*` tool cost nothing (they are rate limited, so many URLs take time rather than credits). `seo_get_serp` is 1 credit per 10 results.
 - Ranks in bulk, not one by one: `seo_get_position` is 6 credits per keyword and target, while `seo_get_ranked_keywords` is 10 credits per 100 rows. For two or more targets on one keyword, `seo_get_serp` with a larger `depth` is cheaper than a position per target: even `depth: 100` is 10 credits.
 - `history: true` on `seo_get_domain_overview` adds 56 credits: use it only when the question is about change over time.
 - `seo_run_technical_crawl` charges on `max_pages` requested, not pages crawled, so size it to the site. `render: true` costs 10 times as much: use it only when the content needs JavaScript.
