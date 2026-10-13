@@ -47,7 +47,7 @@ Before the first question, look for the product marketing context file: `.agents
    - Angle: pain, outcome, social proof, comparison, founder story, demo, objection, offer-led.
    - Offer: free trial, demo, lead magnet (report, template, guide, webinar), discount, guarantee, none.
    - Proof: the number, customer logo, analyst mention or testimonial the ad leans on, if any.
-   - Audience: the job title or team the hook calls out, if any.
+   - Audience: the job title or team the hook calls out, if any, and the languages and places in `targeting` where LinkedIn publishes them.
    - Format: `format` from the row, in the library's own words (image, video, text and others).
    - CTA: the `cta` field, or the call in the last line when it is null.
 5. **Set the recent ones apart.** Ads first shown in the last 14 days are current tests. List them apart: they show where an advertiser is heading, not what works.

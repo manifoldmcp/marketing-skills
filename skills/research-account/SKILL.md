@@ -45,7 +45,7 @@ Before the first question, look for the product marketing context file: `.agents
 
 - Check the current role before the call. The search row's `title` and `company_domain` and the LinkedIn profile agree most of the time; when they disagree, trust the profile and say so.
 - Records lag. A company record can be a month old and a headcount band a quarter behind. Date anything that decides the pitch.
-- The data has no tech stack, revenue or tenure. Ask about them on the call rather than guess.
+- The data has no tech stack, and revenue is an estimated range unless the company discloses it. Ask about them on the call rather than guess.
 - Stay on work. A brief that mentions someone's family, health or private accounts does harm on the call; leave that out even when it is public. The [personal data](../create-outbound-plan/references/lead-data.md#personal-data) rules apply.
 - LinkedIn post dates are approximate ("3 weeks ago"). Say "recently", not a date, when the age is in weeks.
 - A brief on a prospect client for an agency pitch, centred on their marketing, is [prepare-client-pitch](../prepare-client-pitch/SKILL.md). A competitor researched as a rival is [tear-down-competitor](../tear-down-competitor/SKILL.md).

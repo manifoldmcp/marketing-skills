@@ -22,7 +22,7 @@ Before the first question, look for the product marketing context file: `.agents
 ## Inputs to settle first
 
 - **The sheet**: a file or a paste, and which columns hold the name, company, domain, email and LinkedIn URL.
-- **Fields to fill**: which empty columns the user wants: company fields (industry, employees, location, description, LinkedIn page), person fields (title, location, LinkedIn URL, headline) or the work email. Default: only the columns the user names. Funding, revenue, tech stack and seniority are not in the data: say so before the run rather than charge for empty cells.
+- **Fields to fill**: which empty columns the user wants: company fields (industry, employees, location, description, LinkedIn page, estimated revenue range, headcount growth), person fields (title, time in role, location, LinkedIn URL, headline, past employers) or the work email. Default: only the columns the user names. Funding, tech stack and seniority are not in the data: say so before the run rather than charge for empty cells.
 - **Rows**: all, or a filter (for example only rows with no email).
 - **Budget**: company fields 1 credit per unique domain; person fields 3 per person on a hit (1 on a miss); an email 6 per person on a hit (1 on a miss). A 200-row sheet with 120 unique domains, filled in full, is about 120 x 1 + 200 x (3 + 6) = 1,920 credits. Say it and get a yes before the first paid call; pass `max_credits` if the user gave a budget, stopping when the running total reaches it.
 

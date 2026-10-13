@@ -13,13 +13,13 @@ LinkedIn skills run on the manifold MCP server. Before the first step, confirm t
 ## What LinkedIn shows
 
 - `linkedin_search_posts` is LinkedIn's own ranked search: never complete, 1 credit a page, filtered by `since` (day, week, month, year or all) and with no other sort. Its ranking tends to favour posts that already have engagement.
-- A search row carries the author's name (`author_name`) but no handle. A post URL of the form `linkedin.com/posts/<handle>_...` starts with the author's handle, the part before the first underscore: pass it as `handle` to `linkedin_get_profile` (1 credit) for `followers`, `location` and the `bio`, or to `linkedin_get_company` when the author is a company. A URL without that form cannot be traced to a profile; keep the name only.
+- A post row names its author three ways: `author` (the profile's handle), `author_name` and `author_url`, plus `author_followers`. Size authors from the row; call `linkedin_get_profile` (1 credit) only for the `bio`, `location` or `experience`, passing `author_url` as `url`. An `author_url` under `/company/` is a company page: `linkedin_get_company` reads it.
 - Engagement is `likes` and `comments`. LinkedIn publishes no view count (`views` is null). Search rows usually carry both counts; when they are null, `linkedin_get_post` (1 credit) has them. `linkedin_get_company_posts` carries no engagement at all, so every post judged from it needs `linkedin_get_post`.
-- The post type is not visible: every row reads `media: "text"`, so a carousel, an image, a video or a poll looks like a text post. The data judges the words (length, hook, structure); to see the media, the host opens the post URL if it has a browser, or the user checks the top posts by eye.
+- `media` is `video` for a video post and `image` for a photo post. A document carousel or a poll may still read as `text`, so before judging a format on media, the host opens the top post URLs if it has a browser, or the user checks them by eye. A search row for a video post often carries what it says in `transcript`.
 - `text` is cut at 2,000 characters, and `created_at` is approximate: LinkedIn shows an age ("3d", "2w"), exact only to that unit.
-- No comments. The tools cannot read what people replied, or who liked or commented. Judge a conversation by its counts, and let the user read the thread.
-- No feed per person. A person's own posts cannot be listed. Find them through search on the topics they post about and keep the rows under their name. For the user's own posts, ask for the URLs and read each with `linkedin_get_post`.
-- `linkedin_get_company` carries no follower count (`followers` is null); compare pages on posting and engagement, not audience size.
+- Comments, partly. A post and a search row carry up to 10 comments in `top_comments`, each with the commenter's name and `author_url`; `linkedin_get_comments` (1 credit) returns them as rows. That is all LinkedIn shows a logged-out reader: on a post with 200 comments, 10 come back, and who reacted is never shown. Judge a conversation by its counts and read the 10 as a sample.
+- A person's latest posts. `linkedin_get_profile` returns `recent_posts`, their five latest (URL, first lines, date). Further back, search the topics they post about and keep the rows whose `author` is theirs.
+- `linkedin_get_company` carries `followers`, the employees the page shows in `people`, similar pages in `related` and its specialties in `topics`.
 
 ## Thresholds
 

@@ -43,7 +43,7 @@ Before the first question, look for the product marketing context file: `.agents
 - The watch list is the reliable path. When searches keep finding mentions in one community, add it to step 2 rather than relying on search.
 - A missed Reddit window cannot be recovered past 7 days. For a daily schedule, a skipped day is fine; a skipped week leaves a gap that only the ranked search partly fills.
 - `created_at` on YouTube and LinkedIn rows is approximate, so a mention can look older than the last run. Dedupe on `id`, not on dates.
-- Not covered: X (no search), Facebook beyond the groups the user supplies, comments under TikTok, YouTube and Instagram videos (readable only one video at a time), and LinkedIn comments. Say so once in the first report.
+- Not covered: X (no search), Facebook beyond the groups the user supplies, and comments under TikTok, YouTube, Instagram and LinkedIn posts (readable only one post at a time, and on LinkedIn only the 10 it shows). Say so once in the first report.
 - Pages and threads that rank on Google for the brand are a cheap extra: `seo_get_serp` on the brand name once a week (1 credit), comparing the URLs with last week's.
 - Replying to a mention is the user's call. The server never sends alerts, emails or posts.
 

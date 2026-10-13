@@ -29,7 +29,7 @@ Ask for these in one message. For anything the user does not answer, use the def
 - **Goal**: pipeline and leads, hiring, awareness, or investors. Default: pipeline, measured by conversations the posts start.
 - **Stage**: pre-launch, early customers, or established. It decides whether the story is building in public or results.
 - **ICP**: the titles and companies that buy, so the topics are theirs and not the founder's peers'.
-- **Budget**: credits for the research (this plan costs about 60) and hours a week. Default: 500 credits, 3 posts a week and 20 minutes a day for comments.
+- **Budget**: credits for the research (this plan costs about 50) and hours a week. Default: 500 credits, 3 posts a week and 20 minutes a day for comments.
 - **Team**: who posts, who writes, whether employees will reshare. Default: the founder writes and posts, no ghostwriter.
 - **Competitors**: two or three companies, and two or three people in the space whose audience overlaps. Default: the companies the user names, and the people from the gaps step.
 - **Horizon**: default 90 days.
@@ -39,11 +39,11 @@ Ask for these in one message. For anything the user does not answer, use the def
 1. **Read the LinkedIn notes.** Before the first call, read the [LinkedIn notes](references/platforms/linkedin.md): what LinkedIn shows, the thresholds, what each call costs and the handoff. They hold for every skill this plan pulls in.
 2. **Intake.** Settle the inputs above and restate them in one short list, marking the defaults.
 3. **Baseline.** Say the cost first: about 30 credits for both modes.
-   - Founder: `linkedin_get_profile` on the founder (1 credit) for `followers` and the `bio`. There is no way to list a person's posts, so ask for the URLs of their last 10 and read each with `linkedin_get_post` (1 credit each): median likes and comments, and how often they post. With no URLs, `linkedin_search_posts` on the founder's two main topics with `since: "month"` (1 credit a page) and keep the rows whose `author_name` matches; mark the baseline as partial.
+   - Founder: `linkedin_get_profile` on the founder (1 credit) for `followers`, the `bio` and `recent_posts`, their five latest. Read each with `linkedin_get_post` (1 credit each), and ask for the URLs of five more for a baseline of 10: median likes and comments, and how often they post. With no URLs, `linkedin_search_posts` on the founder's two main topics with `since: "month"` (1 credit a page) and keep the rows whose `author_name` matches; mark the baseline as partial.
    - Company: `linkedin_get_company` on the page and each competitor (1 credit each) for the `bio`, `website`, `industry` and `employees`; `linkedin_get_company_posts` for each (1 credit a page) for posting cadence and topics; `linkedin_get_post` on the page's last 10 posts (1 credit each) for engagement, since the feed carries none.
 4. **Gaps.** About 30 credits more.
    - Topic gap: `linkedin_search_posts` for four ICP topics with `since: "month"`, two pages each (1 credit a page). Name the topics and angles with the most engagement, and whether the founder or the page posts on any of them.
-   - Voice gap: the authors of the top posts, traced to a profile per the [LinkedIn notes](references/platforms/linkedin.md#what-linkedin-shows) (1 credit each, top 10): their followers and engagement per 1,000 followers against the founder's. These are the people to learn from and comment on.
+   - Voice gap: the authors of the top posts, from each row's `author` and `author_followers` (no extra call): their followers and engagement per 1,000 followers against the founder's. These are the people to learn from and comment on.
    - Page gap, in company mode: `linkedin_get_post` on the strongest competitor's last 10 posts (1 credit each): what they post that earns more than the user's page.
 5. **Tactics.** From the gaps, choose two or three of these skills and say why each fits the numbers:
    - [find-linkedin-topic-leaders](../find-linkedin-topic-leaders/SKILL.md) when the founder does not know who owns the conversation: the people to learn from, comment on and partner with.
@@ -53,7 +53,7 @@ Ask for these in one message. For anything the user does not answer, use the def
    - [find-linkedin-buyer-posts](../find-linkedin-buyer-posts/SKILL.md) when the goal is pipeline: people already asking for what the user sells.
 6. **Plan.** A 30-60-90 day plan with an owner and a KPI per period, and three first actions for this week.
    - By day 30, a posting cadence the founder keeps (default three a week) on the two topics with the most engagement, and a daily list of posts to comment on. By day 60, the formats that worked doubled and one recurring series. By day 90, a second topic, and in company mode the page resharing the founder with its own weekly post.
-   - KPIs the tools can measure again later: founder followers (`linkedin_get_profile`), median likes and comments on the last 10 posts (`linkedin_get_post` on each URL; the host keeps the URLs, since no feed can be listed), company page posts a week (`linkedin_get_company_posts`) and their median engagement (`linkedin_get_post`), and how often the founder appears among the authors of the top results for the topic searches (`linkedin_search_posts`). Conversations and leads the posts start are not visible to the tools; the user counts them.
+   - KPIs the tools can measure again later: founder followers (`linkedin_get_profile`), median likes and comments on the last 10 posts (`linkedin_get_post` on each URL; the host keeps the URLs, since `recent_posts` reaches back only five), company page posts a week (`linkedin_get_company_posts`) and their median engagement (`linkedin_get_post`), and how often the founder appears among the authors of the top results for the topic searches (`linkedin_search_posts`). Conversations and leads the posts start are not visible to the tools; the user counts them.
 7. **Deliver** one document: the inputs with defaults marked, a baseline table (founder or page against each competitor and leader: followers where published, posts a week, median likes and comments), the gaps in three lines each, the chosen tactics with the linked skill and why, the 30-60-90 table, and the three first actions.
 
 ## Judgment

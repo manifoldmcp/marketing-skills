@@ -24,13 +24,13 @@ Before the first question, look for the product marketing context file: `.agents
 - **Niche**: four or five searches the ICP's world posts about. The topic leader searches from [find-linkedin-topic-leaders](../find-linkedin-topic-leaders/SKILL.md) serve if they were run.
 - **Sample**: default 80 posts or more, `since: "month"`; add `since: "year"` in a quiet niche.
 - **The user's own posts**: the URLs of their last 10, to compare against the niche. Optional.
-- **Budget**: a default run costs about 5 x 3 + 10 + 30 + 10 = 65 credits. Say so before starting; pass `max_credits` if the user gave a budget.
+- **Budget**: a default run costs about 5 x 3 + 10 + 10 = 35 credits. Say so before starting; pass `max_credits` if the user gave a budget.
 
 ## Steps
 
 1. **Read the [LinkedIn notes](../create-linkedin-plan/references/platforms/linkedin.md)** before the first call. They say what LinkedIn's rows show and what each call costs.
 2. **Collect the sample.** `linkedin_search_posts` for each search, three pages (1 credit a page). Keep rows with `text`, `likes` and `comments`; drop duplicates and company-page posts unless the user runs a page. For rows with null counts, `linkedin_get_post` (1 credit each).
-3. **Size the authors.** Trace the handles of the 30 most frequent authors per the [LinkedIn notes](../create-linkedin-plan/references/platforms/linkedin.md#what-linkedin-shows) and call `linkedin_get_profile` (1 credit each) for `followers`, so engagement can be compared per 1,000 followers.
+3. **Size the authors.** Each row carries `author_followers`, so engagement can be compared per 1,000 followers without another call.
 4. **Code each post from its text.**
    - Length: under 500 characters, 500 to 1,300, 1,300 to 2,000, and cut (the `text` stops at 2,000, so a longer post is only known as long).
    - Hook, the first line: a number or a result, a contrarian claim, a story opening, a question, a how-to promise, or news.

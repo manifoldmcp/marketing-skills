@@ -21,7 +21,7 @@ Before the first question, look for the product marketing context file: `.agents
 ## Inputs to settle first
 
 - **Brand**: the name and the domain, since engines mention names and cite domains.
-- **Competitors**: up to nine, names or domains. Default: the brands the engines name most in the first run; [find-competitors](../find-competitors/SKILL.md) finds them if the user has none.
+- **Competitors**: up to nine, names or domains. Default: the brands the engines name most in the first run (each row's `named_brands` lists them where the engine reports them); [find-competitors](../find-competitors/SKILL.md) finds them if the user has none.
 - **Prompts**: five to ten. Default: built in step 1.
 - **Engines**: the default five (chatgpt, claude, gemini, perplexity, ai_overview); add `ai_mode` if the user cares about Google's AI Mode (2 credits a prompt more).
 - **Market**: `location` and `language` if not the United States and English. Answers differ by country.

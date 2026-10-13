@@ -24,15 +24,15 @@ Before the first question, look for the product marketing context file: `.agents
 - **Best customers**: three to ten domains. The best by fit (bought fast, stayed, paid well), not the biggest logos: a famous customer that took a year to close teaches the wrong pattern.
 - **Exclusions**: current customers, open deals and accounts already contacted, as domains. The host holds them; the server keeps no state.
 - **Market**: the regions to search. Default: the regions the customers are in.
-- **Size of the list**: default up to 300 candidates, the best 60 read in full, the best 20 delivered.
-- **Budget**: a default run costs about 5 x 1 + 3 x 4 + 60 x 1 = 77 credits. Say so before starting; pass `max_credits` if the user gave a budget.
+- **Size of the list**: default up to 300 candidates, the best 60 scored, the best 20 delivered.
+- **Budget**: a default run costs about 5 x 1 + 3 x 4 = 17 credits. Say so before starting; pass `max_credits` if the user gave a budget.
 
 ## Steps
 
 1. **Profile the customers.** `leads_get_company` on each best customer (1 credit each). Read `industry`, `keywords[]` (the LinkedIn specialties), `employees`, `location`, `founded_year` and `description`. Write down what most of them share: the `industry` strings, the employee band that covers them, the regions, and specialties that appear on three or more records.
 2. **Search the pattern.** `leads_search_companies` with the shared `industries` (the exact strings from step 1), `employee_ranges` and `locations` (4 credits a page of up to 100 rows). Add `keywords` with a specific specialty three or more customers share; it keeps only rows that name it, so drop it if the page comes back thin. When the customers span two or three industries or regions, one call per combination, up to three. Remove the exclusions and the customers themselves by domain. The [search rules](../create-outbound-plan/references/lead-data.md#searches-and-counts) apply.
-3. **Cut on the rows.** The rows carry `industry`, `employees` and `location`: drop the ones outside the band or the regions, for free. Keep the best 60 by how close they sit to the customers (same industry string first, then the band).
-4. **Read the shortlist.** `leads_get_company` on the 60 (1 credit each) for `keywords[]` and `description`. Score each one against the customer profile, one point per match: two or more shared specialties, industry, employee band, region, and a description that names the same kind of customer or problem as the customers' do. Drop anything that misses on two of the first four.
+3. **Cut on the rows.** The rows carry `industry`, `employees`, `location`, `keywords[]` and `description`: drop the ones outside the band or the regions, for free. Keep the best 60 by how close they sit to the customers (same industry string first, then the band).
+4. **Score the shortlist** from the same rows, at no further cost. Score each one against the customer profile, one point per match: two or more shared specialties, industry, employee band, region, and a description that names the same kind of customer or problem as the customers' do. Drop anything that misses on two of the first four.
 5. **Deliver** a table of the best 20: company, domain, LinkedIn URL, industry, employees, location, the traits matched (for example "4 of 5: payment orchestration, Financial Services, 51 to 200, London"), the specialties it shares with the customers, the customer it most resembles, and the score. Offer to run [build-lead-list](../build-lead-list/SKILL.md) on it from its people step.
 
 ## Judgment
