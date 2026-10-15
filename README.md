@@ -1,10 +1,64 @@
-# Marketing Skills
+# Manifold: the free marketing data connector for AI agents
+
+**Free every month.** One sign-in gives Claude, ChatGPT or any MCP client live data from Google search, AI answers, Search Console, Google Analytics, Google Maps, Reddit, TikTok, Instagram, YouTube, Facebook, LinkedIn, the ad libraries, the app stores, Amazon, Google Shopping, and companies and people. There is no account to open with each platform: no Reddit API app, no LinkedIn login, no SEO subscription.
+
+```text
+https://mcp.manifoldmcp.com/mcp
+```
+
+A remote MCP server over Streamable HTTP, with OAuth sign-in or a Manifold API key as a bearer token. [Manifold](https://www.manifoldmcp.com) hosts the server, and it is not open source. This repository holds the plugin manifests and the marketing skills that run on it, under the MIT license. Agents can read [llms.txt](https://www.manifoldmcp.com/llms.txt) for when to use it, what is free and its limits.
+
+## Connect
+
+| Client | How |
+|--------|-----|
+| Claude | Settings, then Connectors: add a custom connector, paste the URL and sign in. |
+| Claude Code | `claude mcp add --transport http manifold https://mcp.manifoldmcp.com/mcp`, then `/mcp` to sign in. |
+| ChatGPT | At chatgpt.com/plugins, click Add, then Create custom MCP server, and paste the URL. Plus, Pro, Business, Enterprise and Edu, on the web. |
+| Codex | `codex mcp add manifold --url https://mcp.manifoldmcp.com/mcp`, then `codex mcp login manifold` to sign in. |
+| Cursor | [Add to Cursor](https://cursor.com/install-mcp?name=manifold&config=eyJ1cmwiOiJodHRwczovL21jcC5tYW5pZm9sZG1jcC5jb20vbWNwIn0%3D), or paste the URL in the MCP section of Cursor Settings. |
+| Gemini CLI | `gemini mcp add --transport http manifold https://mcp.manifoldmcp.com/mcp`, then `/mcp auth manifold` to sign in. |
+| Grok | Settings, then Connectors: add a connector, paste the URL and sign in. |
+| Grok Bot | Paste to the bot: `Add the Manifold MCP server as a plugin: https://mcp.manifoldmcp.com/mcp.` |
+| OpenCode | Run `opencode mcp add`, choose Remote and paste the URL. |
+| Any other MCP client | Add the URL as a remote MCP server. |
+
+Signing in creates a workspace with free credits. The steps for each client are at https://www.manifoldmcp.com/docs/clients. To add the marketing skills as well, install the plugin: see [Marketing skills](#marketing-skills).
+
+## What your agent can look up
+
+- **Google search**: keyword ideas, volumes and difficulty, rankings, results pages, backlinks, competitors, traffic estimates and a technical crawl.
+- **AI answers**: what ChatGPT, Claude, Gemini, Perplexity and Google's AI answers say for a prompt, which brands they name and which pages they cite, and whether a site is ready for them.
+- **Search Console and Google Analytics**: your own Google Search Console, Bing Webmaster Tools and Google Analytics data once you connect them, and sitemap and URL submission.
+- **Google Maps**: who ranks for a local search, filtered lists of businesses, and full Business Profiles.
+- **Reddit**: posts, comments and communities, searched across Reddit or watched in one subreddit.
+- **Social**: accounts, posts, comments and transcripts on TikTok, Instagram, YouTube, Facebook and LinkedIn.
+- **Ad libraries**: the ads running on Meta, Google, TikTok and LinkedIn, by keyword, brand or advertiser.
+- **Stores**: Google Play and App Store listings, reviews and charts, and Amazon and Google Shopping results, products, sellers and prices.
+- **Companies and people**: company and people search, and verified work emails.
+
+Every tool, with what it costs, is at https://www.manifoldmcp.com/docs/tools.
+
+## Free every month
+
+- Every workspace gets free credits each month, with no card.
+- The Search Console, Bing Webmaster Tools and Google Analytics tools, the on-page snapshot and the AI readiness check cost nothing on any plan.
+- Every tool states its price before it runs. Your agent can check a price without paying it, and cap what a call may spend.
+- After the free credits, a monthly plan buys more. Prices are at https://www.manifoldmcp.com/pricing.
+
+## What it does not do
+
+- It looks things up. It does not post, comment, message, send email or buy anything. The one thing it changes elsewhere is your own Search Console or Bing, when you ask it to submit a sitemap or URLs.
+- It reads public data and your own Search Console, Bing and Google Analytics. It does not connect your ad accounts, CRM or inbox.
+- It is hosted by Manifold and is not open source. Manifold MCP is not related to Manifold Markets.
+
+## Marketing skills
 
 **Marketing skills for AI agents that look at the data before they answer.** Built by [Manifold](https://www.manifoldmcp.com).
 
 Ask an agent why your traffic fell, who your competitors pay to reach or which creators fit your niche, and it usually answers from memory. These skills give it the numbers instead. Each one does a single marketing job, calls the Manifold MCP server for live search, AI answer, social, ad library and company data, and hands you a table you can act on.
 
-Claude Code, Codex and Gemini CLI install the skills and the connector together. Cursor, Cline and other agents that read [Agent Skills](https://agentskills.io) get the skills and connect the server themselves. The skills are MIT-licensed; the data runs on prepaid [credits](#credits).
+Claude Code, Codex and Gemini CLI install the skills and the connector together. Cursor, Cline and other agents that read [Agent Skills](https://agentskills.io) get the skills and connect the server themselves. The skills are MIT-licensed; the data is free every month, with [credits](#credits) to buy for more.
 
 Questions, bugs and skill requests go to [issues](https://github.com/manifoldmcp/marketing-skills/issues).
 

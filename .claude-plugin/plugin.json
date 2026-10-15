@@ -1,8 +1,8 @@
 {
   "name": "manifold",
   "displayName": "Manifold",
-  "version": "1.0.1791881102",
-  "description": "Marketing skills for SEO, AI search, link building, paid ads, influencers, leads, Reddit, TikTok, Instagram, YouTube, LinkedIn, Facebook, competitors, customers, content, monitoring and agencies, on the Manifold MCP server's marketing data tools.",
+  "version": "1.0.1792071024",
+  "description": "The free marketing data connector for AI agents, with marketing skills that run on it. One sign-in gives your agent live data from Google search, AI answers, Search Console, Google Analytics, Google Maps, Reddit, TikTok, Instagram, YouTube, Facebook, LinkedIn, the ad libraries, the app stores, Amazon, Google Shopping, and companies and people. No account with each platform, and no SEO subscription.",
   "author": {
     "name": "Manifold",
     "email": "jesse@manifoldmcp.com",
@@ -13,16 +13,26 @@
   "license": "MIT",
   "keywords": [
     "marketing",
+    "mcp",
+    "mcp-server",
+    "remote-mcp",
     "seo",
+    "seo-mcp",
     "geo",
     "aeo",
     "ai-search",
-    "link-building",
-    "leads",
-    "paid-ads",
-    "influencers",
-    "social-media",
+    "ai-visibility",
+    "search-console",
+    "google-analytics",
     "reddit",
-    "mcp"
+    "linkedin",
+    "tiktok",
+    "instagram",
+    "youtube",
+    "social-media",
+    "paid-ads",
+    "leads",
+    "link-building",
+    "influencers"
   ]
 }

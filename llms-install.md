@@ -1,6 +1,6 @@
 # Install Manifold in Cline
 
-Configure the Manifold MCP server in Cline to access marketing data tools (SEO, AI search visibility, leads, Reddit, social platforms and ad libraries) through the marketing skills.
+Manifold is the free marketing data connector for AI agents. Add its MCP server to Cline and one sign-in gives Cline live data from Google search, AI answers, Search Console, Google Analytics, Google Maps, Reddit, TikTok, Instagram, YouTube, Facebook, LinkedIn, the ad libraries, the app stores, Amazon, Google Shopping, and companies and people, without an account with each platform. The marketing skills in this repository run on it.
 
 ## Server configuration
 
@@ -55,7 +55,7 @@ Then configure the server with the API key in the authorization header:
 
 ## Usage
 
-Every tool call costs Manifold credits (100 credits equal one US dollar). The marketing skills in this repository show the cost before making paid calls. Install the skills with:
+Every workspace gets free credits each month, with no card. Tool calls cost Manifold credits (100 credits equal one US dollar), while the Search Console, Bing Webmaster Tools and Google Analytics tools cost nothing. Every tool states its price before it runs, and the marketing skills in this repository show the cost before making paid calls. Install the skills with:
 
 ```bash
 npx skills add manifoldmcp/marketing-skills
@@ -65,13 +65,15 @@ Start with `/manifold-get-started`: it asks about your goal and picks the skills
 
 ## What the server provides
 
-Read-only marketing data tools:
+Marketing data tools that look things up:
 
-- Search and keyword data (rankings, traffic estimates, SERP features)
-- AI answer visibility (ChatGPT, Claude, Gemini, Perplexity, Google AI Overviews)
-- Link building (backlinks, referring domains, domain ratings)
-- Leads (company search, people search, email finding and verification)
-- Social platforms (Reddit, TikTok, Instagram, YouTube, LinkedIn, Facebook)
-- Ad libraries (Meta, TikTok, LinkedIn, Google ads)
+- Google search: keywords, rankings, results pages, backlinks, competitors, traffic estimates and a technical crawl
+- AI answers: what ChatGPT, Claude, Gemini, Perplexity and Google's AI answers say and cite, and whether a site is ready for them
+- Your own Google Search Console, Bing Webmaster Tools and Google Analytics data, once connected, and sitemap and URL submission
+- Google Maps: local rankings, lists of businesses and Business Profiles
+- Reddit, TikTok, Instagram, YouTube, Facebook and LinkedIn: accounts, posts, comments and transcripts
+- Ad libraries: the ads running on Meta, Google, TikTok and LinkedIn
+- Stores: Google Play and App Store listings, Amazon and Google Shopping products and prices
+- Companies and people: company search, people search, and verified work emails
 
-Nothing is sent, posted or bought for you. Every skill ends with a table you act on.
+Nothing is posted, emailed or bought for you: the one change it makes elsewhere is a sitemap or URL submission to your own Search Console or Bing, when you ask. Every skill ends with a table you act on.

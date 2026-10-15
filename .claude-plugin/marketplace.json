@@ -1,6 +1,6 @@
 {
   "name": "manifold",
-  "description": "Manifold's marketing skills for AI agents, with the Manifold MCP connector.",
+  "description": "The free marketing data connector for AI agents, and the marketing skills that run on it.",
   "owner": {
     "name": "Manifold",
     "email": "jesse@manifoldmcp.com"
@@ -9,7 +9,7 @@
     {
       "name": "manifold",
       "source": "./",
-      "description": "More than 100 marketing skills, one per job and each named for what it does, on Manifold's marketing data tools, and the connector they run on."
+      "description": "The free Manifold MCP server, for live data from Google search, AI answers, Search Console, Reddit, TikTok, Instagram, YouTube, LinkedIn, the ad libraries and more, and the marketing skills that run on it."
     }
   ]
 }
