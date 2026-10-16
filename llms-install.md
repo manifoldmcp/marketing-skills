@@ -61,7 +61,7 @@ Every workspace gets free credits each month, with no card. Tool calls cost Mani
 npx skills add manifoldmcp/marketing-skills
 ```
 
-Start with `/manifold-get-started`: it asks about your goal and picks the skills to run. Run any skill by its name, such as `/audit-technical-seo` or `/find-tiktok-creators`, or let it load automatically when a request matches. If another plugin has a skill with the same name, use `/manifold:audit-technical-seo`.
+Start with `/manifold-get-started`: it asks about your goal and picks the skills to run. Run any skill by its name, such as `/seo` or `/creators`, or let it load automatically when a request matches. If another plugin has a skill with the same name, use `/manifold:seo`.
 
 ## What the server provides
 

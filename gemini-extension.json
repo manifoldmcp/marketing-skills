@@ -1,6 +1,6 @@
 {
   "name": "manifold",
-  "version": "1.0.1792071024",
+  "version": "1.0.1792156866",
   "description": "The free marketing data connector for AI agents. One sign-in gives Gemini CLI live data from Google search, AI answers, Search Console, Google Analytics, Google Maps, Reddit, TikTok, Instagram, YouTube, Facebook, LinkedIn, the ad libraries, the app stores, Amazon, Google Shopping, and companies and people, with marketing skills that run on it. No account with each platform.",
   "mcpServers": {
     "manifold": {

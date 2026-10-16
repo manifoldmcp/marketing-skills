@@ -56,7 +56,7 @@ Every tool, with what it costs, is at https://www.manifoldmcp.com/docs/tools.
 
 **Marketing skills for AI agents that look at the data before they answer.** Built by [Manifold](https://www.manifoldmcp.com).
 
-Ask an agent why your traffic fell, who your competitors pay to reach or which creators fit your niche, and it usually answers from memory. These skills give it the numbers instead. Each one does a single marketing job, calls the Manifold MCP server for live search, AI answer, social, ad library and company data, and hands you a table you can act on.
+Ask an agent what works in AI search, on TikTok or in cold email, and it answers from what it learned a year or more ago. These skills give it what changed since: dated, sourced findings on each channel, what the evidence no longer supports, and Manifold's own measurements. Each skill covers one area of marketing, and calls the Manifold MCP server for live search, AI answer, social, ad library and company data when the work needs numbers.
 
 Claude Code, Codex and Gemini CLI install the skills and the connector together. Cursor, Cline and other agents that read [Agent Skills](https://agentskills.io) get the skills and connect the server themselves. The skills are MIT-licensed; the data is free every month, with [credits](#credits) to buy for more.
 
@@ -68,9 +68,9 @@ Questions, bugs and skill requests go to [issues](https://github.com/manifoldmcp
 npx skills add manifoldmcp/marketing-skills
 ```
 
-[npx skills](https://github.com/vercel-labs/skills) installs every skill in Claude Code, Codex, Cursor and the other agents it supports, or only the ones you name with `--skill`. It does not add the connector: add the Manifold MCP server at `https://mcp.manifoldmcp.com/mcp` with the steps for your client at https://www.manifoldmcp.com/docs/clients. Every skill checks for the connector first and tells you if it is missing.
+[npx skills](https://github.com/vercel-labs/skills) installs every skill in Claude Code, Codex, Cursor and the other agents it supports, or only the ones you name with `--skill`. It does not add the connector: add the Manifold MCP server at `https://mcp.manifoldmcp.com/mcp` with the steps for your client at https://www.manifoldmcp.com/docs/clients. Every skill still helps without the connector, and tells you how to connect when the work needs live data.
 
-Then run `/manifold-get-started`. It writes down what your business sells and to whom, drafting from your site so you only fill the gaps, then picks three to five skills for your goal in the order to run them.
+Then run `/manifold-get-started`. It writes down what your business sells and to whom, drafting from your site so you only fill the gaps, then picks the skills for your goal in the order to use them.
 
 In Claude Code, Codex and Gemini CLI, the plugin installs the skills and the connector together. In Claude Code:
 
@@ -87,13 +87,13 @@ You do not need to know a skill's name. Describe the job and the matching skill 
 
 | You ask | The skill that runs |
 |---------|---------------------|
-| "Does ChatGPT recommend us when people ask for a CRM?" | `check-ai-visibility` |
-| "Find TikTok creators in home fitness under 100k followers" | `find-tiktok-creators` |
-| "What is our main competitor running on Meta right now?" | `research-meta-ads` |
-| "Heads of marketing at Series A fintechs, with verified emails" | `build-lead-list` |
-| "What do people on Reddit hate about project management tools?" | `find-reddit-pain-points` |
+| "Does ChatGPT recommend us when people ask for a CRM? Do listicles still work?" | `ai-search` |
+| "Find TikTok creators in home fitness under 100k followers" | `creators` |
+| "What is our main competitor running on Meta right now?" | `paid-ads` |
+| "Heads of marketing at Series A fintechs, with verified emails" | `outbound` |
+| "What do people on Reddit hate about project management tools?" | `reddit` |
 
-Or run one directly by name, such as `/audit-technical-seo`. If another plugin uses the same name, add the prefix: `/manifold:audit-technical-seo`.
+Or run one directly by name, such as `/seo`. If another plugin uses the same name, add the prefix: `/manifold:seo`.
 
 ## Install
 
@@ -123,176 +123,112 @@ Run `/mcp auth manifold` in Gemini CLI to sign in, and `gemini extensions update
 
 ## The skills
 
-Names start with the verb: `create-` a plan, or `find-`, `audit-`, `check-`, `mine-`, `write-`, `monitor-`. The library is flat, so install all of it or only what you need; the groups below are for browsing.
+One skill per area of marketing, named for the area. The library is flat, so install all of it or only what you need; the groups below are for browsing.
 
 ### Start here
 
 | Skill | What it does |
 |-------|--------------|
-| [`manifold-get-started`](skills/manifold-get-started/) | Writes down once what every skill needs to know about your business (what you sell, who buys, competitors, positioning, customer language, goals) in `.agents/product-marketing.md`, then picks three to five skills for your goal in the order to run them. |
+| [`manifold-get-started`](skills/manifold-get-started/) | Writes down once what every skill needs to know about your business (what you sell, who buys, competitors, positioning, customer language, goals) in `.agents/product-marketing.md`, then picks the skills for your goal in the order to use them. |
 
 ### SEO
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-seo-plan`](skills/create-seo-plan/) | A 90-day SEO plan from where the site stands, its competitors and the keyword gaps. |
-| [`audit-technical-seo`](skills/audit-technical-seo/) | What stops Google crawling and indexing the pages that matter. |
-| [`diagnose-traffic-drop`](skills/diagnose-traffic-drop/) | Why organic traffic fell, and what to fix first. |
-| [`create-migration-plan`](skills/create-migration-plan/) | Move domains, platforms or URLs without losing rankings. |
-| [`find-seo-quick-wins`](skills/find-seo-quick-wins/) | Pages near page one that a small change moves up. |
-| [`refresh-content`](skills/refresh-content/) | Pages that decayed or sit just off page one, and what to update. |
-| [`create-seo-content-plan`](skills/create-seo-content-plan/) | Topic clusters and an order to publish them in. |
-| [`write-seo-brief`](skills/write-seo-brief/) | A brief for one page that can win its keyword. |
-| [`optimize-page`](skills/optimize-page/) | What one page is missing against the pages that beat it. |
-| [`plan-comparison-pages`](skills/plan-comparison-pages/) | "X vs Y" and alternatives pages worth writing. |
-| [`fix-keyword-cannibalization`](skills/fix-keyword-cannibalization/) | Pages of yours that compete for one query, and which should win. |
+| [`seo`](skills/seo/) | Google rankings now: what the 2025-2026 updates rewarded and punished, keywords, content, briefs, quick wins, refreshes, comparison pages, rank tracking and Search Console. |
+| [`technical-seo`](skills/technical-seo/) | Crawling, indexing, traffic drops and migrations, including the false drops that come from Google's own reporting changes. |
 
 ### AI search
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-ai-search-plan`](skills/create-ai-search-plan/) | A plan to get named and cited by ChatGPT, Claude, Gemini, Perplexity and Google's AI answers. |
-| [`check-ai-visibility`](skills/check-ai-visibility/) | Which brands AI answers name and cite for your buyers' questions, once or on a schedule. |
-| [`build-ai-citations`](skills/build-ai-citations/) | The sources AI engines cite for competitors and not for you, Reddit threads and YouTube videos included. |
-| [`check-ai-overviews`](skills/check-ai-overviews/) | Which of your keywords show a Google AI Overview, and whether it cites you. |
-| [`fix-wrong-ai-answers`](skills/fix-wrong-ai-answers/) | Find and fix what AI answers get wrong about you. |
-| [`check-ai-crawler-access`](skills/check-ai-crawler-access/) | Whether AI crawlers can reach and read your site. |
-| [`find-best-of-lists`](skills/find-best-of-lists/) | The best-of lists that rank on Google and that AI engines cite, and how to get on them. |
+| [`ai-search`](skills/ai-search/) | What gets a brand named and cited in ChatGPT, Claude, Gemini, Perplexity and Google's AI answers now, what tested as doing nothing, and how to measure it without fooling yourself. |
 
 ### Links and PR
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-link-building-plan`](skills/create-link-building-plan/) | A link building plan from your links, your competitors' and the gaps. |
-| [`find-backlink-targets`](skills/find-backlink-targets/) | Sites worth a backlink, with a verified contact at each. |
-| [`create-digital-pr-plan`](skills/create-digital-pr-plan/) | The stories that earn coverage in your space, in a 90-day plan. |
-| [`find-journalists`](skills/find-journalists/) | The journalists who cover your story, with a contact for each. |
-| [`find-podcasts`](skills/find-podcasts/) | Podcasts to guest on, with a contact for each. |
-| [`find-unlinked-mentions`](skills/find-unlinked-mentions/) | Pages that name you without a link. |
-| [`reclaim-lost-links`](skills/reclaim-lost-links/) | Links you lost, and which are worth winning back. |
-| [`find-affiliate-partners`](skills/find-affiliate-partners/) | Sites that already promote products like yours. |
+| [`link-building`](skills/link-building/) | Which backlinks still move rankings, where to find them, unlinked mentions, lost links, and the right contact at any site. |
+| [`digital-pr`](skills/digital-pr/) | What journalists and podcast hosts say they want now, the stories that earn coverage, and who to pitch. |
 
 ### Social media
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-tiktok-plan`](skills/create-tiktok-plan/), [`create-instagram-plan`](skills/create-instagram-plan/), [`create-youtube-plan`](skills/create-youtube-plan/), [`create-linkedin-plan`](skills/create-linkedin-plan/), [`create-facebook-plan`](skills/create-facebook-plan/) | A 90-day plan for one platform. |
-| [`audit-tiktok-account`](skills/audit-tiktok-account/), [`audit-instagram-account`](skills/audit-instagram-account/), [`audit-youtube-channel`](skills/audit-youtube-channel/), [`audit-facebook-page`](skills/audit-facebook-page/), [`audit-linkedin-page`](skills/audit-linkedin-page/), [`audit-x-account`](skills/audit-x-account/) | Your own or a competitor's account. |
-| [`find-tiktok-hooks`](skills/find-tiktok-hooks/), [`find-instagram-hooks`](skills/find-instagram-hooks/) | The opening lines that hold viewers in your niche. |
-| [`find-tiktok-trends`](skills/find-tiktok-trends/), [`find-reels-trends`](skills/find-reels-trends/) | The trends your niche can use now. |
-| [`analyze-viral-tiktok`](skills/analyze-viral-tiktok/), [`analyze-viral-reel`](skills/analyze-viral-reel/), [`analyze-viral-youtube-video`](skills/analyze-viral-youtube-video/) | Why one video took off. |
-| [`find-content-ideas`](skills/find-content-ideas/) | Post ideas from real demand, across channels. |
-| [`find-youtube-video-ideas`](skills/find-youtube-video-ideas/) | YouTube videos worth making. |
-| [`find-linkedin-post-formats`](skills/find-linkedin-post-formats/) | The LinkedIn formats that win in your niche. |
-| [`create-content-calendar`](skills/create-content-calendar/) | What to post, where and when. |
-| [`repurpose-content`](skills/repurpose-content/) | One piece of content turned into posts for each channel. |
+| [`tiktok`](skills/tiktok/) | What TikTok rewards now, account audits, hooks, trends, comments and why a video took off. |
+| [`instagram`](skills/instagram/) | How Instagram ranks Reels and posts now, account audits, hooks, trends and comments. |
+| [`youtube`](skills/youtube/) | What YouTube recommends now, channel audits, video ideas, comments, and YouTube as a source for AI answers. |
+| [`linkedin`](skills/linkedin/) | LinkedIn's feed now for people and company pages, formats, commenting, topic leaders and buyer posts. |
+| [`facebook`](skills/facebook/) | Facebook pages and groups now, page audits, comments and group mining. |
+| [`x-twitter`](skills/x-twitter/) | How X ranks posts now, and account audits. |
+
+### Shops, apps and local
+
+| Skill | What it does |
+|-------|--------------|
+| [`local-seo`](skills/local-seo/) | Google Maps and Business Profiles now: what moves the local pack, reviews, rank checks across a town, local competitors and local prospect lists. |
+| [`amazon`](skills/amazon/) | Amazon search and listings now: keywords and real Amazon search volume, competitor listings, pricing and the Buy Box, and what Rufus changed. |
+| [`google-shopping`](skills/google-shopping/) | Google Shopping, product feeds and AI shopping answers: who wins a product search, price checks across stores, feed audits and product reviews. |
+| [`app-store`](skills/app-store/) | App Store and Google Play search: store keywords, listings, competitor apps, reviews and top charts. |
 
 ### Communities
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-reddit-plan`](skills/create-reddit-plan/) | A plan to show up on Reddit without getting banned. |
-| [`find-subreddits`](skills/find-subreddits/) | The subreddits your buyers use, and their rules. |
-| [`find-reddit-threads`](skills/find-reddit-threads/) | Reddit threads worth a reply. |
-| [`find-linkedin-posts-to-comment`](skills/find-linkedin-posts-to-comment/) | LinkedIn posts worth a comment today. |
-| [`find-linkedin-buyer-posts`](skills/find-linkedin-buyer-posts/) | People on LinkedIn posting about the problem you solve. |
-| [`find-linkedin-topic-leaders`](skills/find-linkedin-topic-leaders/) | Who leads the conversation on your topic. |
+| [`reddit`](skills/reddit/) | Reddit without getting banned: communities, threads, pain points, and Reddit's changing place in Google and AI answers. |
 
-### Influencers
+### Creators
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-influencer-plan`](skills/create-influencer-plan/) | An influencer plan from what competitors run and what works in your niche. |
-| [`find-creators`](skills/find-creators/) | Creators across TikTok, Instagram and YouTube, in one table. |
-| [`find-tiktok-creators`](skills/find-tiktok-creators/), [`find-instagram-creators`](skills/find-instagram-creators/), [`find-youtube-creators`](skills/find-youtube-creators/) | Creators on one platform. |
-| [`find-ugc-creators`](skills/find-ugc-creators/) | Creators who make review and unboxing videos for ads. |
-| [`find-brand-fans`](skills/find-brand-fans/) | Creators already posting about you. |
-| [`vet-creator`](skills/vet-creator/) | Whether one creator is worth the fee, and where their audience lives. |
-| [`write-creator-brief`](skills/write-creator-brief/) | The campaign brief a creator works from. |
+| [`creators`](skills/creators/) | Influencer, UGC and affiliate work across platforms: rates, fake-engagement signals, vetting, briefs, disclosure rules and brand fans. |
 
 ### Paid ads
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-paid-ads-plan`](skills/create-paid-ads-plan/) | Which platforms to run ads on, and with what budget. |
-| [`research-meta-ads`](skills/research-meta-ads/), [`research-google-ads`](skills/research-google-ads/), [`research-tiktok-ads`](skills/research-tiktok-ads/), [`research-linkedin-ads`](skills/research-linkedin-ads/) | One competitor's ads, or the best ads across your category, on one platform. |
-| [`write-ad-brief`](skills/write-ad-brief/) | A brief for new ad creative. |
-| [`find-google-ads-keywords`](skills/find-google-ads-keywords/) | The search keywords worth bidding on. |
-| [`check-google-brand-bidding`](skills/check-google-brand-bidding/) | Who bids on your brand name. |
+| [`paid-ads`](skills/paid-ads/) | Ad platforms after the 2025-2026 automation changes, competitors' ads in the ad libraries, keywords, brand bidding, ads in AI answers and creative briefs. |
 
 ### Outbound
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-outbound-plan`](skills/create-outbound-plan/) | An outbound plan from your ICP, the market and your send capacity. |
-| [`size-market`](skills/size-market/) | How many companies and buyers fit your ICP. |
-| [`find-lookalike-companies`](skills/find-lookalike-companies/) | Companies like your best customers. |
-| [`build-lead-list`](skills/build-lead-list/) | A list of buyers with verified emails. |
-| [`find-buying-signals`](skills/find-buying-signals/) | Companies showing a reason to buy now. |
-| [`track-job-changes`](skills/track-job-changes/) | Past champions who moved to a new company. |
-| [`research-account`](skills/research-account/) | One account, researched before a call. |
-| [`write-first-lines`](skills/write-first-lines/) | A personal first line for each lead. |
-| [`clean-email-list`](skills/clean-email-list/) | Verify and clean a list you already have. |
-| [`enrich-lead-list`](skills/enrich-lead-list/) | Fill in the missing fields of a list. |
+| [`outbound`](skills/outbound/) | Cold email that still lands under the 2024-2025 sender rules: lead lists, verification, buying signals, job changes, account research and first lines. |
 
-### Customer research
+### Customer and market research
 
 | Skill | What it does |
 |-------|--------------|
-| [`find-pain-points`](skills/find-pain-points/) | What buyers complain about, across every source. |
-| [`find-reddit-pain-points`](skills/find-reddit-pain-points/) | Pain points from Reddit threads. |
-| [`mine-facebook-groups`](skills/mine-facebook-groups/) | Questions and complaints in Facebook groups. |
-| [`mine-tiktok-comments`](skills/mine-tiktok-comments/), [`mine-instagram-comments`](skills/mine-instagram-comments/), [`mine-youtube-comments`](skills/mine-youtube-comments/), [`mine-facebook-comments`](skills/mine-facebook-comments/) | What people say under posts on one platform. |
-| [`build-personas`](skills/build-personas/) | Personas built from evidence. |
-| [`find-objections`](skills/find-objections/) | The doubts that stop people buying. |
-| [`find-competitor-complaints`](skills/find-competitor-complaints/) | What competitors' customers complain about, and why they switch. |
-| [`check-demand`](skills/check-demand/) | Whether people want the thing, before you build or launch it. |
-| [`map-market`](skills/map-market/) | The players in a market and where each one wins. |
+| [`voice-of-customer`](skills/voice-of-customer/) | Pain points, objections, personas and positioning from what customers actually say. |
+| [`market-research`](skills/market-research/) | Market size, market maps, demand checks and entering a new market, with the limits of each signal. |
 
 ### Competitor research
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-competitor-plan`](skills/create-competitor-plan/) | A plan to win against your competitors. |
-| [`find-competitors`](skills/find-competitors/) | Who your real competitors are. |
-| [`tear-down-competitor`](skills/tear-down-competitor/) | One competitor across search, ads, social and AI answers. |
-| [`compare-messaging`](skills/compare-messaging/) | How competitors describe and price themselves. |
-| [`find-positioning`](skills/find-positioning/) | Where you can stand apart. |
-| [`write-battlecard`](skills/write-battlecard/) | A sales battlecard for one competitor. |
+| [`competitor-intel`](skills/competitor-intel/) | Who the competitors are, teardowns, monitoring, messaging, complaints and battlecards, and how far to trust traffic estimates. |
 
 ### Growth and launch
 
 | Skill | What it does |
 |-------|--------------|
-| [`create-growth-plan`](skills/create-growth-plan/) | A growth plan for your goal (traffic, signups, leads, awareness, first customers). |
-| [`pick-channels`](skills/pick-channels/) | Which channels to be on at all. |
-| [`find-first-customers`](skills/find-first-customers/) | Where to find your first 100 customers. |
-| [`create-gtm-plan`](skills/create-gtm-plan/) | A go-to-market plan. |
-| [`create-market-entry-plan`](skills/create-market-entry-plan/) | Whether and how to enter a new country or segment. |
-| [`measure-brand-awareness`](skills/measure-brand-awareness/) | Your awareness against competitors, and what moves it. |
-| [`create-launch-plan`](skills/create-launch-plan/) | A launch plan, communities, creators, press, and a report on the reaction. |
+| [`growth-strategy`](skills/growth-strategy/) | Which channels to bet on now, growth and go-to-market plans, launches, content calendars, ideas and repurposing. |
 
 ### Monitoring
 
 | Skill | What it does |
 |-------|--------------|
-| [`monitor-brand-mentions`](skills/monitor-brand-mentions/) | New mentions of your brand, on your agent's schedule. |
-| [`monitor-competitors`](skills/monitor-competitors/) | What competitors changed this week. |
-| [`track-rankings`](skills/track-rankings/) | Where you rank, once or on a schedule. |
-| [`monitor-search-console`](skills/monitor-search-console/) | Drops in your own Search Console clicks and impressions. |
-| [`write-weekly-report`](skills/write-weekly-report/) | One weekly report across search, AI answers, social and mentions. |
+| [`brand-monitoring`](skills/brand-monitoring/) | Brand mentions and awareness: share of search, what listening tools can and cannot see, and AI answers as an awareness surface. |
 
 ### Agencies
 
 | Skill | What it does |
 |-------|--------------|
-| [`prepare-client-pitch`](skills/prepare-client-pitch/) | A prospect audit and the data for a pitch. |
-| [`onboard-client`](skills/onboard-client/) | A new client's baseline and first plan. |
-| [`write-client-report`](skills/write-client-report/) | The monthly client report. |
+| [`agency`](skills/agency/) | Client onboarding, pitches built on a prospect's real data, and client and weekly reports that hold up. |
 
 ## Credits
 
-Every tool call costs Manifold credits (100 credits are one US dollar), and every skill says what a run costs before the first paid call. Give a budget and the agent caps every call with it. Prices are at https://www.manifoldmcp.com/pricing.
+Every tool call costs Manifold credits (100 credits are one US dollar), and the skills tell the agent what calls cost so it can say before the first paid one. Give a budget and the agent caps every call with it. Prices are at https://www.manifoldmcp.com/pricing.
 
 ## What the plugin runs and sends
 
@@ -302,7 +238,7 @@ The plugin is Markdown skills, two manifests and one connector entry. It runs no
 - **What a call sends.** Only the parameters the call needs: domains, URLs, keywords, prompts to ask AI engines, social handles and post URLs, subreddit names, company and person filters, the names and domains used to look up a work email, and email addresses to verify.
 - **Where the server gets its data.** DataForSEO for search, keyword, backlink, site audit and AI answer data; ScrapeCreators for public Reddit, social platform and ad library data; Apollo, Hunter, Findymail and Icypeas for company data, professional contacts and email verification. Two tools fetch the site you name directly. These providers receive the parameters of a call, never your name, email address or account.
 - **What the server keeps.** Your credit balance, the charge for each call, task results for 30 days and cached results. The full policy is at https://www.manifoldmcp.com/privacy.
-- **What it never does.** Send email, post, comment, message, buy, or change anything on another service. Every skill ends in a table for you to act on.
+- **What it never does.** Send email, post, comment, message, buy, or change anything on another service. The skills hand you the results to act on.
 
 ## Contributing
 
