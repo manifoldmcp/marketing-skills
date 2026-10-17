@@ -12,11 +12,11 @@ How big a market is, counted so the number survives a sceptical reader: accounts
 
 ## Counting accounts bottom-up
 
-With the connector, count from the lead provider's totals rather than fetching rows. A segment of 40,000 accounts costs 4 credits to count; revealing a buyer at each would cost far more.
+With the connector, count from the lead provider's totals rather than fetching rows. A segment of 40,000 accounts costs 1 credit to count at `limit: 1`; revealing a buyer at each would cost far more.
 
 1. **Turn the ICP into filters** on `leads_search_companies`: `industries[]`, `locations[]`, `employee_ranges[]` as "min,max" and `keywords[]`. Industries are LinkedIn's names; `leads_get_company` (1 credit) on two of the user's customers shows the exact `industry` string to copy. The user's category word ("SaaS", "fintech") is a keyword, not an industry. The full filter rules belong to [outbound](../../outbound/SKILL.md).
 2. **Read `rows_available`, then measure precision.** `rows_available` is the provider's total for the filters, before the keyword check. Read the rows and count how many truly fit; precision is fitting rows over rows fetched (the `limit`). With `keywords[]` set the provider drops rows the keyword check rejects, so a page can return fewer rows than it fetched: count the dropped ones as misfits, since `rows_available` still includes them. Accounts that fit = `rows_available` × precision.
-3. **Under about 50% precision the filter is measuring something else.** Try a neighbouring industry name or a narrower band and count again (4 credits) rather than report the big number. In our test a dental filter in Germany returned 2,277 companies of which at most 3 in 25 were practices ([field notes](field-notes.md)).
+3. **Under about 50% precision the filter is measuring something else.** Try a neighbouring industry name or a narrower band and count again (12 credits at the default `limit` of 100) rather than report the big number. In our test a dental filter in Germany returned 2,277 companies of which at most 3 in 25 were practices ([field notes](field-notes.md)).
 4. **Count buyers per account.** People search has no company-size filter, so search the buyer `titles` with `company_domains` set to up to 100 domains from the segment's sample: `rows_available` over the accounts searched is buyers per account. Read the sample titles first; title matching is loose ("head of growth" returns investors too).
 5. **Value** = accounts that fit × annual contract value, only when the user has a real deal size.
 

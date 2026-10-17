@@ -10,12 +10,12 @@ Measure the brand and two or three competitors the user wants to be named alongs
 |---|---|---|---|
 | Branded search share | `seo_get_keyword_metrics`, `ai_volume: true` (about 11 credits for a dozen names) | Share of the set's `volume`, with `trend[12]` | Buckets, lag, common-word names ([share of search](share-of-search.md)) |
 | Own branded impressions | `console_get_search_analytics`, query filter on the brand (free) | Daily trend for the user only | Undercounts rare queries; no competitors |
-| AI share of voice | `aeo_run_ai_answers`, three buyer prompts, `brands` set to all of them (18 credits a prompt) | Share of answers naming each brand | A small set is noisy; method in [ai-search](../../ai-search/SKILL.md) |
+| AI share of voice | `aeo_run_ai_answers`, three buyer prompts, `brands` set to all of them (27 credits a prompt) | Share of answers naming each brand | A small set is noisy; method in [ai-search](../../ai-search/SKILL.md) |
 | Other people talking | `reddit_search_posts`, `youtube_search_videos`, `tiktok_search_videos` per name with `since: "year"` (1 credit each) | Rows in a year about the brand and not by it | Ranked samples, fuzzy matching ([monitoring](monitoring.md#reading-the-rows)) |
 | Coverage | `seo_get_backlink_summary` per domain (10 each) | `referring_domains` | Slow; reflects years, not quarters |
 | Own reach | `linkedin_get_company`, `instagram_get_profile`, `tiktok_get_profile`, `youtube_get_channel`, `twitter_get_profile` (1 each) | `followers`, `posts_count` | Reach the brand owns, not awareness |
 
-About 130 credits for the brand and three competitors. Say the estimate before the first paid call.
+About 160 credits for the brand and three competitors. Say the estimate before the first paid call.
 
 ## Reading it
 

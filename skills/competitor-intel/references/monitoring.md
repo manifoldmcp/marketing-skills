@@ -8,11 +8,11 @@ A weekly watch on two or three competitors that reports only what changed: ads s
 |---|---|---|---|
 | Ads | `ads_get_advertiser_ads` per library the rival uses (leave `details` off) | 1 a page | New ids; ids gone; a new `destination_url` (a new offer or landing page) |
 | Posts | One listing per channel: `linkedin_get_company_posts`, `twitter_get_tweets`, `youtube_get_videos`, `tiktok_get_videos`, and `instagram_get_posts` or `facebook_get_posts` where they matter | 1 a page | New ids; a post at twice the account's stored median engagement; launches, pricing, funding, hires, customer wins |
-| Search footprint | `seo_get_domain_overview` | 5 | A URL new to `top_pages[]` (a comparison page, a free tool, a new product page); traffic only month over month |
+| Search footprint | `seo_get_domain_overview` | 15 | A URL new to `top_pages[]` (a comparison page, a free tool, a new product page); traffic only month over month |
 | Brand bidding | `ads_get_advertiser_ads` with platform google for each rival (counted in Ads above) | 1 an ad | A new text-format ad: read it with `ads_get_ad` for the user's brand name in its headline. `seo_get_serp` seldom returns paid rows, so it cannot show this. The full read is [paid-ads](../../paid-ads/SKILL.md) |
 | Pages | `seo_get_page` on home and pricing | free | New `title`, `h1` or `h2`: new positioning; new plan names: a pricing change |
 
-About 13 credits a competitor, plus 1 for each new search ad read: about 39 a run for three rivals, about 168 a month weekly. The first run on Google may add `ads_search_advertisers` (1 each) to resolve the advertiser id per region.
+About 23 credits a competitor, plus 1 for each new search ad read: about 69 a run for three rivals, about 297 a month weekly. The first run on Google may add `ads_search_advertisers` (1 each) to resolve the advertiser id per region.
 
 ## Cadence and noise
 

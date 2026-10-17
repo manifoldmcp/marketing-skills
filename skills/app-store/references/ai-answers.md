@@ -30,4 +30,4 @@ These are reasoned from how the systems read listings; no study has measured a b
 
 ## Measuring
 
-`aeo_run_ai_answers` with the category prompts buyers ask (with and without "for iPhone" or "for Android"), the user and up to nine rival apps in `brands`, on the engines buyers use: 18 credits a prompt on the default five, 20 with `ai_mode`. Count mentions per engine and the share of citations to store pages against the apps' own sites and lists. Answers vary run to run; the noise rules and the by-hand method are in [ai-search](../../ai-search/SKILL.md).
+`aeo_run_ai_answers` with the category prompts buyers ask (with and without "for iPhone" or "for Android"), the user and up to nine rival apps in `brands`, on the engines buyers use: 27 credits a prompt on the default five, 29 with `ai_mode`. Count mentions per engine and the share of citations to store pages against the apps' own sites and lists. Answers vary run to run; the noise rules and the by-hand method are in [ai-search](../../ai-search/SKILL.md).

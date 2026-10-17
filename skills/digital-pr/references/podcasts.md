@@ -27,7 +27,7 @@ Guest spots on other people's shows: a borrowed audience that already trusts the
 5. **Size band.** Default to shows whose median episode gets about 500 to 20,000 views: these book guests readily and the host often replies in person. The largest shows book through introductions and agents, not cold pitches.
 6. **Contacts.** The channel `bio` and `links` often name the host, a booking form or the show's site (`website` is the first non-social link). On the show's domain, run the contact steps in [link-building](../../link-building/SKILL.md); for a named host, `leads_get_email` with the name and domain.
 
-About 160 credits for 25 shows looked at and 10 with a verified contact. Say the estimate first.
+About 390 credits for 25 shows looked at and 10 with a verified contact. Say the estimate first.
 
 ## The pitch
 

@@ -16,7 +16,7 @@ A section never run before starts with its baseline that week, and says so.
 
 ## Cost
 
-At each topic's defaults a run costs about 0 (Search Console) + 26 (mentions) + 41 (competitors) + 120 (20 ranks) = 187 credits, or 367 in the weeks AI visibility runs (+180 for 10 prompts on five engines): about 1,200 credits a month. Daily mentions instead of weekly raise it to about 1,570. Say both numbers before setting the schedule, and pass `max_credits` on every call so no week overspends. Store `meta.credits_charged` from every response, so the monthly cost is measured, not guessed (a month is about 4.3 runs).
+At each topic's defaults a run costs about 0 (Search Console) + 26 (mentions) + 71 (competitors) + 120 (20 ranks) = 217 credits, or 487 in the weeks AI visibility runs (+270 for 10 prompts on five engines): about 1,500 credits a month. Daily mentions instead of weekly raise it to about 1,880. Say both numbers before setting the schedule, and pass `max_credits` on every call so no week overspends. Store `meta.credits_charged` from every response, so the monthly cost is measured, not guessed (a month is about 4.3 runs).
 
 Rank tracking and AI visibility are the largest lines. Trim the keyword set to the ones that matter before dropping a section, and keep AI visibility fortnightly: its week-to-week moves are mostly noise.
 

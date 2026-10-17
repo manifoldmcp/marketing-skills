@@ -29,14 +29,14 @@ The tools see public signals, not conversion. Name the deciding KPI from the use
 
 ## Baseline
 
-About 80 credits. Say so before the first paid call.
+About 130 credits. Say so before the first paid call.
 
-- **Search:** `seo_get_domain_overview` on the site and two competitors (5 each), and `seo_search_keywords` on the category (up to 10). Strip competitors' brand terms before judging demand.
-- **AI answers:** `aeo_run_ai_answers` with two buyer prompts and `brands` set to the user and competitors (18 a prompt on the default engines), read with `get_task`.
+- **Search:** `seo_get_domain_overview` on the site and two competitors (15 each), and `seo_search_keywords` on the category (up to 10). Strip competitors' brand terms before judging demand.
+- **AI answers:** `aeo_run_ai_answers` with two buyer prompts and `brands` set to the user and competitors (27 a prompt on the default engines), read with `get_task`.
 - **Communities:** `reddit_search_subreddits` on the problem (1), then `reddit_get_new_posts` on the top three to five with `since: "7d"`, `pages: 3` and `match` set to the problem words (up to 3 a subreddit). If `coverage[]` shows the window cut, say how many days it covered. No community, or no post in the window, is a 0 marked "no signal this week".
 - **Social:** `tiktok_search_videos`, `youtube_search_videos` and `linkedin_search_posts` on the category with `since: "month"` (1 each).
 - **Paid:** `ads_get_advertiser_ads` per competitor with `platform: "google"` and its domain, plus `"linkedin"` for B2B or `"facebook"` for consumer (1 each).
-- **B2B only:** `leads_search_companies` with the ICP's industries, headcount and locations (4).
+- **B2B only:** `leads_search_companies` with the ICP's industries, headcount and locations (1 at `limit: 1`).
 
 One AI run and one week of Reddit are samples: they point the plan; the channel's own skill measures properly.
 

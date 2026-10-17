@@ -15,7 +15,7 @@ In BuzzStream's practitioner surveys (150+ each, 2025 and 2026) the top measures
 | Links to the story page | `seo_get_backlinks` with the page URL as `target` | Syndicated copies inflate the count: report original publishers apart |
 | Link type | `dofollow` and `rel[]` on each backlink row | Nofollow and sponsored links still bring readers and mentions; report them apart, do not drop them |
 | Branded demand | `seo_get_keyword_metrics` on the brand name with `ai_volume: true` (about 10 credits): `trend[12]` for Google, `ai_trend[12]` for AI engines | Monthly and modelled; a single story rarely shows. Read it over a quarter |
-| AI answers naming the brand | `aeo_run_ai_answers` on a frozen prompt set (18 credits a prompt on five engines); see [ai-search](../../ai-search/SKILL.md) | Answers are noisy: report shares with a margin of error, act on gaps seen in two or more cells |
+| AI answers naming the brand | `aeo_run_ai_answers` on a frozen prompt set (27 credits a prompt on five engines); see [ai-search](../../ai-search/SKILL.md) | Answers are noisy: report shares with a margin of error, act on gaps seen in two or more cells |
 | Referral traffic and signups | The user's analytics, by referring domain | Most readers of coverage never click; this undercounts the effect |
 
 ## Rules

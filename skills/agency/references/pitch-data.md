@@ -17,13 +17,13 @@ The numbers for a pitch deck or proposal: where the prospect stands against thre
 - **Buyer questions**: five prompts for the AI slide: "best category" variants and the main use cases.
 - **Deadline**: AI answers are tasks that take minutes; everything else returns at once.
 
-## The calls (about 438 credits, or 215 without the 12-month history)
+## The calls (about 523 credits, or 300 without the 12-month history)
 
-1. **Traffic over a year.** `seo_get_domain_overview` with `history: true` on all four (61 each): `history[]` gives 12 months of `organic_traffic` and `organic_keywords` for the line chart; the same call gives the scoreboard (`domain_rank`, `organic_keywords`, `positions`). Check every brand's line for the same seasonal dip before calling one a decline.
+1. **Traffic over a year.** `seo_get_domain_overview` with `history: true` on all four (71 each): `history[]` gives 12 months of `organic_traffic` and `organic_keywords` for the line chart; the same call gives the scoreboard (`domain_rank`, `organic_keywords`, `positions`). Check every brand's line for the same seasonal dip before calling one a decline.
 2. **Share of page one.** `seo_search_keywords` with the category as `seed` (10 credits); keep the ten highest-volume keywords a buyer would search; `seo_get_serp` on each (1 credit each). Per brand, count the keywords where it is on page one and sum their volume. It is one location, one device, one day: fine for a pitch, not for a report.
 3. **The gap.** `seo_get_keyword_gap` of the prospect against each competitor (10 each): the count (`meta.rows_available`), the summed `volume` of the rows returned, three examples a buyer would recognise.
 4. **Authority.** `seo_get_backlink_summary` on each (10 each): `referring_domains` and `dofollow_share` beside `domain_rank`.
-5. **AI share of voice.** `aeo_run_ai_answers` with the five questions and `brands` set to all four (90 credits), then `get_task`. Per brand, cells mentioned and cited out of 25. Five prompts is a small sample: write "in 25 answers", never "ChatGPT never recommends you", and give the margin of error from [ai-search](../../ai-search/SKILL.md).
+5. **AI share of voice.** `aeo_run_ai_answers` with the five questions and `brands` set to all four (135 credits), then `get_task`. Per brand, cells mentioned and cited out of 25. Five prompts is a small sample: write "in 25 answers", never "ChatGPT never recommends you", and give the margin of error from [ai-search](../../ai-search/SKILL.md).
 6. **Paid presence.** `ads_get_advertiser_ads` on Meta and Google for each (8 credits): running ads and the oldest still running.
 
 Calls repeated from a [prospect audit](prospect-audit.md) in the same week (the competitor list, a gap, the overviews) are cached and free.

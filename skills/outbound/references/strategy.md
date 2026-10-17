@@ -15,11 +15,11 @@ Ask in one message; for anything unanswered, use the default and say so.
 
 ## Baseline
 
-About 30 credits with Manifold.
+About 65 credits with Manifold.
 
 - **ICP as filters:** `leads_get_company` on the best customers (1 each), written as the shared `industry` strings, employee band and regions.
-- **The universe:** `leads_search_companies` with those filters; `rows_available` counts it (4). Read the first 20 rows; fewer than 15 fitting means the filters need work. Repeat for two or three other bands or regions to compare segments (4 each). A segment the customers already cluster in is where to start; a large one with no customers yet is a test.
-- **Buyers per account:** `leads_search_people` with the buyer `titles` inside 100 of those domains (4). In our run about a third of small accounts had a findable marketing leader.
+- **The universe:** `leads_search_companies` with those filters; `rows_available` counts it (12). Read the first 20 rows; fewer than 15 fitting means the filters need work. Repeat for two or three other bands or regions to compare segments (12 each). A segment the customers already cluster in is where to start; a large one with no customers yet is a test.
+- **Buyers per account:** `leads_search_people` with the buyer `titles` inside 100 of those domains (12). In our run about a third of small accounts had a findable marketing leader.
 - **Signal volume:** `linkedin_search_posts` on two problem phrases and on "starting a new position as" plus the buyer title, `since: "month"` (1 a page each). Weekly posts on the problem mean signal-led outbound has enough to run weekly.
 - **The crowded angle:** `ads_get_advertiser_ads` on each competitor on LinkedIn (1 a page): the pain they pay to put in front of the same buyers.
 

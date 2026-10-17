@@ -4,7 +4,7 @@ When an engine states something wrong about the brand: an old price, a feature i
 
 ## Find them
 
-Ask prompts that make an engine state facts: "What is <brand>?", "How much does <brand> cost?", "Is <brand> good for <use case>?", "Does <brand> integrate with <tool>?", "<brand> vs <competitor>", "<brand> alternatives", plus one prompt per error the user already knows about. Run them on every engine the buyers use, `ai_mode` included (`aeo_run_ai_answers`, 20 credits a prompt on all six), and mark each claim about the brand: correct, wrong, outdated, missing (a key fact left out) or confused (another company's fact).
+Ask prompts that make an engine state facts: "What is <brand>?", "How much does <brand> cost?", "Is <brand> good for <use case>?", "Does <brand> integrate with <tool>?", "<brand> vs <competitor>", "<brand> alternatives", plus one prompt per error the user already knows about. Run them on every engine the buyers use, `ai_mode` included (`aeo_run_ai_answers`, 29 credits a prompt on all six), and mark each claim about the brand: correct, wrong, outdated, missing (a key fact left out) or confused (another company's fact).
 
 Confirm before chasing: a claim wrong once may be noise; wrong on two engines, or twice on one, is real.
 

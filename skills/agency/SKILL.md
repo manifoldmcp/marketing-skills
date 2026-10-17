@@ -49,12 +49,12 @@ Open the one the question needs.
 ## Using Manifold
 
 - **The client's own numbers lead:** `console_get_search_analytics` and `analytics_get_report` are free once the client grants access. Take period totals from a country or date grouping; page and query rows drop small rows for privacy.
-- **Size a site:** `seo_get_domain_overview` (5 credits, 61 with `history: true`). Read `positions` before `organic_traffic`: when `top_10` is near 0 the traffic is a model artefact. Its `meta.data_as_of` is null and the index can be weeks old: date the number by the call.
+- **Size a site:** `seo_get_domain_overview` (15 credits, 71 with `history: true`). Read `positions` before `organic_traffic`: when `top_10` is near 0 the traffic is a model artefact. Its `meta.data_as_of` is null and the index can be weeks old: date the number by the call.
 - **Keywords:** `seo_get_position` (6 credits, one day's reading, with the ranking `url`). `seo_get_ranked_keywords` rows come highest `traffic` first, so the first page holds "the top keywords"; `rank` counts ads and features too and can pass 100.
 - **Competitors:** `seo_get_serp_competitors` returns SERP competitors; drop publishers and marketplaces. `seo_get_keyword_gap` gives the gap (10 credits).
-- **AI answers:** `aeo_run_ai_answers`, 18 credits a prompt on five engines, never cached, kept 30 days; report a mention rate. `aeo_get_site_readiness` is free and catches a CDN that began blocking AI crawlers.
+- **AI answers:** `aeo_run_ai_answers`, 27 credits a prompt on five engines, never cached, kept 30 days; report a mention rate. `aeo_get_site_readiness` is free and catches a CDN that began blocking AI crawlers.
 - **Ads and social:** `ads_get_advertiser_ads` (1 credit) shows what runs and since when, never spend; profile tools (1 credit) give followers.
-- **Costs at defaults:** prospect audit about 84 credits, pitch data 438 (215 without history), onboarding 337, a monthly review 258 per client, a weekly digest 187 (367 in AI weeks). Search data is cached 7 days per account, so a pitch, onboarding and first review in one week pay once for repeated calls. `dry_run: true` prices any call; pass `max_credits` when the user names a budget.
+- **Costs at defaults:** prospect audit about 134 credits, pitch data 523 (300 without history), onboarding 432, a monthly review 343 per client, a weekly digest 217 (487 in AI weeks). Search data is cached 7 days per account, so a pitch, onboarding and first review in one week pay once for repeated calls. `dry_run: true` prices any call; pass `max_credits` when the user names a budget.
 - **Never send, post or publish.** Deliver tables and documents; the host's tools send them if asked. The server stores and schedules nothing: the host keeps the client record and the schedule.
 
 ## Related skills

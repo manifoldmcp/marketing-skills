@@ -32,7 +32,7 @@ The tools run on a vendor that reads Reddit, not on Reddit's own API. Reddit has
 
 ## Credits and caching
 
-- Every `reddit_*` call is 1 credit (per subreddit per page on `reddit_get_new_posts`), so most Reddit jobs cost 20 to 60 credits. The expensive call in Reddit work is `aeo_run_ai_answers`, 18 credits a prompt on its five default engines.
+- Every `reddit_*` call is 1 credit (per subreddit per page on `reddit_get_new_posts`), so most Reddit jobs cost 20 to 60 credits. The expensive call in Reddit work is `aeo_run_ai_answers`, 27 credits a prompt on its five default engines.
 - Search, thread and comment results are cached 1 hour, a community's record 7 days; a result this account already paid for is free while cached. `reddit_get_new_posts` is never cached.
 - Say the estimate before the first paid call. If the user names a budget, pass `max_credits` on every call and stop at `BudgetExceeded`. `dry_run: true` prices any call for free.
 - The server keeps no history and has no scheduler. A weekly watch or a before-and-after needs the host to store the queries, the ids seen, `next_since` and the counts.

@@ -19,15 +19,15 @@ Agency-side evidence only: no survey asks clients directly (AgencyAnalytics, 494
 - **Work done** in the month: pages, fixes, links, campaigns, from the agency.
 - **Channels**: the ones in the retainer. Measure nothing else.
 
-## Re-measure (about 258 credits per client per month)
+## Re-measure (about 343 credits per client per month)
 
-At 20 keywords, 5 prompts and 3 competitors; each extra keyword adds 6 credits a month, each extra prompt 18. The same calls as the baseline with the same params:
+At 20 keywords, 5 prompts and 3 competitors; each extra keyword adds 6 credits a month, each extra prompt 27. The same calls as the baseline with the same params:
 
 - **The client's own numbers, first**: `console_get_search_analytics` this month and last (free): clicks, impressions, CTR, position. `analytics_get_report` with sessions, `keyEvents` and revenue by `sessionDefaultChannelGroup`, against last month and the same month last year (free). Leads and revenue from the client's CRM go in rows the client fills.
-- **Estimates, labelled**: `seo_get_domain_overview` on the client and each competitor without history (5 each); the stored months are the history.
+- **Estimates, labelled**: `seo_get_domain_overview` on the client and each competitor without history (15 each); the stored months are the history.
 - **Rankings**: `seo_get_position` per keyword (6 each); note when `url` differs from last month.
 - **Links**: `seo_get_backlink_summary` (10), and `seo_get_referring_domains` for rows with `first_seen` in the month (won), and again with `status: "lost"` for domains that dropped a link (lost): 12 credits each for the default 100 rows, sorted by the rank each passes to the site rather than by the domain's own, so pass `limit: 1000` (25 credits) when `referring_domains` is over 100, or the new small ones are missed. Count won domains only when they clear the quality floors in [link-building](../../link-building/SKILL.md). The index lags the web by weeks: links built late in the month may show next month.
-- **AI answers**: `aeo_run_ai_answers` with the tracked prompts and brands (18 a prompt), then `get_task`.
+- **AI answers**: `aeo_run_ai_answers` with the tracked prompts and brands (27 a prompt), then `get_task`.
 - **Paid and social** when in the retainer: `ads_get_advertiser_ads` and the profile tools (1 credit each).
 - **AI crawler access**: `aeo_get_site_readiness` (free). A check with `tier: "blocks_citations"` that now shows `ok: false` (often a CDN or firewall change) is the first line of the review.
 

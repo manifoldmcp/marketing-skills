@@ -10,13 +10,13 @@ Ask in one message; for anything unanswered use the default and say so.
 - **Stage:** new site or established; `seo_get_domain_overview` answers it.
 - **Team:** who writes, and whether anyone can change templates, redirects and speed. Default: the founder writes, no developer. Pace comes from the team: one good page a week beats five thin ones.
 - **Competitors:** two or three that sell the same thing. `seo_get_serp_competitors` returns sites sharing results, often publishers; prefer the user's list or [competitor-intel](../../competitor-intel/SKILL.md).
-- **Budget:** about 110 credits for the research below; horizon 90 days.
+- **Budget:** about 160 credits for the research below; horizon 90 days.
 
-## Baseline (about 55 credits)
+## Baseline (about 105 credits)
 
-- `seo_get_domain_overview` on the site and each competitor (5 each): `domain_rank`, `organic_traffic`, `organic_keywords`, `positions`, `top_pages`.
+- `seo_get_domain_overview` on the site and each competitor (15 each): `domain_rank`, `organic_traffic`, `organic_keywords`, `positions`, `top_pages`.
 - `seo_get_ranked_keywords` on the site, `limit: 300` (20): keywords at 4 to 20, which pages earn traffic, and the median `kd` of its top-10 keywords, its reach ([keyword floors](keyword-data.md#keyword-floors)).
-- `seo_run_technical_crawl` sized to the site, `max_pages` up to 500 (15), read with `get_task`: `onpage_score`, `non_indexable`, `broken_links`, top `issues[]`.
+- `seo_run_technical_crawl` sized to the site, `max_pages` up to 500 (25), read with `get_task`: `onpage_score`, `non_indexable`, `broken_links`, top `issues[]`.
 - With Search Console (free): 90 days by page and by query, and the same 90 days a year earlier by date for clicks. These replace the estimates for the site; keep brand and non-brand apart.
 
 ## Gaps (about 55 credits)

@@ -16,7 +16,7 @@ Choose per engine. A B2B brand losing on ChatGPT needs off-site mentions and edi
 
 ## Baseline
 
-A fixed prompt set of ten to forty buyer prompts on the engines the buyers use, scored as [measurement](measurement.md) says, with the margin of error beside each share. About 270 credits with Manifold for ten prompts on five engines plus the prompt research; 180 for each re-measure. Readiness is free.
+A fixed prompt set of ten to forty buyer prompts on the engines the buyers use, scored as [measurement](measurement.md) says, with the margin of error beside each share. About 364 credits with Manifold for ten prompts on five engines plus the prompt research; 270 for each re-measure. Readiness is free.
 
 ## The 90 days
 

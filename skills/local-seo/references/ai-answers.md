@@ -33,7 +33,7 @@ On "service in town" searches the local pack still dominates: AI Overviews appea
 
 ## Measuring it
 
-- `aeo_run_ai_answers` with three to five prompts: two "best service in town" prompts, one "service near me", one problem prompt ("my boiler is making a banging noise, who can fix it in Leeds"), and one brand prompt ("is Acme Plumbing any good"). On chatgpt, gemini, ai_overview and ai_mode that is 8 credits a prompt; claude and perplexity add 12 and are less used for local.
+- `aeo_run_ai_answers` with three to five prompts: two "best service in town" prompts, one "service near me", one problem prompt ("my boiler is making a banging noise, who can fix it in Leeds"), and one brand prompt ("is Acme Plumbing any good"). On chatgpt, gemini, ai_overview and ai_mode that is 8 credits a prompt; claude and perplexity add 21 and are less used for local.
 - **Put the town in the prompt** and keep `location` a country for ChatGPT, Claude and Perplexity. A city `location` failed twice on ChatGPT in our runs (reported as "rate limited", which it was not), and the Claude and Perplexity engines take only a country, so a city reaches them as no location at all.
 - **For "near me" prompts, set `location` to the town or ZIP and ask only gemini, ai_mode and ai_overview.** With `location` "United States" a near-me prompt was answered for Quincy, Massachusetts (ChatGPT) and rural Colorado (Gemini, AI Mode): a national location makes near-me answers meaningless.
 - **Read `mentions[]` for the user and named competitors and the answer text for everyone else;** `named_brands[]` is ChatGPT only. AI Mode's `citations[]` were Google search viewer links (domain google.com), not the underlying sources, so count AI Mode by names in the answer.

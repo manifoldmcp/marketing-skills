@@ -10,7 +10,7 @@ Pages that already name the brand, the product or the founder without linking. T
 4. **Check the pages.** `seo_get_page` on each (free, rate limited); drop a `status` other than 200 or a `final_url` that moved elsewhere. From `title`, `h1` and the SERP `snippet`, note what the mention is: a review, a list, a news story, an interview, a passing reference.
 5. **Rate, then contact.** `seo_get_domain_ratings` on all kept domains in one call, with relevance over rank ([authority metrics](authority-metrics.md#floors)): a trade blog that reviewed the product beats a bigger unrelated site. Then [contacts](contacts.md) for the top 20, the page's author first.
 
-About 230 credits for two names and 20 contacts.
+About 695 credits for two names and 20 contacts.
 
 ## The ask
 

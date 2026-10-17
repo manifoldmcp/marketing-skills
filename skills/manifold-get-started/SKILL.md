@@ -1,12 +1,12 @@
 ---
 name: manifold-get-started
 description: When the user is new to the Manifold marketing skills, asks where to start, or wants to set up or update the context every other skill reads first. Writes .agents/product-marketing.md (the business type, what it sells, the customers, competitors, positioning, customer language, proof, goals, accounts and what to track) for any kind of business, from B2B software to a shop, a local service, an app, a creator or a nonprofit, drafting from the site and asking only for the gaps. Then recommends the two or three skills that fit the goal, and the first job to do in each, with what it costs. Also use when the user mentions getting started, I just installed this, which skill should I use, what can Manifold do, product or marketing context, describe my business, ICP, target audience, brand voice, or update our context after a pivot, a new competitor or a price change. A growth plan built on real data goes to growth-strategy.
-compatibility: Works without the Manifold MCP connector. With it, the draft also reads search data for the site at about 25 credits, asked first.
+compatibility: Works without the Manifold MCP connector. With it, the draft also reads search data for the site at about 35 credits, asked first.
 ---
 
 # Manifold get started
 
-The first skill to run. It writes down once what every marketing task needs to know about the business, so no other skill has to ask again, and then picks the skills that fit the user's goal and the first job in each. Each skill covers one area of marketing (AI search, SEO, Reddit, outbound and so on) and holds what changed in that area since models were trained. Setting up the context costs nothing without the connector and about 25 credits with it; picking the skills runs no tools.
+The first skill to run. It writes down once what every marketing task needs to know about the business, so no other skill has to ask again, and then picks the skills that fit the user's goal and the first job in each. Each skill covers one area of marketing (AI search, SEO, Reddit, outbound and so on) and holds what changed in that area since models were trained. Setting up the context costs nothing without the connector and about 35 credits with it; picking the skills runs no tools.
 
 ## The file
 
@@ -43,7 +43,7 @@ The file opens with a version number and the date, and ends with a changelog, ne
    - The conversation so far and any files the user shared.
    - In a codebase: the README, the landing page, pricing or product page copy, and any docs folder.
    - The site: the home, pricing or shop, and about pages through the host's browser or fetch tool, if it has one.
-   - With the manifold tools, and only after telling the user the cost: `seo_get_page` on the home page (free) for its title and description; `seo_get_domain_overview` on the domain (5 credits) for the site's size in search; `seo_get_serp_competitors` on the domain (10 credits) for the sites that share its search results, as candidates for the competitive landscape; `seo_get_ranked_keywords` on the domain (10 credits) for the keywords it already ranks for, as candidates for the tracking set. If the tools are missing, skip this part and do not stop.
+   - With the manifold tools, and only after telling the user the cost: `seo_get_page` on the home page (free) for its title and description; `seo_get_domain_overview` on the domain (15 credits) for the site's size in search; `seo_get_serp_competitors` on the domain (10 credits) for the sites that share its search results, as candidates for the competitive landscape; `seo_get_ranked_keywords` on the domain (10 credits) for the keywords it already ranks for, as candidates for the tracking set. If the tools are missing, skip this part and do not stop.
    From the draft, name the business type from [business-types.md](references/business-types.md) and ask the user to confirm it.
 4. **Interview for the gaps.** Ask about the empty sections, three questions at a time at most, in the file's order, worded for the business type: "who signs the contract" for B2B software, "who is it for and when do they buy" for a shop, "which area do you serve" for a local business. Offer the draft's guess where there is one, so the user can confirm rather than write. Ask for real customer quotes and reviews: they are worth more than a polished summary.
 5. **Check the draft.** Read the full draft back in one message and ask the user to correct it. Mark every line that came from the site or the tools rather than from the user, so they know what to check.

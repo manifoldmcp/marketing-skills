@@ -13,9 +13,9 @@ Cut the market the way buyers search and ask: by who they are ("<category> for d
 | Google results per segment phrase (`seo_get_serp` with `depth: 20`, 2 credits) | SEO-led vendors; list articles whose headings name more (`seo_get_page`, free) | Sales-led vendors with little content |
 | The leaders' search rivals (`seo_get_serp_competitors`, 10 credits each) | Vendors sharing the leaders' keywords, with `organic_traffic` | Drop publishers, marketplaces, review sites and directories: these are search rivals, not business ones |
 | Ad libraries (`ads_search_ads` on facebook and linkedin, 1 credit a page) | Who is investing in the segment now | LinkedIn rows carry no `active` flag; keep those with `last_shown` in the past 30 days. `active_only: true` works on Facebook only |
-| AI answers (`aeo_run_ai_answers`, one "best <category> for <segment>" prompt each, 18 credits a prompt) | The names buyers hear when they ask | Count cells naming each brand, and read the `answer` text for brands not passed in `brands` |
+| AI answers (`aeo_run_ai_answers`, one "best <category> for <segment>" prompt each, 27 credits a prompt) | The names buyers hear when they ask | Count cells naming each brand, and read the `answer` text for brands not passed in `brands` |
 
-Then merge into one row per company, size them with `seo_get_traffic_estimates` in one call (about 75 credits for 50 domains), place each by what its homepage says (`seo_get_page`: `title`, `h1[]`, `meta_description`; a company can sit in two segments), and fetch `employees` and `founded_year` with `leads_get_company` (1 credit) for the ten that matter most. A four-segment map costs about 190 credits; say so first.
+Then merge into one row per company, size them with `seo_get_traffic_estimates` in one call (about 75 credits for 50 domains), place each by what its homepage says (`seo_get_page`: `title`, `h1[]`, `meta_description`; a company can sit in two segments), and fetch `employees` and `founded_year` with `leads_get_company` (1 credit) for the ten that matter most. A four-segment map costs about 225 credits; say so first.
 
 ## Reading the map
 

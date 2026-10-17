@@ -52,7 +52,7 @@ Open the one the question needs.
 
 ## Using Manifold
 
-- **What a site ranks for:** `seo_get_ranked_keywords` (10 credits per 100 rows) on a domain or one URL; `seo_get_domain_overview` (5) for size, `domain_rank` and `top_pages`, with `history: true` (+56) only when the question is change over time. These are index snapshots refreshed on the provider's schedule.
+- **What a site ranks for:** `seo_get_ranked_keywords` (10 credits per 100 rows) on a domain or one URL; `seo_get_domain_overview` (15) for size, `domain_rank` and `top_pages`, with `history: true` (+56) only when the question is change over time. These are index snapshots refreshed on the provider's schedule.
 - **One live rank:** `seo_get_position` (6 credits). For two or more sites on one keyword, `seo_get_serp` with a larger `depth` is cheaper (1 credit per 10 results, `depth: 100` is 10); `ai_overview: true` adds the overview and its sources for 1 more.
 - **Keywords:** `seo_search_keywords` for ideas (10 per 100 rows, metrics included, so never follow it with `seo_get_keyword_metrics`); `seo_get_keyword_metrics` for a list the user has (`source: "google_ads"` is 24 flat); `seo_get_keyword_gap` against one competitor (10).
 - **Pages:** `seo_get_page` is free and live (title, meta, canonical, robots, headings, word count, schema), rate limited and cached an hour. It cannot read body copy. A whole site is `seo_run_technical_crawl`, which belongs to [technical-seo](../technical-seo/SKILL.md).

@@ -57,7 +57,7 @@ Recovery: a technical fix shows within days to weeks as pages are recrawled; a c
 
 ## Budget
 
-Without Search Console about 175 credits (12-month history on the domain overview 61, ranked keywords 30, keyword trends 10, ten SERPs 20, five positions 30, a 500-page crawl 15, link summary 10); with it about 75, since the console tools are free. Say the estimate first and pass `max_credits`.
+Without Search Console about 195 credits (12-month history on the domain overview 71, ranked keywords 30, keyword trends 10, ten SERPs 20, five positions 30, a 500-page crawl 25, link summary 10); with it about 85, since the console tools are free. Say the estimate first and pass `max_credits`.
 
 ## Without the connector
 

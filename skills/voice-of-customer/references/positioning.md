@@ -19,9 +19,9 @@ Each option fills the same five parts (the components in April Dunford's method,
 3. **Best customers.** The customers who bought fastest, use most or stayed longest, and why. The most important input: positioning built for all customers lands on the same claims as the competitors. Say the options are weaker without it.
 4. **Attributes to value.** For each attribute the user has and the alternatives lack (confirmed by the user; never position on a capability the product lacks), write the value as a buyer outcome in buyer words, and the proof (a number, a customer, a demo). Drop attributes that map to no value a buyer asked for. Unique can mean "the only one that does it for this segment".
 5. **Who cares most.** Group values by the customer who needs them most: a segment, a use case, a company size. For evidence-backed personas see [personas](personas.md).
-6. **Categories.** Three or four candidates: the one claimed now, the one competitors claim, a narrower "<category> for <segment>", an adjacent one. `seo_get_keyword_metrics` on two or three phrasings of each (10 credits for up to 100 keywords): `volume` and `trend[12]` show whether buyers use those words. `aeo_run_ai_answers` with "best <category>" for the two strongest, all competitors in `brands` (18 credits a prompt on the default engines, never cached), read with `get_task`: the brands engines list show who owns each category in AI answers now ([ai-search](../../ai-search/SKILL.md) explains how noisy those lists are).
+6. **Categories.** Three or four candidates: the one claimed now, the one competitors claim, a narrower "<category> for <segment>", an adjacent one. `seo_get_keyword_metrics` on two or three phrasings of each (10 credits for up to 100 keywords): `volume` and `trend[12]` show whether buyers use those words. `aeo_run_ai_answers` with "best <category>" for the two strongest, all competitors in `brands` (27 credits a prompt on the default engines, never cached), read with `get_task`: the brands engines list show who owns each category in AI answers now ([ai-search](../../ai-search/SKILL.md) explains how noisy those lists are).
 
-Default run about 46 credits plus the pain run if needed; pages are free.
+Default run about 64 credits plus the pain run if needed; pages are free.
 
 ## Choosing
 

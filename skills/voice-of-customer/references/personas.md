@@ -11,7 +11,7 @@ Two to four buyer personas built from evidence, where every field is either evid
 
 ## Sizing roles (business buyers)
 
-- `leads_search_people` once per candidate title with `titles` (the full title, no `seniority`), `industries` and `locations` (4 credits a call). `rows_available` is how many people hold that title in the target market; the rows' `title` field shows the variants people actually use ("Revenue Operations Lead" as well as "RevOps Manager").
+- `leads_search_people` once per candidate title with `titles` (the full title, no `seniority`), `industries` and `locations` (12 credits a call at the default `limit` of 100). `rows_available` is how many people hold that title in the target market; the rows' `title` field shows the variants people actually use ("Revenue Operations Lead" as well as "RevOps Manager").
 - Industries must be LinkedIn's names, matched exactly: copy the `industry` string from `leads_get_company` on two of the user's customers (1 credit each).
 - To see where decision power sits, run the strongest functions once per `seniority` level (junior, senior, executive) with the bare function word as `titles` (`["Sales"]`, not `["Head of Sales"]`). `seniority` combines with `titles` into phrases ("VP Sales"), so a full title plus a seniority matches almost nothing.
 - `rows_available` compares roles with each other. It is not the number of buyers or a market size ([market-research](../../market-research/SKILL.md) sizes markets). Add up the variants of one role before comparing.
@@ -23,7 +23,7 @@ Two to four buyer personas built from evidence, where every field is either evid
 - `reddit_search_subreddits` with the category (1 credit) finds the communities where the roles talk; search the top two with the problem words and read the five busiest threads.
 - Take phrases verbatim, with links. For pains ranked across sources, run [pain points](pain-points.md) and reuse its rows.
 
-Default run about 80 credits: 8 title sizes (32), seniority splits (24), two company lookups, LinkedIn searches and profiles, Reddit.
+Default run about 192 credits: 8 title sizes (96), seniority splits (72), two company lookups, LinkedIn searches and profiles, Reddit.
 
 ## Consumer products
 

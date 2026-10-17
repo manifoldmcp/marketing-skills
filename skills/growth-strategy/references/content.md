@@ -15,10 +15,10 @@ So: a cadence the team can hold for six months beats a burst. Two posts a week f
 
 ## Finding ideas
 
-Collect the questions around the topic from several sources, merge the same question across them, and give each idea the channel and format its evidence points to. About 68 credits for two seeds.
+Collect the questions around the topic from several sources, merge the same question across them, and give each idea the channel and format its evidence points to. About 70 credits for two seeds.
 
 - **Google:** `seo_search_keywords` per seed (10). Keep question and choice keywords (how, what, why, best, vs, alternatives, template, examples) above about 50 searches a month; note `intent` and a rising `trend[12]`.
-- **AI engines:** `aeo_search_prompts` with `keyword` set to the main seed and `limit: 20` (36). Prompts are longer and more specific than keywords; `answer_preview` is the answer to beat. Run it once per topic, never per idea; `ai_search_volume` is a proxy, never searches.
+- **AI engines:** `aeo_search_prompts` with `keyword` set to the main seed and `limit: 20` (38). Prompts are longer and more specific than keywords; `answer_preview` is the answer to beat. Run it once per topic, never per idea; `ai_search_volume` is a proxy, never searches.
 - **Reddit:** `reddit_search_posts` on the main seed at relevance with `time_range: "year"` (1 a page, two pages), then order rows by `comments` yourself and keep on-topic threads with 10 or more comments that ask, complain or choose. `reddit_get_comments` on the three busiest (1 each): disagreement means an opinion post, one repeated answer means a how-to. Keep the thread's wording; it is the audience's own.
 - **Video:** `youtube_search_videos` and `tiktok_search_videos` with the three strongest questions, `since: "year"` and `sort: "popular"` (1 a page). Strong demand elsewhere with no good video is an open slot; big views prove the format.
 - **LinkedIn**, for a business audience: `linkedin_search_posts` on the seed with `since: "month"`; read which posts earn comments.

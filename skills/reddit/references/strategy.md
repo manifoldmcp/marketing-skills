@@ -11,7 +11,7 @@ Ask in one message; for anything unanswered, use the default and say so.
 - **Who posts, from which account:** the founder or a named employee from a personal account with history is the default. A new account or a brand account changes the first 30 days ([rules](rules.md#the-account)).
 - **Hours a week:** default 3, about ten careful replies. Set volume from hours, never from the thread count; twenty rushed replies read as spam and trip the filters.
 - **Competitors:** two or three; default the ones Reddit names most in the baseline.
-- **Budget:** about 33 credits of research, about 87 with the AI check.
+- **Budget:** about 33 credits of research, about 114 with the AI check.
 
 ## Baseline
 
@@ -23,7 +23,7 @@ About 23 credits.
 
 ## Gaps
 
-About 10 credits more, or about 64 with the AI check.
+About 10 credits more, or about 91 with the AI check.
 
 - **Unanswered demand:** check-in posts asking for help or a tool with fewer than 5 `comments`.
 - **Why rivals win:** `reddit_get_comments` on 5 threads where a competitor is recommended. Recommended by users, or by its own staff and resellers? A space where competitors are recommended mostly by their own people is open: a genuine user recommendation beats a vendor's.

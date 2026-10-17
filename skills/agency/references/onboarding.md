@@ -20,14 +20,14 @@ Fix it once and re-measure exactly it every month.
 - **The client's own data**: Search Console and GA4 access on day one (both free to read), and a named person who will supply leads, sales or revenue each month. Leads, sales and revenue sit in the client's CRM, which no tool here reads.
 - **Add, never swap.** A keyword or prompt added later is a new row with its own start month. A number measured another way is a different number, not a change.
 
-## The baseline (about 337 credits at defaults)
+## The baseline (about 432 credits at defaults)
 
 Only for the channels in the retainer:
 
-- **Search**: `console_get_search_analytics` for the last 16 months if granted (free), which shows seasonality in real clicks; `analytics_get_report` for sessions and `keyEvents` by `sessionDefaultChannelGroup` (free). `seo_get_domain_overview` with `history: true` on the client (61) and without on each competitor (5 each); `seo_get_backlink_summary` on the client (10).
+- **Search**: `console_get_search_analytics` for the last 16 months if granted (free), which shows seasonality in real clicks; `analytics_get_report` for sessions and `keyEvents` by `sessionDefaultChannelGroup` (free). `seo_get_domain_overview` with `history: true` on the client (71) and without on each competitor (15 each); `seo_get_backlink_summary` on the client (10).
 - **Rankings**: `seo_get_position` per tracked keyword (6 each): `rank` and `url`.
-- **AI answers**: `aeo_run_ai_answers` with the prompts and all four brands (18 a prompt), then `get_task`; record per cell mentioned and cited. `aeo_get_site_readiness` (free).
-- **Site health**: `seo_run_technical_crawl` with `max_pages: 500` (15), then `get_task`: `onpage_score`, `broken_links`, `non_indexable`.
+- **AI answers**: `aeo_run_ai_answers` with the prompts and all four brands (27 a prompt), then `get_task`; record per cell mentioned and cited. `aeo_get_site_readiness` (free).
+- **Site health**: `seo_run_technical_crawl` with `max_pages: 500` (25), then `get_task`: `onpage_score`, `broken_links`, `non_indexable`.
 - **Paid**: `ads_get_advertiser_ads` on Meta and Google (1 each): what runs and since when, not spend.
 - **Social**: the profile tool per platform run (1 each): `followers`, `posts_count`.
 

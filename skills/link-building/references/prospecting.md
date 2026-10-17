@@ -19,7 +19,7 @@ Where to find sites worth asking for a link, which kinds of link still work, and
 3. **A keyword's first page.** `seo_get_serp` (top 10, 1 credit). Keep publishers, drop vendors and marketplaces.
 4. **No competitors named.** `seo_get_serp_competitors` on the user (10 credits) and take the top two that are real businesses, not publishers; [competitor-intel](../../competitor-intel/SKILL.md) for who the real competitors are.
 
-Then rate every candidate in one `seo_get_domain_ratings` call (1 credit plus 2.5 per 100) and cut to the best 30 by relevance first, rank second. A default run from one competitor to 30 contacted sites costs about 25 + 25 + 2 + 30 × 8 + 30 ≈ 320 credits, 25 more for each extra competitor.
+Then rate every candidate in one `seo_get_domain_ratings` call (7 credits plus 2.5 per 100) and cut to the best 30 by relevance first, rank second. A default run from one competitor to 30 contacted sites costs about 25 + 25 + 8 + 30 × 31 + 30 ≈ 1,020 credits, 25 more for each extra competitor.
 
 ## Reading the backlink data
 
@@ -42,7 +42,7 @@ Then rate every candidate in one `seo_get_domain_ratings` call (1 credit plus 2.
 - A list the user is already on is not a target, but if it ranks, ask the editor to update the entry.
 - In a new category with no "best X" lists yet, "alternatives to <incumbent>" lists exist earlier.
 - Many lists are affiliate pages and the editor may ask for a fee or a commission deal. Flag the likely ones (many paid tools reviewed, "we earn a commission") and let the user decide. A paid placement must be disclosed and its link marked sponsored.
-- About 214 credits for 20 lists with contacts.
+- About 674 credits for 20 lists with contacts.
 
 ## Broken link building on a competitor
 

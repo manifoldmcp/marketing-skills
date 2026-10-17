@@ -10,11 +10,11 @@ Take them from the product context file; ask in one message for what it lacks, a
 - **Stage.** New site with almost no links, or established; `seo_get_domain_overview` answers it.
 - **Team and hours.** Who writes and sends, and who can make an asset worth linking to. Default: one founder, three hours a week, no designer.
 - **Competitors.** Two or three real businesses, not publishers. Default: the top of `seo_get_serp_competitors`.
-- **Budget.** Research costs about 140 credits; contacts about 8 a site on top.
+- **Budget.** Research costs about 155 credits; contacts about 31 a site on top.
 
-## Baseline (about 140 credits)
+## Baseline (about 155 credits)
 
-- `seo_get_domain_overview` on the user (5) and `seo_get_backlink_summary` on the user and each competitor (10 each): domain rank, referring main domains, dofollow share, broken backlinks.
+- `seo_get_domain_overview` on the user (15) and `seo_get_backlink_summary` on the user and each competitor (10 each): domain rank, referring main domains, dofollow share, broken backlinks.
 - Link intersect: `seo_get_referring_domains` with `limit: 1000` on each competitor and the user (25 each), rated in one `seo_get_domain_ratings` call ([prospecting](prospecting.md#sources-and-what-each-costs)). Count domains that link to two or more competitors and not the user, and how many clear the [floors](authority-metrics.md#floors).
 - What earns competitors links: `seo_get_backlinks` on the strongest competitor (`limit: 1000`, 25), grouped by page after stripping query strings, counted by distinct linking domain.
 - Deliver a table: user against each competitor on domain rank, Ahrefs DR (with its attribution), referring main domains, dofollow share, broken backlinks.

@@ -23,7 +23,7 @@ So the bar for being cited is not a big channel. It is a clear, current, chapter
 
 ## Finding the videos that matter for the user
 
-About 75 credits for ten buyer questions with an existing AI answer run; without one, a baseline run first (see [ai-search](../../ai-search/SKILL.md), about 270 credits).
+About 75 credits for ten buyer questions with an existing AI answer run; without one, a baseline run first (see [ai-search](../../ai-search/SKILL.md), about 364 credits).
 
 1. **Read the answers.** `get_task` on the run's `task_id` (free; results kept 30 days). Keep every citation whose domain is youtube.com (any subdomain) or youtu.be; for each video count the engines and prompts citing it, and note whether the user is among the row's `mentions[]`.
 2. **Check Google.** `seo_get_serp` with `ai_overview: true` on the short search twin of each prompt ("best crm for agencies"). Keep youtube.com organic results, youtube.com `references` in the overview, and whether `features` includes `video`. The video block's row carries no video URLs, so which videos fill it is unknown; `youtube_search_videos` on the same query shows the likely ones. Mark them likely.

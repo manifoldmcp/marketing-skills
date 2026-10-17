@@ -6,21 +6,21 @@ When the user wants a plan to win against named competitors rather than a report
 
 The goal (win deals against a named rival, take search or AI share, defend against a new entrant, stand out in a crowded category), the stage, the ICP, the budget in credits and money, the team, and two or three competitors. Default: take share from the two strongest direct competitors, early stage, one founder who also sells, no paid media. Restate the inputs with the defaults marked.
 
-## Baseline (about 71 credits for the user and three rivals)
+## Baseline (about 129 credits for the user and three rivals)
 
 | Measure | Call | Credits |
 |---|---|---|
-| Search strength | `seo_get_domain_overview` on each | 5 each |
+| Search strength | `seo_get_domain_overview` on each | 15 each |
 | Paid activity | `ads_get_advertiser_ads` on facebook and google for each; on Google keep rows whose `last_shown` is in the last 30 days | 1 a page |
-| AI shortlist | `aeo_run_ai_answers`, two category prompts, `brands` holding all four | 36 |
+| AI shortlist | `aeo_run_ai_answers`, two category prompts, `brands` holding all four | 54 |
 | Company size | `leads_get_company` and `linkedin_get_company` on each | 2 each |
 
-## Gaps (about 78 more)
+## Gaps (about 80 more)
 
 - **Search:** `seo_get_keyword_gap` with the user as `target` and each rival as `competitor` (10 each). Keep commercial and transactional keywords: where each rival meets buyers the user never sees.
 - **Message:** homepage headings for all of them (free): the claims everyone makes and the ones nobody makes ([messaging](messaging.md)).
 - **Switching:** "<rival> alternative" on Reddit (1 each), past year: where a rival is exposed ([complaints](complaints.md)).
-- **AI ground:** `aeo_search_prompts` on the strongest rival's domain (45 for 50 rows). With a domain as input, `mentions_brand` means the domain is cited; prompts with volume where it is false are where engines answer without citing that rival. `ai_search_volume` is a proxy, not query logs.
+- **AI ground:** `aeo_search_prompts` on the strongest rival's domain (47 for 50 rows). With a domain as input, `mentions_brand` means the domain is cited; prompts with volume where it is false are where engines answer without citing that rival. `ai_search_volume` is a proxy, not query logs.
 - **Absence:** every channel in the baseline where a rival shows nothing (no active ads, no AI mentions, no pages for a topic) is ground the user can take without a fight.
 
 ## Choosing the ground

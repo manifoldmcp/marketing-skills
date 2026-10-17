@@ -17,7 +17,7 @@ No single source finds the competitive set. A company named by several independe
 | Source | What it finds | Trap |
 |---|---|---|
 | Search overlap (`seo_get_serp_competitors`, 10 credits for 100 rows) | Who takes the same Google results | Top rows are platforms and publishers. For pipedrive.com, 4 of the top 24 sold a CRM ([field notes](field-notes.md)) |
-| AI answers (`aeo_run_ai_answers`, 18 a prompt on five engines) | The shortlist engines hand a buyer who asks | `mentions[]` only detects the brands passed in `brands`; read each `answer` for the rest. Brands that recur across engines matter; one engine's long tail is noise |
+| AI answers (`aeo_run_ai_answers`, 27 a prompt on five engines) | The shortlist engines hand a buyer who asks | `mentions[]` only detects the brands passed in `brands`; read each `answer` for the rest. Brands that recur across engines matter; one engine's long tail is noise |
 | Comparison searches (`seo_search_keywords` with "<rival> vs" as `seed`, 10) | Who buyers weigh against the best-known rival, and how often (`volume`) | A brand in several "vs" keywords is in the buyer's set whatever its own size |
 | Category ads (`ads_search_ads`, 1 a page per library) | Who pays for the category's words now | Only Facebook honours `active_only`; on LinkedIn and TikTok read `last_shown`, which LinkedIn often leaves empty |
 | Reddit (`reddit_search_posts` and `reddit_search_comments`, 1 each) | Who people actually switch to, and the indirect options ("we use a spreadsheet") | A ranked sample, never complete. Count names across threads |
@@ -34,11 +34,11 @@ No single source finds the competitive set. A company named by several independe
 
 1. `seo_get_page` on the homepage (free): `title`, `meta_description` and `h1[]` say what it sells and to whom. The same job for the same buyer makes it direct.
 2. Where that is unclear, `leads_get_company` (1 credit) for `description`, `industry` and `keywords[]`. The description can be old; `linkedin_get_company` `bio` is the current one.
-3. Size it last, as a signal and not a ranking: `organic_traffic` from `seo_get_domain_overview` (5 each) for up to about ten domains, `seo_get_traffic_estimates` above that (50 plus 50 per 100 domains). Traffic sizes SEO-led companies well and sales-led ones badly: an enterprise vendor can have little traffic and a large sales team ([reading the numbers](estimates.md)).
+3. Size it last, as a signal and not a ranking: `organic_traffic` from `seo_get_domain_overview` (15 each) for up to about three domains, `seo_get_traffic_estimates` above that (50 plus 50 per 100 domains). Traffic sizes SEO-led companies well and sales-led ones badly: an enterprise vendor can have little traffic and a large sales team ([reading the numbers](estimates.md)).
 
 ## Cost
 
-A default run (homepage, search overlap, two SERPs, three AI prompts, one "vs" keyword pull, three ad libraries, three Reddit searches and three threads, traffic for 20 domains) costs about 145 credits, plus 1 for each company record. Put every known competitor (up to ten) in `brands` on the one AI run, since it is never cached.
+A default run (homepage, search overlap, two SERPs, three AI prompts, one "vs" keyword pull, three ad libraries, three Reddit searches and three threads, traffic for 20 domains) costs about 172 credits, plus 1 for each company record. Put every known competitor (up to ten) in `brands` on the one AI run, since it is never cached.
 
 ## Deliver
 

@@ -29,11 +29,11 @@ So for AI visibility, Reddit is a Perplexity and Google lever in late 2026, not 
 
 ## Finding the threads that matter
 
-1. **AI answers:** an existing `aeo_run_ai_answers` `task_id` (kept 30 days; `get_task` is free), or a new run on five to ten buyer prompts (18 credits a prompt on the default five engines; a cheaper first pass is five prompts on `engines: ["perplexity", "ai_mode"]`, the engines that still cite Reddit, at 8 credits a prompt). From each row's `citations[]`, keep those on reddit.com (www, old and bare are the same thread), with the prompt, engine and whether the user was named. Leave out rows whose `answer` is null.
+1. **AI answers:** an existing `aeo_run_ai_answers` `task_id` (kept 30 days; `get_task` is free), or a new run on five to ten buyer prompts (27 credits a prompt on the default five engines; a cheaper first pass is five prompts on `engines: ["perplexity", "ai_mode"]`, the engines that still cite Reddit, at 8 credits a prompt). From each row's `citations[]`, keep those on reddit.com (www, old and bare are the same thread), with the prompt, engine and whether the user was named. Leave out rows whose `answer` is null.
 2. **Google:** `seo_get_serp` per keyword with `ai_overview: true` (2 credits): the discussions rows, organic rows on reddit.com, and Reddit URLs among the `ai_overview` references.
 3. **Rank** one row per thread by the number of surfaces showing it, then prompts. A thread three surfaces show for four prompts is the core; one shown once is noise unless it is the only Reddit source for a prompt that matters.
 4. **Read the top 15:** `reddit_get_post` for `created_at`, `locked`, `archived`; `reddit_get_comments` for which products the top comments recommend and whether the user is named. Then the rules verdict per community from [rules](rules.md#the-rules-check).
-5. **Deliver** a table: title, URL, subreddit, shown by, prompts and keywords, age, open (yes, locked, archived), products recommended, user named, rules verdict, how to take part. Default cost about 235 credits with a new AI run, about 55 reusing one. If no surface shows Reddit for the category, say so and stop: Reddit is not where these answers come from.
+5. **Deliver** a table: title, URL, subreddit, shown by, prompts and keywords, age, open (yes, locked, archived), products recommended, user named, rules verdict, how to take part. Default cost about 325 credits with a new AI run, about 55 reusing one. If no surface shows Reddit for the category, say so and stop: Reddit is not where these answers come from.
 
 ## Taking part
 

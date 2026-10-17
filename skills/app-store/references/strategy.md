@@ -15,7 +15,7 @@ The order follows what blocks what. Skip a step only when the baseline shows it 
 
 ## Baseline
 
-From the user: store analytics for the past 90 days (impressions, product page views, installs, conversion by source, for search and browse apart), the keyword field, rating per main country, and any Apple Ads data. From Manifold, about 70 credits for one store: the listing and three to five rivals (`apps_get_app`, 6), competitors (`apps_get_competitors`, 10), keywords for the app and three rivals (`apps_get_keywords`, 40), shared keywords (`apps_get_shared_keywords`, 10), 300 newest reviews of the app (3) and its category chart (1). Add about 100 for an AI answers check on five prompts. Double the store calls for both stores.
+From the user: store analytics for the past 90 days (impressions, product page views, installs, conversion by source, for search and browse apart), the keyword field, rating per main country, and any Apple Ads data. From Manifold, about 70 credits for one store: the listing and three to five rivals (`apps_get_app`, 6), competitors (`apps_get_competitors`, 10), keywords for the app and three rivals (`apps_get_keywords`, 40), shared keywords (`apps_get_shared_keywords`, 10), 300 newest reviews of the app (3) and its category chart (1). Add about 145 for an AI answers check on five prompts. Double the store calls for both stores.
 
 ## The 90 days
 

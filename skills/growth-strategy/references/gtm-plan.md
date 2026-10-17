@@ -12,12 +12,12 @@ A go-to-market plan answers four questions in order: who it is for, why they wou
 
 ## The market check
 
-About 35 credits. It is a sample (one AI prompt, two results pages, one page of Reddit) that points the deeper work; it is not the verdict.
+About 41 credits. It is a sample (one AI prompt, two results pages, one page of Reddit) that points the deeper work; it is not the verdict.
 
 - **Demand:** `seo_search_keywords` on the category (10). Read `volume` without competitors' brand names, and the median of `trend[12]`. Existing demand can be captured; near-zero means a new category where demand is made.
-- **Who wins now:** `seo_get_serp` for "best <category>" and "<leading competitor> alternatives" (1 each), and `aeo_run_ai_answers` with "best <category> for <ICP>" and the competitors in `brands` (18), read with `get_task`.
+- **Who wins now:** `seo_get_serp` for "best <category>" and "<leading competitor> alternatives" (1 each), and `aeo_run_ai_answers` with "best <category> for <ICP>" and the competitors in `brands` (27), read with `get_task`.
 - **The problem in buyers' words:** `reddit_search_posts` on the problem at the default relevance sort (1); keep the rows that are on topic.
-- **B2B size:** `leads_search_companies` with the ICP's industries, headcount and locations (4); `meta.rows_available` is an upper bound.
+- **B2B size:** `leads_search_companies` with the ICP's industries, headcount and locations (1 at `limit: 1`); `meta.rows_available` is an upper bound.
 
 Depth for each lives elsewhere: demand and market size in [market-research](../../market-research/SKILL.md), competitors in [competitor-intel](../../competitor-intel/SKILL.md), the ICP's pains and language in [voice-of-customer](../../voice-of-customer/SKILL.md).
 

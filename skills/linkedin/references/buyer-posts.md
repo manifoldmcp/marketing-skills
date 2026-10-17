@@ -8,7 +8,7 @@ Inputs: the problem in the buyer's words, five or six phrasings across four kind
 
 1. **Search the phrasings.** `linkedin_search_posts` for each, two pages.
 2. **Sort each post** from its `text`: asking for a recommendation (hot), switching or complaining about a competitor (hot), describing the pain (warm), discussing the topic in general (drop), a vendor, consultant or recruiter marketing to the pain (drop; about half of a topic search in our October read, see [field notes](field-notes.md)). Keep the sentence that shows the signal.
-3. **Qualify the authors.** `linkedin_get_profile` with the row's `author_url` on the hot and warm authors, up to 25: role, company type and market from the `bio`, `experience` and `location`. The profile has no headline or title; when the role decides it, `leads_get_person` (3 credits) has the current title.
+3. **Qualify the authors.** `linkedin_get_profile` with the row's `author_url` on the hot and warm authors, up to 25: role, company type and market from the `bio`, `experience` and `location`. The profile has no headline or title; when the role decides it, `leads_get_person` (9 credits by profile URL) has the current title.
 4. **Weigh the post.** `likes` and `comments` on the row. A complaint with many likes means many people share it: a theme for content even when its author is not a buyer.
 5. **Read the replies.** `top_comments` names up to 10 people replying: others with the same problem, or competitors already answering. The user opens the post and reads the thread before acting.
 

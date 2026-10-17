@@ -48,10 +48,10 @@ Open the one the question needs.
 
 ## Using Manifold
 
-- **A link profile:** `seo_get_backlink_summary` (10 credits) for totals, dofollow share and `broken_backlinks`; `seo_get_domain_overview` (5) for the canonical domain rank and traffic.
+- **A link profile:** `seo_get_backlink_summary` (10 credits) for totals, dofollow share and `broken_backlinks`; `seo_get_domain_overview` (15) for the canonical domain rank and traffic.
 - **Who links:** `seo_get_referring_domains` (10 + 1.5 per 100 rows, 25 at `limit: 1000`), one row per registered domain. Its row `rank_passed` is not the site's rank, so take the domains and rate them separately; `status: "lost"` lists the domains that dropped a link.
 - **Individual links:** `seo_get_backlinks` (same pricing) for `url_to`, `anchor`, `dofollow`, `rel[]`, `broken` and `url_to_status`. Strip query strings and count distinct linking domains per page.
-- **Rating a list:** `seo_get_domain_ratings`, up to 1,000 domains for 1 credit plus 2.5 per 100, with `domain_rank` and `ahrefs_dr` (show "Domain Rating by Ahrefs", linked, beside it). Never rate one at a time.
+- **Rating a list:** `seo_get_domain_ratings`, up to 1,000 domains for 7 credits plus 2.5 per 100, with `domain_rank` and `ahrefs_dr` (show "Domain Rating by Ahrefs", linked, beside it). Never rate one at a time.
 - **Pages:** `seo_get_page`, free and rate limited, for live status, redirects and headings. `seo_get_serp` (1 credit per 10 results) for mentions and page-one prospects.
 - **Contacts:** `leads_get_domain_emails`, `leads_get_email` and `leads_get_email_status`, last and only for the shortlist ([contacts](references/contacts.md)).
 - **Costs and cache:** say the estimate before the first paid call; with a budget, pass `max_credits` on every call and stop at `BudgetExceeded`; `dry_run: true` prices a call for free. Backlink data is cached seven days and domain emails thirty for the account that paid, so a second pass is cheap. The index lags the live web by weeks.

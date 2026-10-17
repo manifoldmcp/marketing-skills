@@ -50,11 +50,11 @@ Open the one the question needs.
 
 ## Using Manifold
 
-- **Count and find accounts:** `leads_search_companies` (4 credits a page of up to 100). Read `rows_available` to count instead of fetching. `industries` match LinkedIn's names exactly, and some records carry them in another language.
-- **Find buyers:** `leads_search_people` with full `titles` (or bare functions plus `seniority`) and up to 100 `company_domains` (4 credits a page). Rows carry name, `title`, `title_start`, `location` and the LinkedIn URL as `id`, never an email.
-- **Reveal:** `leads_get_email`, 6 credits on a hit, 1 on `NoData`. Misses are not cached, so never retry one. A domain with no named buyer: `leads_get_domain_emails` (2 credits a domain plus 6 per 10 addresses).
+- **Count and find accounts:** `leads_search_companies` (12 credits per 100 rows asked for in `limit`, rounded up: the default 100 is 12, `limit: 1` is 1). Read `rows_available` to count instead of fetching. `industries` match LinkedIn's names exactly, and some records carry them in another language.
+- **Find buyers:** `leads_search_people` with full `titles` (or bare functions plus `seniority`) and up to 100 `company_domains` (12 credits per 100 rows asked for). Rows carry name, `title`, `title_start`, `location` and the LinkedIn URL as `id`, never an email.
+- **Reveal:** `leads_get_email`, 7 credits on a hit by name and domain, 1 on `NoData`. Misses are not cached, so never retry one. A domain with no named buyer: `leads_get_domain_emails` (1 credit a domain plus 30 for each domain that returns addresses).
 - **Verify:** `leads_get_email_status`, 1 credit, cached 30 days. Its `mail_provider` says whether a domain runs on Google, Microsoft or a security gateway.
-- **Signals and research:** `linkedin_search_posts` (1 credit a page), `linkedin_get_company_posts`, `linkedin_get_profile`, `seo_get_serp` for funding news, `ads_get_advertiser_ads`, `leads_get_person` (3 credits, 1 on a miss) for employment history.
+- **Signals and research:** `linkedin_search_posts` (1 credit a page), `linkedin_get_company_posts`, `linkedin_get_profile`, `seo_get_serp` for funding news, `ads_get_advertiser_ads`, `leads_get_person` (9 credits by profile URL, 1 on a miss) for employment history.
 - **Read the data right:** spend in funnel order (count, search, cut on the rows, then reveal); a person's `location` is not the company's; a reveal's `valid` is the finder's own verdict; `title_start` dates a move better than a headline does. Detail and traps in [lead data](references/lead-data.md).
 - **Never send, sequence, connect on LinkedIn or write to a CRM.** Deliver tables the user imports.
 

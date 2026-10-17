@@ -19,7 +19,7 @@ Whether a product sold on Amazon shows up when people ask ChatGPT, Perplexity, G
 1. **Have a crawlable brand site** with the product's specs, price and use cases in plain HTML, and the Amazon link as the way to buy. That is the page engines can read.
 2. **Submit a product feed** to Google Merchant Center and to ChatGPT's merchant programme where eligible, so the products exist in the feeds AI shopping answers draw on. Feeds and Google Shopping are in [google-shopping](../../google-shopping/SKILL.md).
 3. **Be talked about where engines read:** reviews on the brand's site, YouTube reviews, editorial roundups, Reddit. That is the [ai-search](../../ai-search/SKILL.md) work; it applies to an Amazon brand like any other.
-4. **Measure, do not assume.** `aeo_run_ai_answers` asks the buyer's question on the engines that matter and shows which products and pages are named; 18 credits a prompt on the default five engines. Expect amazon.com to be absent from ChatGPT and Perplexity citations even when the product is named.
+4. **Measure, do not assume.** `aeo_run_ai_answers` asks the buyer's question on the engines that matter and shows which products and pages are named; 27 credits a prompt on the default five engines. Expect amazon.com to be absent from ChatGPT and Perplexity citations even when the product is named.
 
 ## Unknown
 

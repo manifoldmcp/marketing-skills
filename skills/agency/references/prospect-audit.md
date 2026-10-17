@@ -20,13 +20,13 @@ A prospect audit opens a sales conversation: a handful of cheap calls that find 
 - **Buyer questions**: two questions a buyer would ask an AI engine ("best invoicing app for freelancers", "emergency plumber in Leeds").
 - **Market**: `location` and `language` if not the United States and English.
 
-## The calls (about 84 credits, under a dollar)
+## The calls (about 134 credits, under $1.50)
 
-1. **Size.** `seo_get_domain_overview` on the prospect and each competitor (5 credits each): `domain_rank`, `organic_keywords`, `positions`, `top_pages`, and `organic_traffic` only as an estimate. If the prospect's `top_10` is 0, skip the traffic comparison: the figure is modelled from deep rankings.
+1. **Size.** `seo_get_domain_overview` on the prospect and each competitor (15 credits each): `domain_rank`, `organic_keywords`, `positions`, `top_pages`, and `organic_traffic` only as an estimate. If the prospect's `top_10` is 0, skip the traffic comparison: the figure is modelled from deep rankings.
 2. **Quick wins.** `seo_get_ranked_keywords` on the prospect. Its rows come by traffic, highest first, so striking-distance keywords with little traffic sit deep: check `meta.rows_available` and pull every row when it is a few hundred (5 credits plus 5 per 100), then keep keywords ranking 4 to 20 with real volume. Then `seo_get_page` on the homepage and top page (free): a missing or overlong title, no meta description, no `h1`, no structured data are findings anyone can see.
 3. **Gap.** `seo_get_keyword_gap` against the strongest competitor (10 credits). "competitor.com ranks for these 20 searches, worth N a month, and you rank for none."
-4. **Site health.** `seo_run_technical_crawl` with `max_pages: 100` (3 credits), then `get_task` after `poll_after_s`: `broken_links`, `non_indexable`, `duplicate_titles`, `onpage_score`. Add `aeo_get_site_readiness` (free): a CDN or robots rule blocking AI crawlers is a finding few prospects know.
-5. **AI answers.** `aeo_run_ai_answers` with the two questions and `brands` set to the prospect and the competitors (36 credits on five engines), then `get_task`. Count in how many of the ten answers each brand is named and cited. Say it is one run on one date and a second can differ.
+4. **Site health.** `seo_run_technical_crawl` with `max_pages: 100` (5 credits), then `get_task` after `poll_after_s`: `broken_links`, `non_indexable`, `duplicate_titles`, `onpage_score`. Add `aeo_get_site_readiness` (free): a CDN or robots rule blocking AI crawlers is a finding few prospects know.
+5. **AI answers.** `aeo_run_ai_answers` with the two questions and `brands` set to the prospect and the competitors (54 credits on five engines), then `get_task`. Count in how many of the ten answers each brand is named and cited. Say it is one run on one date and a second can differ.
 6. **Ads.** `ads_get_advertiser_ads` with `platform: "facebook"` and `platform: "google"` for the prospect and the strongest competitor (1 credit each): whether each runs ads, how many still run (`active: true` on Meta; on Google `active` is null, so `last_shown` within 7 days), and the oldest `first_shown` still running. An ad kept for months is usually one that works.
 
 A local business often has null or tiny estimates. Use `seo_get_position` (6 credits each) on two or three "service in city" keywords instead, and show who ranks above from `above[]`.

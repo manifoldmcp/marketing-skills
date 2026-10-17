@@ -26,7 +26,7 @@ For each page, `seo_get_page` on it and on the top three results (free, rate lim
 3. **Title.** The keyword or a close variant near the start, under about 60 characters, with a reason to click the others lack. Google rewrites titles it finds unhelpful; a title that agrees with the `h1` and the query is rewritten less.
 4. **Meta description.** Present, answers the query in under about 155 characters. Google often shows its own snippet; this is the default it falls back to.
 5. **Headings.** One `h1` matching the query; `h2` sections for the subtopics two or more winners share. `seo_get_ranked_keywords` on the top result's URL (10 credits) lists the other queries it wins: each is a question the page could answer.
-6. **Internal links.** `seo_get_domain_overview` (5 credits) gives the site's strongest pages in `top_pages`. Suggest one or two links from a related strong page with the keyword as anchor text. The tools cannot see existing inbound internal links; the user checks.
+6. **Internal links.** `seo_get_domain_overview` (15 credits) gives the site's strongest pages in `top_pages`. Suggest one or two links from a related strong page with the keyword as anchor text. The tools cannot see existing inbound internal links; the user checks.
 7. **Links, only when on-page is level.** If the page already matches the winners on intent, format and sections, the gap is usually links: `seo_get_backlink_summary` on the page and the top result (10 credits each), compare `referring_domains`. A large gap goes to [link-building](../../link-building/SKILL.md).
 
 The tools cannot read the body copy. If the host can open the page, it judges the copy (stale facts, a missing direct answer); otherwise headings and `word_count` are the evidence.

@@ -8,7 +8,7 @@ All six tools read what LinkedIn shows the public, with no logged-in account. Th
 
 - **No views, shares or saves.** `views`, `shares` and `saves` are always null. Reach is invisible; engagement is `likes` (all reactions) and `comments`. The user's own analytics (impressions, in-network and out-of-network reach since June 2026, followers gained) are the only reach data; ask for them when judging the user's own posts.
 - **Ten commenters, no reactors.** A post shows up to 10 comments, each with the commenter's name and `author_url`, and no time, likes or replies for the comment. Who reacted is never shown. On a post with 200 comments, 10 come back: a sample, not the thread.
-- **No headline, no job titles.** `linkedin_get_profile` returns the about text in `bio` (often cut to a line), `location`, `followers`, `experience` (companies, usually without titles or dates) and `recent_posts`. For a person's current title and company, `leads_get_person` (3 credits, see [outbound](../../outbound/SKILL.md)) on the profile URL.
+- **No headline, no job titles.** `linkedin_get_profile` returns the about text in `bio` (often cut to a line), `location`, `followers`, `experience` (companies, usually without titles or dates) and `recent_posts`. For a person's current title and company, `leads_get_person` (9 credits, see [outbound](../../outbound/SKILL.md)) on the profile URL.
 - **No feed, no audience.** The tools cannot see what a member's feed shows, who follows a page, or who clicked.
 
 ## The tools

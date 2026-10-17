@@ -4,7 +4,7 @@ One question: can Google crawl, render, index and understand the pages that earn
 
 ## Order of work
 
-1. **Weigh first.** Which pages earn traffic: `console_get_search_analytics` with `dimensions: ["page"]` over 90 days (free, measured), or `top_pages` from `seo_get_domain_overview` (5 credits, estimated). An issue matters by the traffic on the pages it touches, not by how many pages it touches: a `noindex` on the pricing page beats a thousand missing alt texts.
+1. **Weigh first.** Which pages earn traffic: `console_get_search_analytics` with `dimensions: ["page"]` over 90 days (free, measured), or `top_pages` from `seo_get_domain_overview` (15 credits, estimated). An issue matters by the traffic on the pages it touches, not by how many pages it touches: a `noindex` on the pricing page beats a thousand missing alt texts.
 2. **Test rendering.** `seo_get_page` (free) on the homepage and one key template. A `word_count` under about 100 or an empty `h1` on a page that shows full content in a browser means the content needs JavaScript: crawl with `render: true` and treat it as a finding, since Google renders with a delay and other engines mostly do not ([indexing](indexing.md#rendering-javascript)).
 3. **Crawl.** `seo_run_technical_crawl` sized to the site, then `get_task` after `poll_after_s` (a few minutes for a few hundred pages).
 4. **Confirm on pages that matter.** For each sample URL that is also a top page, `seo_get_page`; with Search Console, `console_inspect_url` on up to ten key URLs and `console_get_sitemaps`; with Bing, `console_get_crawl_issues`.
@@ -12,7 +12,7 @@ One question: can Google crawl, render, index and understand the pages that earn
 
 ## Reading the crawl
 
-- **Size.** `max_pages` up to 1,000 per crawl on the current plan. It charges on pages requested, not crawled: 3 credits per 100, 30 per 100 with `render: true`. If `pages_crawled` is far below the site's size, the crawler was blocked or internal links do not reach the pages; if it equals `max_pages`, the result is a sample, so say so. A page the user expects that the crawl never found is a finding: nothing links to it.
+- **Size.** `max_pages` up to 1,000 per crawl on the current plan. It charges on pages requested, not crawled: 5 credits per 100, 50 per 100 with `render: true`. If `pages_crawled` is far below the site's size, the crawler was blocked or internal links do not reach the pages; if it equals `max_pages`, the result is a sample, so say so. A page the user expects that the crawl never found is a finding: nothing links to it.
 - **Where it starts.** It follows links from the homepage of the `target` host and stays on that host unless `include_subdomains` is true, when subdomains share `max_pages`. Crawl a large blog or docs subdomain as its own `target` ([field notes](field-notes.md)).
 - **Time.** A few hundred pages took 10 to 45 minutes in our runs. Start the crawl first and do the free checks while it runs.
 - **What comes back.** `status_codes` counts crawled pages per HTTP status: the reliable count. `broken_links` counts links, not broken pages, so one broken link in a template reads as one per page. `non_indexable` counts URLs blocked from indexing by robots.txt, headers or meta tags, including linked URLs robots.txt kept the crawler from, so it can exceed `pages_crawled`. Quote neither without its sample URLs. `duplicate_titles` and `duplicate_descriptions` are counts of pages. `issues[]` lists each failed `check` with `pages` and up to ten `sample_urls`. Sort them:
@@ -44,7 +44,7 @@ One question: can Google crawl, render, index and understand the pages that earn
 
 Order: what blocks indexing on pages that earn traffic (5xx, `noindex`, wrong canonicals, soft 404s), then broken internal links and redirect chains, then duplication, then on-page gaps, hygiene last. A table: issue, check name, pages affected, sample URLs, why it matters, fix, owner (developer or writer), priority. Above it, the crawl size, whether it was rendered, the data sources and the date. Say what the crawl did not cover.
 
-Budget: a 1,000-page audit is about 35 credits (5 for the overview, 30 for the crawl), or about 305 rendered. `seo_get_page`, `get_task` and the console tools are free.
+Budget: a 1,000-page audit is about 65 credits (15 for the overview, 50 for the crawl), or about 515 rendered. `seo_get_page`, `get_task` and the console tools are free.
 
 ## Without the connector
 

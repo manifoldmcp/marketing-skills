@@ -7,12 +7,12 @@ One competitor across every channel in one table: how big it is, how strong in s
 | Channel | Calls | Credits | What it says | Trap |
 |---|---|---|---|---|
 | Company | `leads_get_company`, then `linkedin_get_company` with its `linkedin_url` | 2 | Category, founding year, two headcounts, growth, revenue range | The two headcounts disagree; funding is never there ([reading the numbers](estimates.md#company-size)) |
-| Search | `seo_get_domain_overview`, `seo_get_ranked_keywords` with `limit: 100`, `seo_get_backlink_summary` | 25 | Strength, the topics and pages that earn non-branded traffic, the commercial keywords where it meets buyers, link base | Estimates, not visits; the model changes on 1 November 2026 |
+| Search | `seo_get_domain_overview`, `seo_get_ranked_keywords` with `limit: 100`, `seo_get_backlink_summary` | 35 | Strength, the topics and pages that earn non-branded traffic, the commercial keywords where it meets buyers, link base | Estimates, not visits; the model changes on 1 November 2026 |
 | Paid | `ads_get_advertiser_ads` on facebook (brand), linkedin (company), tiktok (advertiser), google (domain) | 4 | Active ads per library, the oldest still running, formats, offers and landing pages | Only Facebook honours `active_only`; LinkedIn rows are mostly undated |
 | Social | Profiles on TikTok, Instagram, YouTube, X and Facebook, then one page of recent posts each, plus `linkedin_get_company_posts` | about 11 | Followers, posts in 30 days, median engagement | `linkedin_get_company_posts` carries no engagement; X returns one page |
-| AI answers | `aeo_run_ai_answers`, two category prompts, `brands` holding the user and every rival likely to be torn down next | 36 | Cells where each brand is named; the domains cited | Ten cells show presence or absence, not share of voice |
+| AI answers | `aeo_run_ai_answers`, two category prompts, `brands` holding the user and every rival likely to be torn down next | 54 | Cells where each brand is named; the domains cited | Ten cells show presence or absence, not share of voice |
 
-A default teardown is about 78 credits, plus 25 for the user's own search row. Results are cached (7 days for SEO, 24 hours for ad lists and profiles, 30 days for company records), so a second teardown in the same week reuses them free, and one AI run can serve several competitors if they are all in `brands`.
+A default teardown is about 106 credits, plus 35 for the user's own search row. Results are cached (7 days for SEO, 24 hours for ad lists and profiles, 30 days for company records), so a second teardown in the same week reuses them free, and one AI run can serve several competitors if they are all in `brands`.
 
 ## Reading it
 

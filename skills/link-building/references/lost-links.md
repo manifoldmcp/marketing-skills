@@ -28,7 +28,7 @@ Do the redirects first: they recover every link to a page at once, cost nothing 
 
 Rate the kept domains ([floors](authority-metrics.md#floors)), find a contact for the top 20 ([contacts](contacts.md)), and ask to restore the link or update it to the current URL. A link dropped in a rewrite is usually a lost citation, not a rejection: "you cited us before; here is the current page." Links lost from directories, spam or scrapers are not worth an email.
 
-About 220 credits for a site with 20 contacts.
+About 685 credits for a site with 20 contacts.
 
 ## Deliverables
 

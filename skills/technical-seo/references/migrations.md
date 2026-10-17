@@ -25,7 +25,7 @@ Small and medium sites should move all at once; large sites can move a section a
 
 ## Before launch
 
-1. **Baseline the old site.** `seo_get_domain_overview` (5 credits), a crawl sized to the site (30 credits for 1,000 pages) kept as the health baseline, noting issues not to carry over.
+1. **Baseline the old site.** `seo_get_domain_overview` (15 credits), a crawl sized to the site (50 credits for 1,000 pages) kept as the health baseline, noting issues not to carry over.
 2. **List every URL that matters.**
    - With Search Console: pages with any click in 12 months, `dimensions: ["page"]` and `limit: 1000`, following `cursor` (free). The fullest list.
    - Ranking URLs: `seo_get_ranked_keywords` with `limit: 1000` (55 credits), grouped by `url`, summing `traffic`; keep each URL's keywords and `rank` as the position baseline.
@@ -34,7 +34,7 @@ Small and medium sites should move all at once; large sites can move a section a
 3. **Build the map.** One row per URL that ranks, earns clicks or has links: old URL, new URL, 301 (or 308). Same content first, then closest topic, then parent category; never the homepage. Old URLs with no traffic, no links and no equivalent can return 404 or 410.
 4. **Record what the pages carry.** `seo_get_page` (free) on the top 50 by traffic and links: `title`, `meta_description`, `h1`, `canonical`, `schema_types`.
 
-Deliver: old URL, clicks or estimated traffic (say which), linking domains, top keyword and rank, new URL, status to return, notes. Budget about 115 credits.
+Deliver: old URL, clicks or estimated traffic (say which), linking domains, top keyword and rank, new URL, status to return, notes. Budget about 145 credits.
 
 ## After launch
 
@@ -53,7 +53,7 @@ Deliver: old URL, clicks or estimated traffic (say which), linking domains, top 
 - The user, not a tool, runs Change of Address and submits the new sitemap.
 - Links to old URLs pass through redirects, but a direct link does not depend on one being kept. After a domain change, ask the sites behind the strongest links (by `dr_from`) to update them: finding their contacts is in [link-building](../../link-building/SKILL.md).
 
-Budget after launch about 145 credits.
+Budget after launch about 165 credits.
 
 ## Without the connector
 

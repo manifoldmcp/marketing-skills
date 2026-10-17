@@ -14,7 +14,7 @@ What the `youtube_*` tools return, what they do not, the traps in their fields, 
 | What do viewers say? | `youtube_get_comments` (most liked first) | 1 credit a page |
 | Is there Google demand for the phrase, and does Google show videos for it? | `seo_search_keywords`, then `seo_get_serp` | 10 credits for 100 rows (cached 7 days); 1 credit a SERP, +1 with `ai_overview: true` |
 
-Every YouTube call costs 1 credit, so YouTube research is cheap; the expensive calls in this topic are elsewhere (`aeo_run_ai_answers`, 18 credits a prompt on the default engines). Transcripts are cheap in credits but long: read them for a shortlist, to spare the context. A result the account already paid for is free while cached, so a second pass the same day costs little. `dry_run: true` prices any call for free; pass `max_credits` when the user set a budget.
+Every YouTube call costs 1 credit, so YouTube research is cheap; the expensive calls in this topic are elsewhere (`aeo_run_ai_answers`, 27 credits a prompt on the default engines). Transcripts are cheap in credits but long: read them for a shortlist, to spare the context. A result the account already paid for is free while cached, so a second pass the same day costs little. `dry_run: true` prices any call for free; pass `max_credits` when the user set a budget.
 
 ## Traps
 

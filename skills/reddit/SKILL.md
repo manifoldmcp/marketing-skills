@@ -54,7 +54,7 @@ Open the one the question needs.
 - **What is new in chosen communities:** `reddit_get_new_posts`, up to 10 subreddits, at most 7 days back, with `match` terms; complete only for the window `coverage[]` reports. One page of a busy community reaches back hours, not days. 1 credit per subreddit per page, never cached.
 - **What Reddit has said about something:** `reddit_search_posts` and `reddit_search_comments`, 1 credit a page of six to nine rows, ranked and never complete. Counts from them compare like with like and never size anything.
 - **One thread:** `reddit_get_post` for `locked`, `archived` and the full body; `reddit_get_comments` for one page of 25 replies in reading order. 1 credit each.
-- **Google and AI:** `seo_get_serp` rows with `type: "discussions_and_forums_element"` are the threads Google shows; `aeo_run_ai_answers` citations on reddit.com are the ones engines cite (18 credits a prompt on five engines).
+- **Google and AI:** `seo_get_serp` rows with `type: "discussions_and_forums_element"` are the threads Google shows; `aeo_run_ai_answers` citations on reddit.com are the ones engines cite (27 credits a prompt on five engines).
 - **Read the data right:** `submit_text` came back empty on every community in October 2026, `upvote_ratio` is empty on search rows, and comment search applies `time_range` to its page itself because the vendor ignores it, so a narrow window can come back short ([reading the data](references/data.md)).
 - **Never post, reply, vote, message or modmail for the user.** No tool can, and the account at risk is theirs. Deliver tables the user works through; draft text only when asked.
 

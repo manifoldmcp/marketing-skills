@@ -10,11 +10,11 @@ How to find the person who can add a link, a list entry or a correction at any w
 
 ## Steps
 
-1. **Domain search, shortlist only.** `leads_get_domain_emails` with up to 20 domains per call, `department: ["marketing", "communication"]` and `type: "all"`, and `limit: 10` when one contact per site is enough. Cost: 2 credits a domain plus 6 per 10 addresses returned, about 8 a domain at `limit: 10`, about 20 at the default 30. Choose in this order: a named editor or content lead with `verification_status: valid`; any named person in those departments; a generic address. If a domain has nothing in those departments, call it once more with no `department`. A domain that answers `NoData` (1 credit) gets no further call: keep the row as "no contact found; use the site's contact page".
-2. **A named person the search missed.** `leads_get_email` with `first_name`, `last_name` and `domain`: 6 credits on a hit, 1 on `NoData`. Never retry a `NoData`. `domains[].pattern` from step 1 shows the address format, but an address built from it is unproven until step 3.
+1. **Domain search, shortlist only.** `leads_get_domain_emails` with up to 20 domains per call, `department: ["marketing", "communication"]` and `type: "all"`. Cost: 1 credit a domain plus 30 for each domain that returns addresses, whatever the `limit`: 31 a domain with addresses. Choose in this order: a named editor or content lead with `verification_status: valid`; any named person in those departments; a generic address. If a domain has nothing in those departments, call it once more with no `department`. A domain that answers `NoData` (1 credit) gets no further call: keep the row as "no contact found; use the site's contact page".
+2. **A named person the search missed.** `leads_get_email` with `first_name`, `last_name` and `domain`: 7 credits on a hit, 1 on `NoData`. Never retry a `NoData`. `domains[].pattern` from step 1 shows the address format, but an address built from it is unproven until step 3.
 3. **Verify the one address per site you would send to**, never the whole list: `leads_get_email_status`, 1 credit each. Drop `invalid`. Keep `accept_all` and mark it unproven (the server accepts anything, so nothing there can be proven). Keep `unknown` with a note: the mail server refused the check.
 
-A typical shortlist of 20 sites costs about 160 credits for contacts and 20 for verification, more than all the research before it. Find contacts last.
+A typical shortlist of 20 sites costs about 620 credits for contacts and 20 for verification, more than all the research before it. Find contacts last.
 
 ## Outreach evidence
 

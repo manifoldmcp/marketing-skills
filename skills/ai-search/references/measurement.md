@@ -42,7 +42,7 @@ Answers are sampled, not looked up. The same prompt on the same engine a minute 
 
 ## Cost
 
-`aeo_run_ai_answers` costs, per prompt, 6 credits each for claude and perplexity and 2 each for chatgpt, gemini, ai_overview and ai_mode: 18 per prompt on the default five engines, 180 for ten prompts. A tracked set of ten prompts every two weeks is about 390 credits a month. Cut cost by dropping engines the buyers do not use (chatgpt, gemini and ai_overview alone are 6 a prompt) before cutting prompts: fewer prompts make every share noisier. Results are kept 30 days and never cached, so reuse a `task_id` rather than re-asking, and re-run only the prompt whose cell failed.
+`aeo_run_ai_answers` costs, per prompt, 15 credits for claude, 6 for perplexity and 2 each for chatgpt, gemini, ai_overview and ai_mode: 27 per prompt on the default five engines, 270 for ten prompts. A tracked set of ten prompts every two weeks is about 585 credits a month. Cut cost by dropping engines the buyers do not use (chatgpt, gemini and ai_overview alone are 6 a prompt) before cutting prompts: fewer prompts make every share noisier. Results are kept 30 days and never cached, so reuse a `task_id` rather than re-asking, and re-run only the prompt whose cell failed.
 
 For Google's AI Overview alone, `seo_get_serp` with `ai_overview: true` is cheaper and also shows the organic results the overview drew on.
 
