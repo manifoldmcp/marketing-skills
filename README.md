@@ -228,7 +228,7 @@ One skill per area of marketing, named for the area. The library is flat, so ins
 
 ## Credits
 
-Every tool call costs Manifold credits (100 credits are one US dollar), and the skills tell the agent what calls cost so it can say before the first paid one. Give a budget and the agent caps every call with it. Prices are at https://www.manifoldmcp.com/pricing.
+Every tool call costs Manifold credits (1 to 2.5 US cents a credit, by plan), and the skills tell the agent what calls cost so it can say before the first paid one. Give a budget and the agent caps every call with it. Prices are at https://www.manifoldmcp.com/pricing.
 
 ## What the plugin runs and sends
 

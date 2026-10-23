@@ -55,7 +55,7 @@ Then configure the server with the API key in the authorization header:
 
 ## Usage
 
-Every workspace gets free credits each month, with no card. Tool calls cost Manifold credits (100 credits equal one US dollar), while the Search Console, Bing Webmaster Tools and Google Analytics tools cost nothing. Every tool states its price before it runs, and the marketing skills in this repository show the cost before making paid calls. Install the skills with:
+Every workspace gets free credits each month, with no card. Tool calls cost Manifold credits (1 to 2.5 US cents a credit, by plan), while the Search Console, Bing Webmaster Tools and Google Analytics tools cost nothing. Every tool states its price before it runs, and the marketing skills in this repository show the cost before making paid calls. Install the skills with:
 
 ```bash
 npx skills add manifoldmcp/marketing-skills
