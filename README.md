@@ -1,4 +1,4 @@
-# Manifold: the free marketing data connector for AI agents
+# Manifold: the free marketing data MCP server for AI agents
 
 **Free every month.** One sign-in gives Claude, ChatGPT or any MCP client live data from Google search, AI answers, Search Console, Google Analytics, Google Maps, Reddit, TikTok, Instagram, YouTube, Facebook, LinkedIn, the ad libraries, the app stores, Amazon, Google Shopping, and companies and people. There is no account to open with each platform: no Reddit API app, no LinkedIn login, no SEO subscription.
 
@@ -27,15 +27,15 @@ Signing in creates a workspace with free credits. The steps for each client are 
 
 ## What your agent can look up
 
-- **Google search**: keyword ideas, volumes and difficulty, rankings, results pages, backlinks, competitors, traffic estimates and a technical crawl.
-- **AI answers**: what ChatGPT, Claude, Gemini, Perplexity and Google's AI answers say for a prompt, which brands they name and which pages they cite, and whether a site is ready for them.
-- **Search Console and Google Analytics**: your own Google Search Console, Bing Webmaster Tools and Google Analytics data once you connect them, and sitemap and URL submission.
-- **Google Maps**: who ranks for a local search, filtered lists of businesses, and full Business Profiles.
-- **Reddit**: posts, comments and communities, searched across Reddit or watched in one subreddit.
-- **Social**: accounts, posts, comments and transcripts on TikTok, Instagram, YouTube, Facebook and LinkedIn.
+- **[Google search](https://www.manifoldmcp.com/mcp/seo)**: keyword ideas, volumes and difficulty, rankings, results pages, backlinks, competitors, traffic estimates and a technical crawl.
+- **[AI answers](https://www.manifoldmcp.com/mcp/ai-visibility)**: what ChatGPT, Claude, Gemini, Perplexity and Google's AI answers say for a prompt, which brands they name and which pages they cite, and whether a site is ready for them.
+- **Search Console and Google Analytics**: your own [Google Search Console](https://www.manifoldmcp.com/mcp/search-console), [Bing Webmaster Tools](https://www.manifoldmcp.com/mcp/bing-webmaster-tools) and [Google Analytics](https://www.manifoldmcp.com/mcp/google-analytics) data once you connect them, and sitemap and URL submission.
+- **[Google Maps](https://www.manifoldmcp.com/mcp/google-maps)**: who ranks for a local search, filtered lists of businesses, and full Business Profiles.
+- **[Reddit](https://www.manifoldmcp.com/mcp/reddit)**: posts, comments and communities, searched across Reddit or watched in one subreddit.
+- **Social**: accounts, posts, comments and transcripts on [TikTok](https://www.manifoldmcp.com/mcp/tiktok), [Instagram](https://www.manifoldmcp.com/mcp/instagram), [YouTube](https://www.manifoldmcp.com/mcp/youtube), [Facebook](https://www.manifoldmcp.com/mcp/facebook) and [LinkedIn](https://www.manifoldmcp.com/mcp/linkedin).
 - **Ad libraries**: the ads running on Meta, Google, TikTok and LinkedIn, by keyword, brand or advertiser.
-- **Stores**: Google Play and App Store listings, reviews and charts, and Amazon and Google Shopping results, products, sellers and prices.
-- **Companies and people**: company and people search, and verified work emails.
+- **Stores**: [Google Play](https://www.manifoldmcp.com/mcp/google-play) and [App Store](https://www.manifoldmcp.com/mcp/app-store) listings, reviews and charts, and [Amazon](https://www.manifoldmcp.com/mcp/amazon) and [Google Shopping](https://www.manifoldmcp.com/mcp/google-shopping) results, products, sellers and prices.
+- **[Companies and people](https://www.manifoldmcp.com/mcp/apollo)**: company and people search, and verified work emails.
 
 Every tool, with what it costs, is at https://www.manifoldmcp.com/docs/tools.
 
@@ -236,7 +236,7 @@ The plugin is Markdown skills, two manifests and one connector entry. It runs no
 
 - **Where calls go.** The skills tell your agent which tools to call on the Manifold MCP server at `https://mcp.manifoldmcp.com/mcp`, the only server the plugin adds. You sign in to it with your Manifold account; the plugin holds no credentials.
 - **What a call sends.** Only the parameters the call needs: domains, URLs, keywords, prompts to ask AI engines, social handles and post URLs, subreddit names, company and person filters, the names and domains used to look up a work email, and email addresses to verify.
-- **Where the server gets its data.** DataForSEO for search, keyword, backlink, site audit and AI answer data; ScrapeCreators for public Reddit, social platform and ad library data; Apollo, Hunter, Findymail and Icypeas for company data, professional contacts and email verification. Two tools fetch the site you name directly. These providers receive the parameters of a call, never your name, email address or account.
+- **Where the server gets its data.** DataForSEO for search, keyword, backlink, site audit and AI answer data; ScrapeCreators for public Reddit, social platform and ad library data; Icypeas, Findymail and Hunter for company data, professional contacts and email verification. Two tools fetch the site you name directly. These providers receive the parameters of a call, never your name, email address or account.
 - **What the server keeps.** Your credit balance, the charge for each call, task results for 30 days and cached results. The full policy is at https://www.manifoldmcp.com/privacy.
 - **What it never does.** Send email, post, comment, message, buy, or change anything on another service. The skills hand you the results to act on.
 
