@@ -58,7 +58,7 @@ The public ad libraries of Meta, TikTok, LinkedIn and Google are the only outsid
 ## Reading an ad
 
 1. **The text.** `ads_get_ad` (1 credit) where a row lacks `body` or `destination_url`: usually on Google, sometimes on TikTok. The id is the row's `id` on Meta and TikTok, its `url` on LinkedIn and Google. The hook is the first line of the body.
-2. **The words of a video.** `tiktok_get_transcript` or `facebook_get_transcript` on the ad's `url` (1 credit). On NoData (1 credit, do not retry), find the post on the advertiser's own account (`tiktok_get_videos`, `instagram_get_reels`, `facebook_get_posts`) by its caption and transcribe that (`instagram_get_transcript` for a reel up to two minutes). LinkedIn and Google video have no transcript route; use the text. The first spoken sentence is the hook.
+2. **The words of a video.** `tiktok_get_transcript` or `facebook_get_transcript` on the ad's `url` (1 credit). On NoData (free, do not retry), find the post on the advertiser's own account (`tiktok_get_videos`, `instagram_get_reels`, `facebook_get_posts`) by its caption and transcribe that (`instagram_get_transcript` for a reel up to two minutes). LinkedIn and Google video have no transcript route; use the text. The first spoken sentence is the hook.
 3. **The landing page.** `seo_get_page` on `destination_url` (free, rate limited): `title`, `h1` and `h2` show the offer the page leads with and whether it is gated. No Manifold tool reads page body text.
 4. **Link it.** Keep each row's library `url` so the user can see the creative; the tools return text and a media link, not the video.
 

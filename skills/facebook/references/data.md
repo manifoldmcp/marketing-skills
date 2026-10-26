@@ -34,7 +34,7 @@ Pages only: `kind` is always company. Personal profiles, including a founder pos
 
 - Speech only. Text burned into the video, captions and visuals are not in it, and much of Facebook watches with the sound off. When a top video's transcript is thin or empty, say so rather than read meaning into it.
 - Auto-generated: on a music-heavy reel our test transcript was a garbled run of lyrics and fragments, with `language` null. Treat a transcript with no clear sentences as no speech.
-- `NoData` (no speech) still costs 1 credit; do not retry it.
+- `NoData` (no speech) is free; do not retry it.
 
 ## Groups
 

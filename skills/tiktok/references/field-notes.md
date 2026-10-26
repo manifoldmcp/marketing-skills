@@ -26,5 +26,5 @@ Three `tiktok_search_videos` calls of one page each (30 rows): "meal prep" (`sin
 - `music` was filled on every row: "original sound - <author>" for original audio (26 of 30 meal-prep rows), "original sound - <another handle>" for a borrowed sound, or a song title and artist.
 - A listing page held 10 rows; a search page 30; a comment page 19 of 589.
 - HubSpot's latest listing put three pinned videos first (June, April, September) before September's newest; 6 of its 10 latest were `is_ad`. Its photo post had a `/photo/` URL, `media: "image"` and a null `duration_s`.
-- A bookkeeper's talking-head video returned a full transcript (`language` null) that matched its caption almost word for word: creators paste transcripts into captions for search. A recipe video set to a song returned `NoData` and still cost 1 credit.
+- A bookkeeper's talking-head video returned a full transcript (`language` null) that matched its caption almost word for word: creators paste transcripts into captions for search. A recipe video set to a song returned `NoData`, which is free.
 - Hashtags #creatorsearchinsights and #TikTokCreatorSearchInsightsIncentive appeared on budgeting videos from May and September 2026: TikTok's search-gap programme for creators is live.
