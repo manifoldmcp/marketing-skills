@@ -14,9 +14,9 @@ US companies of 51 to 200 staff matching the keyword "SaaS", their marketing lea
 
 **Time in role.** 15 of 18 rows carried `title_start`. 3 of the 15 had started in the past 12 months, 2 in the past six. One headline still named the previous employer while `title` and `title_start` showed the new role from four months earlier.
 
-**The waterfall found everyone.** `leads_get_email` by profile URL on ten marketing leaders: 10 hits, all `valid`, all `found_by` Findymail. `meta.providers_tried` read icypeas then findymail on every call: the first entry is the Icypeas person lookup that resolves the profile to a name and domain, not a finder that missed. `confidence` was null and `sources[]` empty on every hit. Address formats varied (first.last, first, first initial plus last, full first name plus last).
+**The waterfall found everyone.** `leads_get_email` by profile URL on ten marketing leaders: 10 hits, all `valid`, all from the first finder that answered. `meta.providers_tried` started with the people lookup that resolves the profile to a name and domain, then the finder that hit. `confidence` was null and `sources[]` empty on every hit. Address formats varied (first.last, first, first initial plus last, full first name plus last).
 
-**A reveal's `valid` is the finder's verdict.** Re-checking the ten with `leads_get_email_status`: 8 `valid` (score 99), 1 `accept_all` (score 95, "risky"), 1 `unknown` with `mx_records`, `score` and `mail_provider` all null. Findymail returns only addresses it has verified, and the tool passes that on without a second check, so on a catch-all domain a reveal can say `valid` where the verifier says unproven.
+**A reveal's `valid` is the finder's verdict.** Re-checking the ten with `leads_get_email_status`: 8 `valid` (score 99), 1 `accept_all` (score 95, "risky"), 1 `unknown` with `mx_records`, `score` and `mail_provider` all null. Some finders return only addresses they have verified, and the tool passes that on without a second check, so on a catch-all domain a reveal can say `valid` where the verifier says unproven.
 
 **Most B2B mail here runs on Google.** Of the nine re-checks that answered, `mail_provider` was google for 7, microsoft for 1 and other for 1. These recipients are on Workspace, outside the formal reach of Gmail's bulk-sender rules ([deliverability](deliverability.md)).
 

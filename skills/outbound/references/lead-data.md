@@ -4,7 +4,7 @@ The rules for Manifold's `leads_*` tools, and for any list of real people. Every
 
 ## Where the data comes from
 
-Companies and people come from Icypeas. One person's email comes from a waterfall that stops at the first hit: Findymail, then Icypeas, with Hunter only when named (`provider: "hunter"`). A domain's addresses come from Hunter. Verification of an address the user holds runs on Icypeas. No single finder clears about 71% coverage on B2B decision makers (Anymail Finder's June 2026 test of 5,000 contacts: Findymail 70.9%, Hunter 57.6%, Icypeas 49.0% at 99.1% accuracy), which is why the reveal asks several and charges only on a hit.
+Companies and people come from professional data providers. One person's email comes from a waterfall of verified email lookup sources that stops at the first hit, with certain providers used only when explicitly requested (`provider` parameter). A domain's addresses come from email verification providers. Verification of an address the user holds runs through email verification services. No single source clears about 71% coverage on B2B decision makers (independent testing shows coverage ranging from 49% to 71% at 99.1% accuracy), which is why the reveal asks several and charges only on a hit.
 
 The index is strongest on companies with a website and a LinkedIn presence, and thin on small local businesses and on markets outside English-speaking tech. Say so whenever a count or a list is read as the market.
 
@@ -28,14 +28,14 @@ The index is strongest on companies with a website and a LinkedIn presence, and 
 
 ## Emails
 
-- **Reveal last, only for people worth contacting.** `leads_get_email` costs 7 credits on a hit by name and domain, 31 with `provider: "hunter"`, and 1 on `NoData`, cached 90 days. Misses are not cached, so asking again pays again for the same answer: never retry a `NoData`. A source that does not answer in time is skipped; when none answers the call is `ProviderUnavailable` at no charge, so retry that later.
-- Pass the row's `first_name`, `last_name` and `company_domain` as `domain`, with or without its `id`. With an `id` alone, the reveal first looks the person up in Icypeas to get the name and domain (9 credits more, 16 on a hit), so `meta.providers_tried` starting with icypeas is that lookup, not a failed finder.
+- **Reveal last, only for people worth contacting.** `leads_get_email` costs 7 credits on a hit by name and domain, 31 with certain providers, and 1 on `NoData`, cached 90 days. Misses are not cached, so asking again pays again for the same answer: never retry a `NoData`. A source that does not answer in time is skipped; when none answers the call is `ProviderUnavailable` at no charge, so retry that later.
+- Pass the row's `first_name`, `last_name` and `company_domain` as `domain`, with or without its `id`. With an `id` alone, the reveal first looks the person up to get the name and domain (9 credits more, 16 on a hit), so `meta.providers_tried` starting with a profile lookup is that step, not a failed finder.
 - Reveal the first 10 and count the hits before buying more. Under 5 hits means the titles are too junior or the companies too small for the sources' coverage; stop and say so.
 - Person records never carry an email. With no name (anyone at a small firm), `leads_get_domain_emails` lists a domain's known addresses (1 credit a domain plus 30 for each domain that returns addresses, whatever the `limit`, cached 30 days) with `position`, `department`, `type` (personal or generic) and `confidence`; for a founder, pass `department: ["executive"]` and `limit: 10`. Its addresses come back mostly unverified. Contacts at publishers for links or coverage are a different job: [link-building](../../link-building/SKILL.md).
 
 ## Verification
 
-- **Two verdicts, two sources.** Findymail returns only addresses it has verified, so a Findymail hit comes back `valid` on its own word; a hit with an `unknown` status gets a second check from the Icypeas verifier before it is returned. `leads_get_email_status` (1 credit, cached 30 days) is the Icypeas verifier. In our run it agreed on 8 of 10 Findymail `valid` reveals, called one `accept_all` and could not answer one. Before the first sends from a new domain, re-check reveals for 1 credit each.
+- **Two verdicts, two sources.** Some email finders return only addresses they have verified, so their hits come back `valid` on their own word; a hit with an `unknown` status gets a second check from a verification service before it is returned. `leads_get_email_status` (1 credit, cached 30 days) uses a verification service. In our run it agreed on 8 of 10 `valid` reveals, called one `accept_all` and could not answer one. Before the first sends from a new domain, re-check reveals for 1 credit each.
 - **Read the status:**
   - `valid`: send.
   - `accept_all`: the server takes any address, so this one is unproven. About a third of B2B contacts sit on such domains. Keep it, marked, and send it after the verified rows, in small batches, stopping if it bounces.

@@ -236,7 +236,7 @@ The plugin is Markdown skills, two manifests and one connector entry. It runs no
 
 - **Where calls go.** The skills tell your agent which tools to call on the Manifold MCP server at `https://mcp.manifoldmcp.com/mcp`, the only server the plugin adds. You sign in to it with your Manifold account; the plugin holds no credentials.
 - **What a call sends.** Only the parameters the call needs: domains, URLs, keywords, prompts to ask AI engines, social handles and post URLs, subreddit names, company and person filters, the names and domains used to look up a work email, and email addresses to verify.
-- **Where the server gets its data.** DataForSEO for search, keyword, backlink, site audit and AI answer data; ScrapeCreators for public Reddit, social platform and ad library data; Icypeas, Findymail and Hunter for company data, professional contacts and email verification. Two tools fetch the site you name directly. These providers receive the parameters of a call, never your name, email address or account.
+- **Where the server gets its data.** DataForSEO for search, keyword, backlink, site audit and AI answer data; a social data provider for public Reddit, social platform and ad library data; verified work email lookup providers for company data, professional contacts and email verification. Two tools fetch the site you name directly. These providers receive the parameters of a call, never your name, email address or account.
 - **What the server keeps.** Your credit balance, the charge for each call, task results for 30 days and cached results. The full policy is at https://www.manifoldmcp.com/privacy.
 - **What it never does.** Send email, post, comment, message, buy, or change anything on another service. The skills hand you the results to act on.
 
