@@ -48,4 +48,4 @@ A section whose tool group is switched off or whose call failed says "not measur
 
 - The host runs the schedule. If it has a scheduler (a scheduled task, a routine, cron), set the digest up for the report day (default Monday morning). If not, say so: the user asks each week and the host reruns with the stored state.
 - The host stores each section's settings (terms, communities, keywords, prompts, engines, competitors, `location`, `language`, `device`) and each run's numbers where the next run can read them. Every run uses the same settings; a changed setting starts a new baseline for what it changed, shown apart until it has history. Without stored state every run is a first run.
-- Acting on a row (replying, answering a competitor, changing a page) is the user's call. The server sends nothing; if the host has an email or chat tool, offer to send the digest there.
+- Acting on a row (replying, answering a competitor, changing a page) is the user's call. Manifold sends no digest (a monitor emails only its urgent changes); if the host has an email or chat tool, offer to send the digest there.

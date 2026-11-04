@@ -38,7 +38,7 @@ Answers are sampled, not looked up. The same prompt on the same engine a minute 
 
 - **Every two weeks by default**, weekly during a push to get cited, monthly for a mature brand. Shorter gaps add cost and noise, not information.
 - **Re-measure a fix after two to four weeks**, not days.
-- The server keeps no history and has no scheduler. The host stores, for each run: the exact prompts, `brands`, `engines`, `location` and `language`, and per cell whether each brand was named, its position, whether it was cited and the cited domains, with the date and `meta.credits_charged`. Without that every run is a first run. If the host has a scheduler (a scheduled task, a routine, cron), set the run up there; if not, say so.
+- **To repeat the set, offer an `ai_visibility` monitor** (`monitoring_create_monitor`) with the same questions, competitors, engines, `location` and `language`: show the monthly cost with `preview: true` first and create it only once the user agrees. Manifold then runs it weekly or on the cadence chosen, keeps every check (`monitoring_get_history`) and reports moves, new citations and new brands (`monitoring_get_changes`). A one-off run keeps nothing: the host stores the exact prompts, `brands`, `engines`, `location` and `language`, and per cell whether each brand was named, its position, whether it was cited and the cited domains, with the date and `meta.credits_charged`, or the next run is a first run.
 
 ## Cost
 

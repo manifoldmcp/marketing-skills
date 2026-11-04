@@ -42,7 +42,7 @@ Who sells the same product, at what delivered price, and whether the user is und
 
 ## Watching prices
 
-The server keeps no history and has no scheduler. For a weekly watch, the host stores each run's date, location, the three ids (match products by `gid`, since `product_id` can change with the store shown) and per-store delivered price, and compares; set it in the host's scheduler if it has one. Ten products weekly is about 120 credits a month.
+No monitor checks Shopping prices. For a weekly watch, the host stores each run's date, location, the three ids (match products by `gid`, since `product_id` can change with the store shown) and per-store delivered price, and compares; set it in the host's scheduler if it has one. Ten products weekly is about 120 credits a month.
 
 ## Without the connector
 

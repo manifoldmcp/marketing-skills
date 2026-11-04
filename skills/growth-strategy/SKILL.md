@@ -54,7 +54,7 @@ Open the one the question needs.
 - **Read the data right.** Subtract competitors' brand names before summing keyword demand (in our test they were 81% of a category's volume). One page of `reddit_get_new_posts` covered nine hours to three days of a busy subreddit, not seven days: pass `pages: 3` and read `coverage[]`. On Google ads `active` comes back null, so judge a running ad by `last_shown`; a domain lookup also returns other advertisers' ads, so group by advertiser. Platform searches are ranked samples, never counts. See [field notes](references/field-notes.md).
 - **What the tools cannot see:** conversions, revenue, Product Hunt, Hacker News, Slack, Discord, newsletters, X search and private groups. Signups and sales come from the user's analytics (`analytics_get_report`, free) and CRM; branded search from `console_get_search_analytics` (free) or `seo_get_keyword_metrics`.
 - **Budget.** Say the estimate before the first paid call, pass `max_credits` when the user names a budget, and use `dry_run: true` to price a call for free. Results already paid for are free while cached (7 days for most search data, 6 hours for platform searches, never for `reddit_get_new_posts`).
-- **Never post, send, schedule, submit, vote or contact anyone** on the user's behalf. The deliverable is a plan or a table; the host keeps it, since the server keeps no state.
+- **Never post, send, schedule, submit, vote or contact anyone** on the user's behalf. The deliverable is a plan or a table; the host keeps it.
 
 ## Related skills
 

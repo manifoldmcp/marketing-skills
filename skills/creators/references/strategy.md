@@ -31,7 +31,7 @@ About 40 credits. Per platform, note how many distinct creators post and their m
 | Days 31 to 60 | Three to five paid posts from vetted micro and mid creators, each with its own code | Each post's views against the creator's median; buying questions in its comments; code redemptions from the user's store |
 | Days 61 to 90 | Re-hire the two whose posts beat their median; run the best posts as ads ([paid-ads](../../paid-ads/SKILL.md)); drop the rest | Cost per redemption per creator; count of posts naming the brand in the baseline searches |
 
-Give each period an owner and three first actions for this week. Codes and sales live in the user's store: ask for them at each checkpoint. The server keeps no state, so the host keeps the baseline; weekly brand-mention reruns belong to [brand-monitoring](../../brand-monitoring/SKILL.md).
+Give each period an owner and three first actions for this week. Codes and sales live in the user's store: ask for them at each checkpoint. The host keeps the baseline; weekly brand mentions are a `mentions` monitor in [brand-monitoring](../../brand-monitoring/SKILL.md).
 
 ## Setting targets honestly
 

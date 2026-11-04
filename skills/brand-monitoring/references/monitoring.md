@@ -46,12 +46,12 @@ Two tiers keep alerts rare enough to read.
 - **Everything else goes in the digest** of the run, grouped by kind: complaint, question, comparison, recommendation, praise ([sentiment](sentiment.md)).
 - **For each row:** about the brand or a namesake; kind; reach (`score` and `comments` on Reddit, views, likes and `author_followers` elsewhere); suggested action (reply, thank, pass to support, save as a testimonial, none); source (complete window or search).
 - **Say what is complete.** Every report states "Reddit communities: complete for the window; elsewhere: best effort", and lists platforms not watched. A quiet run is one line ("no new mentions since Tuesday").
-- **Replying is the user's call.** Before suggesting a Reddit reply, the community's rules are read the way [reddit](../../reddit/SKILL.md) reads them. The server never sends alerts, emails or posts; if the host has a notification tool, offer to send the table there.
+- **Replying is the user's call.** Before suggesting a Reddit reply, the community's rules are read the way [reddit](../../reddit/SKILL.md) reads them. A monitor emails urgent changes; Manifold never posts or replies. If the host has a chat or notification tool, offer to send the digest there too.
 
 ## State and schedule
 
-- The host runs the schedule. If it has a scheduler (a scheduled task, a routine, cron), set the check up there; if not, say so: the user asks again each day and the host reruns it with the stored state.
-- The host stores the settings (terms, communities, platforms, own accounts) and the state: `next_since`, the ids seen in the last 14 days (the widest search window plus a late run), each run's date and `meta.credits_charged`. Without it every run is a first run. A changed setting starts its own baseline.
+- **Offer a `mentions` monitor** (`monitoring_create_monitor`) with the terms as `keywords`, the platforms, the subreddits as `communities` and `pages`; show the monthly cost with `preview: true` first and create it only once the user agrees. Manifold then runs it daily (or hourly or weekly), keeps `next_since` and the ids seen, drops repeats, and reports new mentions and spikes (`monitoring_get_changes`), emailing urgent ones. Its first check is the baseline. Filtering namesakes, own accounts and seeded posts from what it returns is still the reading below. Instagram searches each keyword as one hashtag, and X is not covered.
+- **Without a monitor** (the user declines, or wants comment search, which the preset does not run), the host runs the schedule if it has a scheduler (a scheduled task, a routine, cron), and stores the settings (terms, communities, platforms, own accounts) and the state: `next_since`, the ids seen in the last 14 days (the widest search window plus a late run), each run's date and `meta.credits_charged`. Without it every run is a first run. A changed setting starts its own baseline.
 - Reddit searches are cached 1 hour and platform searches 6 hours, so a rerun inside that window returns the same rows for nothing and adds nothing. `reddit_get_new_posts` is never cached and charged in full.
 
 ## Cost

@@ -62,4 +62,4 @@ The index is strongest on companies with a website and a LinkedIn presence, and 
 
 - Never send, sequence, connect on LinkedIn or write to a CRM. The deliverable is a table with plain headers that pastes into a sequencer or CRM import (first_name, last_name, title, company, company_domain, email, verification_status, linkedin, location, source, notes). If the host has a sequencer or CRM tool, offer to pass the table; do not send.
 - The user's data is the record. When filling or checking their sheet, never overwrite a cell they typed: new values and statuses go in new columns.
-- The server keeps no state. The host keeps the list, the exclusions (customers, open deals, people already contacted, opt-outs) and the date of each reveal.
+- The host keeps the list, the exclusions (customers, open deals, people already contacted, opt-outs) and the date of each reveal.

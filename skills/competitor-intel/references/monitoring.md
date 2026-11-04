@@ -25,7 +25,9 @@ About 23 credits a competitor, plus 1 for each new search ad read: about 69 a ru
 
 ## State
 
-The server keeps no history and has no scheduler. The host stores the settings (rivals, domains, handles, libraries, Google advertiser ids) and each run's state (ad ids with `active` and `last_shown`, post ids, overview numbers, page headings, the date and credits) where the next run can read it: a file, a doc, a sheet, its memory. Without it every run is a first run. The first run is the baseline, reported as the starting picture. A rival or channel added later starts its own baseline. If the host has a scheduler (a scheduled task, a routine, cron), set the watch up there; if not, say so. The server never sends alerts; if the host has an email or chat tool, offer to send the table there.
+Offer monitors for the parts a preset covers (`monitoring_create_monitor`): `ads` with the rivals' websites as `brands` and their libraries as `platforms`; `social_accounts` with their handles; `website_changes` on their home and pricing pages. Before creating any, show the monthly cost with `preview: true` first and create it only once the user agrees. Manifold then keeps each check and reports ads started and stopped, new posts and posts taking off, and new text and prices (`monitoring_get_changes`), emailing urgent ones. Each monitor's first check is the baseline; a rival added later starts its own.
+
+Search footprint (`seo_get_domain_overview`) and brand bidding have no preset. For those, the host stores the settings and each run's numbers (overview figures, `top_pages[]`, the Google ad ids read with `ads_get_ad`, the date and credits) where the next run can read them, or every run is a first run, and sets the run in its own scheduler if it has one. If the host has an email or chat tool, offer to send the table there.
 
 ## Deliver
 

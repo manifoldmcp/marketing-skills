@@ -32,7 +32,7 @@ Set volume from the team's hours, not the list's length: 20 well-matched sites w
 - **Write copy only when the user asks**, then one short email per row (under about 120 words) that names the page, the exact place a link fits and why it helps that page's readers.
 - **Never offer payment for an undisclosed link or mention**, and never agree to a fee on the user's behalf; flag the request and let the user decide (see [spam and paid links](spam-and-paid-links.md)).
 - **Never send, post or fill in a form.** The deliverable is a table: site, page, domain rank, contact name, role, email, verification status, the ask in one line. If the host has an email or sequencer tool, offer to hand the table over; do not send.
-- **The server keeps no state.** To track replies or rerun next month, the host keeps the table with the date and the credits spent.
+- **The host keeps the table.** To track replies or rerun next month, it keeps the date and the credits spent.
 
 ## Without the connector
 

@@ -53,4 +53,4 @@ The same work by hand, slowly: search LinkedIn for the topic with the "Posts" fi
 
 - Never post, comment, like, connect, message or schedule. The deliverable is a table or a plan with a link to every post, person and page it cites; the user acts from their own account.
 - Draft a post or comment only when asked, one per row, tied to the evidence in that row and marked as a draft. Never pass off a creator's post or words as the user's.
-- The server keeps no state. A daily commenting list or a weekly watch is a job the host schedules, keeping the post URLs already listed; if the host has no scheduler, say so.
+- A weekly watch of company pages can be a `social_accounts` monitor, and posts that name a keyword a `mentions` monitor on linkedin; show the monthly cost with `preview: true` first and create it only once the user agrees. A daily commenting list has no preset: the host schedules it, keeping the post URLs already listed; if the host has no scheduler, say so.

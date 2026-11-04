@@ -58,7 +58,7 @@ Open the one the question needs.
 - **Pages:** `seo_get_page` is free and live (title, meta, canonical, robots, headings, word count, schema), rate limited and cached an hour. It cannot read body copy. A whole site is `seo_run_technical_crawl`, which belongs to [technical-seo](../technical-seo/SKILL.md).
 - **The user's own data:** every `console_*` and `analytics_*` call is free, 60 a minute per workspace. Search Console is measured and outranks every estimate; never mix the two in one column.
 - **Credits:** say the estimate before the first paid call; pass `max_credits` when the user names a budget and stop on `BudgetExceeded`; `dry_run: true` prices any call free. Results this account already paid for are free while cached: 24 hours for SERPs and positions, 7 days for keyword, domain and backlink data.
-- **Never edit the site, publish or set redirects.** Submitting a sitemap (`console_submit_sitemap`) or URLs to Bing (`console_submit_urls`) writes to the user's own account; do it only when the user asks. The server keeps no history: put the date, market and data source on every deliverable, and let the host store runs. Titles, metas and outlines are drafts the user approves; write a full article only when asked.
+- **Never edit the site, publish or set redirects.** Submitting a sitemap (`console_submit_sitemap`) or URLs to Bing (`console_submit_urls`) writes to the user's own account; do it only when the user asks. Put the date, market and data source on every deliverable. A repeated rank check can be a `google_rankings` monitor ([tracking](references/tracking.md#on-a-schedule)); other runs the host stores. Titles, metas and outlines are drafts the user approves; write a full article only when asked.
 
 ## Related skills
 

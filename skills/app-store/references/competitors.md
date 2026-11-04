@@ -22,7 +22,7 @@ No Manifold tool returns downloads or revenue for an app. Play's `installs` from
 
 ## Watching rivals
 
-A monthly pull per rival is cheap: `apps_get_app` (1), newest reviews (1), keywords (10). Changes worth reporting: a new name or subtitle (a term they are now chasing), a new first screenshot (a new message), a rating drop of 0.2 or more, a jump in `ratings_count` (a review prompt campaign or a launch), a release cadence change. The server keeps no history; the host stores each pull with its date.
+A monthly pull per rival is cheap: `apps_get_app` (1), newest reviews (1), keywords (10). Changes worth reporting: a new name or subtitle (a term they are now chasing), a new first screenshot (a new message), a rating drop of 0.2 or more, a jump in `ratings_count` (a review prompt campaign or a launch), a release cadence change. The host stores each pull with its date; a rival's new reviews can be a `reviews` monitor.
 
 ## Data notes
 

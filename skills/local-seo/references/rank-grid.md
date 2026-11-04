@@ -22,7 +22,7 @@ Maps ranks from the searcher's position, and the pack can change completely with
 
 ## Tracking over time
 
-- **Re-run the same grid, same points, same searches, every two to four weeks**, and monthly once stable. The server keeps no history: store each run in the host with the date, the points, the searches and every row's rank and `place_id`. If the host has a scheduler, set the run there; if not, say so.
+- **Re-run the same grid, same points, same searches, every two to four weeks**, and monthly once stable. No monitor runs a grid: store each run in the host with the date, the points, the searches and every row's rank and `place_id`. If the host has a scheduler, set the run there; if not, say so.
 - **Single-cell moves of one or two places are noise.** Practitioners and grid vendors report that the same scan minutes apart can differ slightly; in our test a point 11 m from another gave the same top three and the same top 14, with two pairs swapped by one place. Report a change only when the top-3 share or the average moves across several cells in the same direction, and on two runs in a row.
 - **Annotate known events** next to the run: a category change, a review push, a new competitor, a Google update. A grid that moved after a category change two weeks earlier is the evidence the change worked; nothing else is.
 - **Cost of a programme:** three searches on a 5 by 5 grid every two weeks is about 150 credits a month. Cut points before searches: a 3 by 3 grid (9 credits) shows the ring; 5 by 5 shows its edge.

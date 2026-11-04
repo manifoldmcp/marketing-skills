@@ -67,7 +67,7 @@ Give each period an owner and a KPI, and three first actions for this week.
 
 ## Rules
 
-- Measure again with the same calls, competitors and queries at day 30, 60 and 90, or the comparison says nothing. The server keeps no state: the host keeps the plan, the baseline and the KPIs, and sets any recurring re-measure in its own scheduler.
+- Measure again with the same calls, competitors and queries at day 30, 60 and 90, or the comparison says nothing. The host keeps the plan, the baseline and the KPIs. A re-measure a preset covers (mentions, social accounts, competitors' pages and ads, Google rankings, AI visibility) can be a monitor, priced with `preview: true` before the user agrees; the rest goes in the host's own scheduler.
 - A channel with no signal is not ruled out for a new category; demand may not exist anywhere yet. Say so rather than calling the channel dead.
 - The channels' own skills state their costs; add them up before running more than one. A result this account already paid for is free while cached, so running the first channel skill soon after the plan costs less.
 - Deliver one document: the inputs with defaults marked, a baseline table (channel, the user, each competitor, the signal), the gaps in a line each, the chosen channels with the topic skill and why, the 30-60-90 table, three first actions. Running campaigns, posting, sending and spending stay with the user.

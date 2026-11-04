@@ -60,4 +60,4 @@ Review text, Best Sellers Rank history, unit sales, revenue, conversion, Brand A
 
 ## Cost and freshness
 
-Say the estimate before a run, pass `max_credits` when the user names a budget, and use `dry_run: true` to price a call free (the estimate ignores the cache, so a cached call can cost less than quoted). Repeating a call inside its cache window is free and returns the same data; date every table, and for a watch let the host store each run, since Manifold keeps no history.
+Say the estimate before a run, pass `max_credits` when the user names a budget, and use `dry_run: true` to price a call free (the estimate ignores the cache, so a cached call can cost less than quoted). Repeating a call inside its cache window is free and returns the same data; date every table, and for a watch let the host store each run, since no monitor covers Amazon.

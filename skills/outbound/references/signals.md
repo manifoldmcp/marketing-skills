@@ -29,7 +29,7 @@ Not visible to any tool here: the tech stack, website visits, review-site resear
 - **Contact the person who posted**, with the post as the reason; do not go over their head. A post asking for help with the problem the user solves is the warmest cold email there is.
 - **A new leader** is, by rule of thumb, most open to new tools in the first few months in the seat. Lead with their goal, not with congratulations. In our run 3 of 15 dated marketing leaders at small software companies had started in the past 12 months, so a new-leader trigger yields a few accounts per hundred, not a list.
 - **Ads running mean a budget and a growth goal.** A signal only when the offer serves advertisers or growth teams.
-- **Re-checking weekly** runs on the host's schedule: the server keeps no state, so the host stores what it saw last time and compares.
+- **Re-checking weekly** runs on the host's schedule, since no monitor covers job changes or hiring: the host stores what it saw last time and compares.
 - **Deliver** a table: account, domain, score, each signal with its evidence, link and date, the person to contact, and a one-line "why now". Then hand the people to the reveal step in [lists](lists.md#a-lead-list).
 
 ## Job changes

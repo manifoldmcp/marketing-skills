@@ -48,7 +48,7 @@ Rules of thumb, not platform facts.
 - **Page sizes differ:** 30 rows a search page, 10 a listing page, about 20 comments a page. Plan credits on those.
 - **Wrong handle:** a profile that comes back `NoData` means the handle is wrong; fix it before paying for listings. An empty listing on a live account means it has posted nothing.
 - **Time zones:** `created_at` is UTC.
-- **What is missing entirely:** watch time, completion, traffic sources (For You, search, following, profile), profile visits, link clicks, follower growth over time, Shop sales. The user reads their own in TikTok Studio. For growth over time the host must re-run the same read and keep the table; the server keeps no history.
+- **What is missing entirely:** watch time, completion, traffic sources (For You, search, following, profile), profile visits, link clicks, follower growth over time, Shop sales. The user reads their own in TikTok Studio. For growth over time the host re-runs the same read and keeps the table; a `social_accounts` monitor keeps new posts and posts taking off, not these numbers.
 
 ## Without the connector
 

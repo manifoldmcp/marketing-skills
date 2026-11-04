@@ -39,4 +39,4 @@ Draft only when the user asks. Then:
 ## Cadence
 
 - Set reply volume from the team's hours, not the thread count: three hours a week is about ten careful replies.
-- One run is a snapshot; the server keeps no state. To get this list daily or weekly, the host schedules `reddit_get_new_posts`, stores `next_since` to send back as `since`, and keeps the ids already seen, as [brand-monitoring](../../brand-monitoring/SKILL.md) does.
+- One run is a snapshot. To get this list daily or weekly, offer a `mentions` monitor with the terms and the subreddits as `communities`, which keeps `next_since` and the ids seen ([brand-monitoring](../../brand-monitoring/references/monitoring.md#state-and-schedule)); show the monthly cost with `preview: true` first and create it only once the user agrees.

@@ -27,5 +27,5 @@ Deliver a table: post URL, author, who they are (buyer or leader), followers, po
 - A comment on a buyer's post is worth more than one on a famous creator's, even with ten times fewer readers: the buyer reads every comment.
 - Consistency over volume. Ten useful comments a day for a month builds a name; fifty in a day looks automated, and LinkedIn may cap how many comments a member makes in a period.
 - The comment is the user's own. Draft one only when asked, mark it a draft, and keep it to what the user actually knows.
-- A daily or weekly list is the host's schedule, keeping the post URLs already listed; the server keeps no state.
+- A daily or weekly list is the host's schedule, keeping the post URLs already listed; no monitor builds it.
 - The same engagement on Reddit threads: [reddit](../../reddit/SKILL.md).

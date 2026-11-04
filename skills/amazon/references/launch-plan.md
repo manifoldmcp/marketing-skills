@@ -24,7 +24,7 @@ Give each period an owner and three first actions for this week. Time big change
 - Promise inputs and leading signals: a compliant, complete listing; reviews through permitted channels; rank on named terms. No one can promise a page-one position or a recommendation from the assistant.
 - Organic rank on a competitive term can take months and depends on sales the ads help create. Say that the length of any "honeymoon" for new listings has never been measured.
 - Organic share of sales and TACoS come from the user's Seller Central and ads console; Manifold cannot measure them. Ask for them at days 30, 60 and 90.
-- Re-measure ranks and pages with the same terms each time; the host stores the dates, terms, positions and credits spent. Manifold keeps no history.
+- Re-measure ranks and pages with the same terms each time; the host stores the dates, terms, positions and credits spent, since no monitor tracks Amazon ranks or Best Sellers Rank.
 
 ## Never
 

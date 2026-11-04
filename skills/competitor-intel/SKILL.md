@@ -57,7 +57,7 @@ Open the one the question needs.
 - **Company:** `leads_get_company` (1, cached 30 days) and `linkedin_get_company` (1). Report both headcounts; take the current bio from LinkedIn. Its `running_ads` is always null (a Facebook field): read the library with `ads_get_advertiser_ads`.
 - **Pages:** `seo_get_page` (free) returns title, meta description and headings, never body text or prices. Prices come from the host's browser, the user's paste, or "not read".
 - **Credits:** say the estimate first, pass `max_credits` when the user sets a budget, and price any call free with `dry_run: true`. Typical jobs: finding competitors about 172, a teardown 106, a battlecard 32, a messaging table 56 for four rivals, complaints 53 for three, a plan 209, a weekly watch 71 a run for three rivals.
-- **Never contact anyone, post, or pose as a buyer.** The server reads public data and keeps no state; the host stores baselines.
+- **Never contact anyone, post, or pose as a buyer.** The server reads public data; monitors keep the baselines they watch ([monitoring](references/monitoring.md#state)) and the host stores the rest.
 
 ## Related skills
 

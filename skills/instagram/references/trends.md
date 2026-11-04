@@ -19,4 +19,4 @@ What is rising on Reels in a niche right now: formats, topics and lengths that s
 - Business accounts get a narrower music library than personal ones, so a trend that rides a popular song may be closed to a brand. Flag trends that depend on the audio and have the user check the track in the app.
 - Hashtag search sees only tagged posts, and the five-tag cap means fewer tags per post: the sample leans to accounts that still tag. Say so.
 - When the user also wants TikTok, run that read through [tiktok](../../tiktok/SKILL.md) and keep the tables apart: views compare only within one platform.
-- For the same read every week, the host schedules it and keeps the previous table; the server keeps no state.
+- For the same read every week, the host schedules it and keeps the previous table; no monitor reads trends.

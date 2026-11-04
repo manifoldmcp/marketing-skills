@@ -40,7 +40,7 @@ Give each period an owner and three first actions for this week. Keep the plan t
 ## Measuring it
 
 - CPA, ROAS and CTR live in the user's ad accounts, never in these tools. Ask for them at each checkpoint.
-- What the tools can re-measure: the user's and competitors' ads and how long each keeps running (`ads_get_advertiser_ads`), `paid_traffic` (`seo_get_traffic_estimates`), and the category's `cpc` (`seo_get_keyword_metrics` on the kept keywords). The host stores the baseline; the server keeps no history.
+- What the tools can re-measure: the user's and competitors' ads and how long each keeps running (`ads_get_advertiser_ads`), `paid_traffic` (`seo_get_traffic_estimates`), and the category's `cpc` (`seo_get_keyword_metrics` on the kept keywords). The host stores the baseline; competitors' ads can be an `ads` monitor.
 - Platform-reported conversions overlap: Meta, Google and LinkedIn each claim the same sale. Judge the plan on the business's own count of customers and revenue against spend, and say which number each KPI comes from.
 
 ## Deliver

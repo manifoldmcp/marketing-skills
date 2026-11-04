@@ -23,7 +23,7 @@ Who wins the featured offer on a listing, why, what resellers and Amazon itself 
 - **No featured offer** returns `has_featured_offer` false, no rank-1 row, the other offers from rank 2, and `price` null on the product's results row. That is the "See all buying options" state at fetch time; check whether a cheaper price elsewhere (below) could be the trigger.
 - The tool reads the listing at one moment for one marketplace and delivery address; the Buy Box can rotate between sellers within a day. Re-check after the six-hour cache before reporting a change, and report "held the Buy Box at 14:00 UTC", not "owns the Buy Box".
 - **Prices across other stores** (to see whether a cheaper offer elsewhere could be the trigger) are `shopping_get_sellers` and the [google-shopping](../../google-shopping/SKILL.md) skill.
-- For a watch: the host stores each run per ASIN (date, rank-1 seller, price, the brand's own price, number of offers) and flags a new rank-1 seller, a rank-1 price below the floor the user set, or Amazon.com appearing. Manifold keeps no history and has no scheduler. A daily check of 20 ASINs is 40 credits.
+- For a watch: the host stores each run per ASIN (date, rank-1 seller, price, the brand's own price, number of offers) and flags a new rank-1 seller, a rank-1 price below the floor the user set, or Amazon.com appearing. No monitor covers the Buy Box, so the host sets the schedule. A daily check of 20 ASINs is 40 credits.
 
 ## Pricing reads that hold up
 

@@ -20,7 +20,7 @@ Choose by the grid's pattern: weak even at the address means steps 1 to 3; stron
 - A [rank grid](rank-grid.md) for two or three searches (5 by 5, 25 credits each), plus `seo_get_serp` for the same searches at the town and two ZIP or postcodes (1 credit each).
 - `maps_get_place` on the business and the three competitors that recur in the grid (8 credits), filled into the [competitors](competitors.md) table.
 - `aeo_run_ai_answers` on four or five local prompts on chatgpt, gemini, ai_overview and ai_mode (8 credits a prompt).
-- About 105 credits for two searches, 130 for three. Store every number with the date and the points in the host; the server keeps no history.
+- About 105 credits for two searches, 130 for three. Store every number with the date and the points in the host; no monitor runs a rank grid. A `reviews` monitor can watch the profile's reviews.
 
 ## The 90 days
 

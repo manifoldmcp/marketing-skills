@@ -27,7 +27,7 @@ About 28 credits for a weekly trend read on four terms, about 40 for a hook tabl
 - **Date it.** Trends on TikTok fade within one to three weeks; one whose oldest example is two weeks old is probably at its peak. Put the pull date on the table.
 - **Check the audio before recommending it to a brand.** A trend that depends on a popular song is closed to a business account unless the track is in the Commercial Music Library, and labels sue brands over it.
 - **The trend is the format or topic, never the video.** Advise making the brand's own version.
-- **For a weekly read,** the host schedules the same run and keeps last week's table; the server keeps no state.
+- **For a weekly read,** the host schedules the same run and keeps last week's table; no monitor reads trends.
 
 ## Deliverables
 

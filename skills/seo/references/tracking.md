@@ -1,6 +1,6 @@
 # Tracking rankings and watching Search Console
 
-Where a site ranks for a fixed set of keywords, and whether its own Google clicks are falling, checked once or on the host's schedule. The server keeps no history and sends no alerts: the host stores every run and delivers the change. Checked October 2026.
+Where a site ranks for a fixed set of keywords, and whether its own Google clicks are falling, checked once or on a schedule. A `google_rankings` monitor repeats a rank check for one site and keeps every run; Search Console watching and competitor positions are the host's to store. Checked October 2026.
 
 ## A rank check
 
@@ -22,6 +22,7 @@ Pick the cheapest method that answers the question:
 
 ## On a schedule
 
+- **For one site, offer a `google_rankings` monitor** (`monitoring_create_monitor`) with the `site`, up to 50 `keywords` and the `location`, weekly by default; show the monthly cost with `preview: true` first and create it only once the user agrees. It runs `seo_get_position` per keyword, keeps each check (`monitoring_get_history`) and reports moves (`monitoring_get_changes`). Competitors' positions through `seo_get_serp` have no preset: the host stores those runs as below.
 - **Fix the set and the method once:** ten to thirty keywords that matter (money keywords and pages at 4 to 20), the competitors, the market. A keyword added later starts its own baseline and is reported apart.
 - **Weekly by default.** Daily costs seven times as much and leads to the same decisions.
 - **Cost:** 20 keywords for one site with `seo_get_position` is 120 credits a run, about 520 a month weekly. The same 20 with two competitors through `seo_get_serp` at `depth: 30` is 60 a run, about 260 a month (top 30 only). Daily on 20 keywords is about 3,600 a month. Say both numbers before setting it up, and pass `max_credits` on every call.
@@ -47,6 +48,6 @@ Free, so it can run daily for a site where a lost day costs money; weekly for th
 
 ## Schedule and delivery
 
-If the host has a scheduler (a scheduled task, a routine, cron), set the run up there; if not, say so, and the user asks again each week while the host reruns with the stored state. Store settings and history where the next run can read them (a file, a sheet, a doc, its memory), and offer a sheet the user owns, since a lost store loses the trend. If the host has an email, chat or notification tool, offer to send the change table there; the server never sends.
+Rank checks for one site go in a `google_rankings` monitor, which keeps the history and emails urgent changes. For Search Console watching and competitor positions, if the host has a scheduler (a scheduled task, a routine, cron), set the run up there; if not, say so, and the user asks again each week while the host reruns with the stored state. Store settings and history where the next run can read them (a file, a sheet, a doc, its memory), and offer a sheet the user owns, since a lost store loses the trend. If the host has an email, chat or notification tool, offer to send the change table there.
 
 For one weekly report across SEO, AI answers, mentions and competitors, see [agency](../../agency/SKILL.md).

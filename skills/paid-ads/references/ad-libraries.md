@@ -73,4 +73,4 @@ The public ad libraries of Meta, TikTok, LinkedIn and Google are the only outsid
 - Never buy, launch, edit, pause or boost ads, and never ask for ad account access. The deliverable is a table or a brief the user takes into Ads Manager, TikTok Ads Manager, Campaign Manager or Google Ads.
 - The user's own spend, CPA and ROAS live in their ad accounts. Ask for them when the work needs them.
 - Never copy a competitor's footage, claims or lines. Take the structure: the angle, the hook pattern, the offer type, the landing page.
-- The server keeps no history. To watch a competitor's ads over time, the host stores each table and reruns it; the watch itself belongs to [competitor-intel](../../competitor-intel/SKILL.md).
+- To watch a competitor's ads over time, offer an `ads` monitor with their website and libraries, which reports ads started and stopped; show the monthly cost with `preview: true` first and create it only once the user agrees. The watch itself belongs to [competitor-intel](../../competitor-intel/SKILL.md).

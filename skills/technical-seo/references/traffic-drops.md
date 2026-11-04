@@ -51,7 +51,7 @@ One cause usually carries most of the loss. Check the site's own changes first: 
 
 ## Deliver
 
-A verdict in two lines, then a table: cause, evidence with its source (measured or estimated), pages affected, keywords affected, clicks lost, fix, owner. List the causes tested and ruled out, with the evidence, so nobody chases them again. Put the date, market and data source on it; the server keeps no history.
+A verdict in two lines, then a table: cause, evidence with its source (measured or estimated), pages affected, keywords affected, clicks lost, fix, owner. List the causes tested and ruled out, with the evidence, so nobody chases them again. Put the date, market and data source on it; the host keeps it.
 
 Recovery: a technical fix shows within days to weeks as pages are recrawled; a core update loss can take until the next core update, months. Say which the user has.
 

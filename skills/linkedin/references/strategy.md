@@ -52,4 +52,4 @@ Give each period an owner and three first actions for this week.
 - **Consistency beats volume**, but a missed week costs nothing (a first post after a break ran 19% above average). Three posts a week for 90 days beat daily posts for three weeks and then silence.
 - **Weight topics by what the ICP engages with**, not peers and other founders; ask the user who wrote to them after a post.
 - **Never post, schedule or comment for the user,** and never suggest pods, engagement groups or comment tools: LinkedIn detects and limits them (see [commenting](commenting.md)).
-- A weekly re-measure is the host's schedule; the server keeps no state.
+- A weekly re-measure is the host's schedule; new posts on the page and rivals' pages can be a `social_accounts` monitor.

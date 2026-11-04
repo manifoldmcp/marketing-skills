@@ -19,4 +19,4 @@ About 695 credits for two names and 20 contacts.
 - **Newest first.** Recent articles get edited; pages over a year old rarely do.
 - **Many news sites never link to companies they cover, or link nofollow.** One polite email, no follow-up chase. The mention still counts for brand demand and for AI answers, which follow mentions more than links (see [ai-search](../../ai-search/SKILL.md)).
 - **A mention that gets a fact wrong** (an old price, a dropped feature) is a correction first and a link second.
-- **Re-run each quarter.** The server keeps no history; the host keeps the table and drops rows already asked. Watching for new mentions as they appear belongs to [brand-monitoring](../../brand-monitoring/SKILL.md).
+- **Re-run each quarter.** The host keeps the table and drops rows already asked: no monitor reads the web for unlinked mentions. Watching social and Reddit mentions as they appear is a `mentions` monitor in [brand-monitoring](../../brand-monitoring/SKILL.md).

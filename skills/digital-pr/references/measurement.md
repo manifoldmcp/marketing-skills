@@ -24,4 +24,4 @@ In BuzzStream's practitioner surveys (150+ each, 2025 and 2026) the top measures
 - **Count stories, not copies.** The same article on twenty syndication sites is one placement. Practitioners split on this (53% count syndicated links in totals, BuzzStream 2025); say which way the report counts.
 - **Count mentions.** Coverage that names the user without a link still feeds AI answers and branded search. The easiest follow-up link is asking the author of an unlinked mention to add one ([link-building](../../link-building/SKILL.md)).
 - **Report against the user's own baseline,** never against an industry "average links per campaign": no trustworthy one exists (see [stories](stories.md#benchmarks)).
-- **The server keeps no state.** The host keeps the coverage log and each re-measure with its date and `meta.credits_charged`; without it every report starts from zero.
+- **The host keeps the coverage log** and each re-measure with its date and `meta.credits_charged`; without it every report starts from zero.
