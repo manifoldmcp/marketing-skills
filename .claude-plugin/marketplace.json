@@ -10,6 +10,82 @@
       "name": "manifold",
       "source": "./",
       "description": "The free Manifold MCP server, for live data from Google search, AI answers, Search Console, Reddit, TikTok, Instagram, YouTube, LinkedIn, the ad libraries and more, and the marketing skills that run on it."
+    },
+    {
+      "name": "manifold-influencers",
+      "source": "./plugins/manifold-influencers",
+      "description": "Find influencers, creators and UGC makers on TikTok, Instagram and YouTube. Your agent searches by niche, spots fake engagement, checks fair rates and writes the brief, with live data from Manifold.",
+      "category": "marketing",
+      "tags": [
+        "influencers",
+        "influencer-marketing",
+        "find-influencers",
+        "creators",
+        "ugc-creators",
+        "creator-outreach",
+        "tiktok",
+        "instagram",
+        "youtube",
+        "tiktok-trends",
+        "instagram-reels",
+        "youtube-channels"
+      ]
+    },
+    {
+      "name": "manifold-seo",
+      "source": "./plugins/manifold-seo",
+      "description": "Keyword research, rankings, backlinks, site audits and local SEO, plus your own Google Search Console and Google Analytics. Live search data for your agent, with no SEO subscription.",
+      "category": "marketing",
+      "tags": [
+        "seo",
+        "keyword-research",
+        "rank-tracking",
+        "backlinks",
+        "technical-seo",
+        "site-audit",
+        "local-seo",
+        "google-maps",
+        "google-search-console",
+        "google-analytics",
+        "search-console-mcp"
+      ]
+    },
+    {
+      "name": "manifold-reddit",
+      "source": "./plugins/manifold-reddit",
+      "description": "Search Reddit posts and comments, find the threads and subreddits where buyers ask for help, and pull pain points in their own words. No Reddit API app needed.",
+      "category": "marketing",
+      "tags": [
+        "reddit",
+        "reddit-marketing",
+        "reddit-search",
+        "subreddits",
+        "reddit-comments",
+        "reddit-leads",
+        "pain-points",
+        "customer-research",
+        "voice-of-customer",
+        "reddit-mcp"
+      ]
+    },
+    {
+      "name": "manifold-ai-search",
+      "source": "./plugins/manifold-ai-search",
+      "description": "See whether ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews name your brand, which sources they cite, and what to change to get cited. Also called GEO, AEO or LLM SEO.",
+      "category": "marketing",
+      "tags": [
+        "ai-search",
+        "ai-visibility",
+        "geo",
+        "aeo",
+        "llm-seo",
+        "generative-engine-optimization",
+        "chatgpt",
+        "perplexity",
+        "ai-overviews",
+        "brand-mentions",
+        "share-of-voice"
+      ]
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "name": "manifold-ai-search",
+  "displayName": "AI Search by Manifold",
+  "version": "1.0.1794161211",
+  "description": "See whether ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews name your brand, which sources they cite, and what to change to get cited. Also called GEO, AEO or LLM SEO.",
+  "author": {
+    "name": "Manifold",
+    "email": "jesse@manifoldmcp.com",
+    "url": "https://www.manifoldmcp.com"
+  },
+  "homepage": "https://www.manifoldmcp.com",
+  "repository": "https://github.com/manifoldmcp/marketing-skills",
+  "license": "MIT",
+  "privacyPolicyUrl": "https://www.manifoldmcp.com/privacy",
+  "keywords": [
+    "ai-search",
+    "ai-visibility",
+    "geo",
+    "aeo",
+    "llm-seo",
+    "generative-engine-optimization",
+    "chatgpt",
+    "perplexity",
+    "ai-overviews",
+    "brand-mentions",
+    "share-of-voice"
+  ]
+}

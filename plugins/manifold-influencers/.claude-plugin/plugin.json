@@ -1,0 +1,29 @@
+{
+  "name": "manifold-influencers",
+  "displayName": "Influencers by Manifold",
+  "version": "1.0.1794161211",
+  "description": "Find influencers, creators and UGC makers on TikTok, Instagram and YouTube. Your agent searches by niche, spots fake engagement, checks fair rates and writes the brief, with live data from Manifold.",
+  "author": {
+    "name": "Manifold",
+    "email": "jesse@manifoldmcp.com",
+    "url": "https://www.manifoldmcp.com"
+  },
+  "homepage": "https://www.manifoldmcp.com",
+  "repository": "https://github.com/manifoldmcp/marketing-skills",
+  "license": "MIT",
+  "privacyPolicyUrl": "https://www.manifoldmcp.com/privacy",
+  "keywords": [
+    "influencers",
+    "influencer-marketing",
+    "find-influencers",
+    "creators",
+    "ugc-creators",
+    "creator-outreach",
+    "tiktok",
+    "instagram",
+    "youtube",
+    "tiktok-trends",
+    "instagram-reels",
+    "youtube-channels"
+  ]
+}

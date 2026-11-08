@@ -226,6 +226,17 @@ One skill per area of marketing, named for the area. The library is flat, so ins
 |-------|--------------|
 | [`agency`](skills/agency/) | Client onboarding, pitches built on a prospect's real data, and client and weekly reports that hold up. |
 
+## Plugins for one job
+
+The same marketplace lists smaller plugins for one job each. Each carries the skills for that job plus `manifold-get-started`, and the same connector, so with the main plugin installed as well Claude still makes one connection.
+
+| Plugin | Install in Claude Code | For |
+|--------|------------------------|-----|
+| [Influencers by Manifold](plugins/manifold-influencers/) | `/plugin install manifold-influencers@manifold` | Finding, vetting and briefing creators on TikTok, Instagram and YouTube |
+| [SEO by Manifold](plugins/manifold-seo/) | `/plugin install manifold-seo@manifold` | Keyword research, rankings, backlinks, site audits, local SEO, Search Console and Google Analytics |
+| [Reddit by Manifold](plugins/manifold-reddit/) | `/plugin install manifold-reddit@manifold` | Reddit research, threads worth answering and customer pain points |
+| [AI Search by Manifold](plugins/manifold-ai-search/) | `/plugin install manifold-ai-search@manifold` | Getting named and cited in ChatGPT, Claude, Gemini, Perplexity and AI Overviews |
+
 ## Credits
 
 Every tool call costs Manifold credits (1 to 2.5 US cents a credit, by plan), and the skills tell the agent what calls cost so it can say before the first paid one. Give a budget and the agent caps every call with it. Prices are at https://www.manifoldmcp.com/pricing.

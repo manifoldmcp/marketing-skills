@@ -1,0 +1,27 @@
+{
+  "name": "manifold-reddit",
+  "displayName": "Reddit by Manifold",
+  "version": "1.0.1794161211",
+  "description": "Search Reddit posts and comments, find the threads and subreddits where buyers ask for help, and pull pain points in their own words. No Reddit API app needed.",
+  "author": {
+    "name": "Manifold",
+    "email": "jesse@manifoldmcp.com",
+    "url": "https://www.manifoldmcp.com"
+  },
+  "homepage": "https://www.manifoldmcp.com",
+  "repository": "https://github.com/manifoldmcp/marketing-skills",
+  "license": "MIT",
+  "privacyPolicyUrl": "https://www.manifoldmcp.com/privacy",
+  "keywords": [
+    "reddit",
+    "reddit-marketing",
+    "reddit-search",
+    "subreddits",
+    "reddit-comments",
+    "reddit-leads",
+    "pain-points",
+    "customer-research",
+    "voice-of-customer",
+    "reddit-mcp"
+  ]
+}
