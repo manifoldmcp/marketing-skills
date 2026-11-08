@@ -52,6 +52,7 @@ Open the one the question needs.
 - **Which prompts to ask:** `aeo_search_prompts` on the user's domain or the category keyword (47 credits for 50 rows), from an index covering ChatGPT and AI Overviews only. Its `ai_search_volume` is a People Also Ask proxy, not query logs.
 - **Whether engines can read the site:** `aeo_get_site_readiness`, free. Its `tier` on each check encodes the evidence in [site access](references/site-access.md).
 - **Google's AI Overview per keyword:** `seo_get_serp` with `ai_overview: true`, cheaper than a full answer run and with the organic results beside it.
+- **To keep measuring:** offer an `ai_visibility` monitor (`monitoring_create_monitor`) with the same prompts as `questions`, the user's brand, the rivals as `competitors`, and the same `engines`; show the monthly cost with `preview: true` first and create it only once the user agrees. It reruns the set weekly and reports what moved (see [measurement](references/measurement.md)).
 - **Read the data right:** `chatgpt` and `gemini` are what their consumer apps show a person; `claude` and `perplexity` are their APIs with web search on, which can differ from the apps. A null `answer` on Google's engines means no AI answer was shown, not a loss. Leave nulls out of shares. Report brand prompts apart from category prompts. Act on a gap only when it shows in two or more cells.
 - **Never post, send or edit third-party pages.** Deliver tables the user acts on.
 
