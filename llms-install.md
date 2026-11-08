@@ -31,13 +31,7 @@ If OAuth is unavailable, use an API key from your Manifold account settings:
 
 1. Sign in to your Manifold account
 2. Generate an API key from account settings
-3. Add the key to your environment:
-
-```bash
-export MANIFOLD_API_KEY="mk_live_..."
-```
-
-Then configure the server with the API key in the authorization header:
+3. Paste the key into the authorization header, in place of `<your Manifold API key>`:
 
 ```json
 {
@@ -46,7 +40,7 @@ Then configure the server with the API key in the authorization header:
       "type": "streamableHttp",
       "url": "https://mcp.manifoldmcp.com/mcp",
       "headers": {
-        "Authorization": "Bearer ${MANIFOLD_API_KEY}"
+        "Authorization": "Bearer <your Manifold API key>"
       }
     }
   }
