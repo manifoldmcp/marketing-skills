@@ -63,6 +63,6 @@ Open the one the question needs.
 
 - AI answers about the user and its rivals, measured properly: [ai-search](../ai-search/SKILL.md). A rival's ads read creative by creative, and bidding on the user's brand: [paid-ads](../paid-ads/SKILL.md).
 - Turning the gaps into positioning, and the user's own buyers' objections: [voice-of-customer](../voice-of-customer/SKILL.md). The whole market mapped and sized: [market-research](../market-research/SKILL.md).
-- "X vs Y" and "X alternatives" pages and keyword gaps: [seo](../seo/SKILL.md). Answering switching threads: [reddit](../reddit/SKILL.md).
+- "X vs Y" and "X alternatives" pages and keyword gaps: [seo](../seo/SKILL.md). Answering switching threads: [reddit](../reddit/SKILL.md). Who comments on a rival's LinkedIn posts (its customers, partners and buyers): [linkedin](../linkedin/references/competitor-engagers.md).
 - Mentions of the user's own brand: [brand-monitoring](../brand-monitoring/SKILL.md). A growth plan with no rival in focus: [growth-strategy](../growth-strategy/SKILL.md). The same research for an agency's prospect: [agency](../agency/SKILL.md).
 - Competitors on Amazon (listings, prices, the Buy Box): [amazon](../amazon/SKILL.md). In the app stores: [app-store](../app-store/SKILL.md). On Google Maps, for a local business: [local-seo](../local-seo/SKILL.md). Who undercuts a product's price across stores: [google-shopping](../google-shopping/SKILL.md).

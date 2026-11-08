@@ -2,6 +2,16 @@
 
 What Manifold has seen in its own reads of LinkedIn through the `linkedin_*` tools. Small samples: read them as evidence of how the data behaves, not as benchmarks. Newest first.
 
+## One competitor's commenters (8 November 2026)
+
+Inputs: one page of `linkedin_get_company_posts` for Clay (`clay-hq`, 6 posts from 2 to 7 November), then `linkedin_get_post` on all six. 7 credits.
+
+- The feed page held 6 posts, not 9, all with empty `top_comments` and null counts. `linkedin_get_post` filled both. The page's handle came back as `grow-with-clay` in `author_url`, not the `clay-hq` asked for.
+- The posts counted 40 comments; 26 commenters came back (1 to 7 a post), 24 different people. Returned commenters fall short of the count on most posts, since replies are counted too.
+- Only 2 of 24 commented on more than one post: one who reads as Clay staff (an out-of-office joke about seeing Clay everywhere) and one whose comments read as generic AI summaries. Over one week, repeat counting finds staff and automation, not buyers.
+- Post type predicted who commented. The customer story drew the customer's own team (5 of its 6 commenters named the customer or spoke as its team). The webinar post drew its partner-agency co-hosts and Clay's community page. The office post drew what read as Clay staff ("we're hiring!!"). The product and data posts drew vendors pitching their own data, a proxy company and generic summaries.
+- Company pages commented too (4 of 26: two vendors, a proxy seller, Clay's community page), each with `/company/` or `/school/` in `author_url`.
+
 ## Three niches, one page each, plus spot checks (15 October 2026)
 
 Inputs: `linkedin_search_posts` with `since: "month"` on "revenue operations", "cold email" and "product-led growth", one page each (30 posts); then `linkedin_get_post` on one row, `linkedin_get_company` and one page of `linkedin_get_company_posts` on a company page from the results, `linkedin_get_comments` on one post, and `linkedin_get_profile` on two authors (one failed). About 9 credits.

@@ -1,6 +1,6 @@
 ---
 name: linkedin
-description: When the user wants to grow on LinkedIn without paying for it, as a founder, a team or a company page, or asks what works on LinkedIn now. Holds dated, sourced findings a model lacks (the 2026 feed rebuilt on LLM retrieval, reach for active posters down by a third to a half since 2024, the July 2026 cut to comment-keyword bait, what links and polls cost, the AI slop and pod crackdowns, how AI answers cite LinkedIn) and how to read Manifold's LinkedIn data honestly. Also use when the user mentions a LinkedIn strategy or 90-day plan, founder-led content, personal branding or thought leadership on LinkedIn, a company page audit or a competitor's LinkedIn page, what LinkedIn posts work, hooks, post length, why our posts get no reach, posts to comment on, a commenting routine, social selling, top LinkedIn voices in a niche, or people on LinkedIn asking for a tool like ours or complaining about a competitor. LinkedIn ads go to paid-ads, emails and outreach to the people found to outbound, X to x-twitter.
+description: When the user wants to grow on LinkedIn without paying for it, as a founder, a team or a company page, or asks what works on LinkedIn now. Holds dated, sourced findings a model lacks (the 2026 feed rebuilt on LLM retrieval, reach for active posters down by a third to a half since 2024, the July 2026 cut to comment-keyword bait, what links and polls cost, the AI slop and pod crackdowns, how AI answers cite LinkedIn) and how to read Manifold's LinkedIn data honestly. Also use when the user mentions a LinkedIn strategy or 90-day plan, founder-led content, personal branding or thought leadership on LinkedIn, a company page audit or a competitor's LinkedIn page, what posts work, hooks, post length, why our posts get no reach, posts to comment on, a commenting routine, social selling, top LinkedIn voices in a niche, people asking for a tool like ours or slating a competitor, or who comments on a competitor's posts. LinkedIn ads go to paid-ads, emails and outreach to the people found to outbound, X to x-twitter.
 compatibility: Works without the Manifold MCP connector. Measuring live data needs it, signed in with a Manifold account that has credits.
 ---
 
@@ -44,6 +44,7 @@ Open the one the question needs.
 | Which posts should I comment on? How do I build a commenting routine? | [Commenting](references/commenting.md) |
 | Who leads the conversation on a topic? Who to learn from or partner with? | [Topic leaders](references/topic-leaders.md) |
 | Who on LinkedIn is asking for what we sell, or complaining about a competitor? | [Buyer posts](references/buyer-posts.md) |
+| Who engages with a competitor's posts? Its customers, partners and deal flow? Who reacted? | [Competitor engagers](references/competitor-engagers.md) |
 | Does LinkedIn help us show up in ChatGPT or Google's AI answers? | [AI answers](references/ai-answers.md) |
 | We want a 90-day LinkedIn plan | [Strategy](references/strategy.md) |
 | What do the tools return, what does it cost, what can't they see? | [Reading the data](references/data.md) |
