@@ -17,19 +17,20 @@ A cold list says who could buy; a signal says who might buy now. This page cover
 | Reddit asking for a tool | The [reddit](../../reddit/SKILL.md) skill | 1 a call | Authors are anonymous; an account only when the post names the company |
 | Funding | `seo_get_serp` with `"<company>" raises` as the keyword; the company's own posts | 1 | A round with no date in the result does not count |
 | A new leader in the buyer's seat | `linkedin_search_posts` for `"starting a new position as <title>"`, or `title_start` on `leads_search_people` rows | 1 a page, 12 a page of 100 | Records lag a move by weeks |
-| Hiring for the role the product serves | `linkedin_get_company_posts` on the account | 1 a page | Job boards are not visible here |
+| Hiring for the role the product serves | `leads_search_jobs` with the role as a job seeker searches it, then `leads_get_company` per employer | 1 per 20 postings | Searches by role, not by company: a company's name finds jobs that mention it. `posted` is only to the day |
+| Hiring people who use a tool | `leads_search_jobs` with the tool's name ("hubspot") | 1 per 20 postings | A mention in a posting, not proof the company runs it |
 | Ads running | `ads_get_advertiser_ads`, Facebook with `active_only: true`, or LinkedIn or Google | 1 a page | Only Facebook reports `active`; elsewhere read `last_shown` |
 | Traffic growth | `seo_get_domain_overview` with `history: true` | 71 | Worth it for the top five only, and only when growth matters to the offer |
 | Headcount growth | `headcount_growth[]` on company rows | free with the row | Empty on most small companies (6 of 40 in our run) |
 
-Not visible to any tool here: the tech stack, website visits, review-site research, email engagement, job boards. Say so when asked and use the nearest visible signal. Absence of a found post is not evidence: post search is ranked, so an account with nothing found may still have announced a round.
+Not visible to any tool here: the full tech stack, website visits, review-site research, email engagement, one company's every opening. Say so when asked and use the nearest visible signal. Absence of a found post is not evidence: post search is ranked, so an account with nothing found may still have announced a round.
 
 ## Reading them
 
 - **Contact the person who posted**, with the post as the reason; do not go over their head. A post asking for help with the problem the user solves is the warmest cold email there is.
 - **A new leader** is, by rule of thumb, most open to new tools in the first few months in the seat. Lead with their goal, not with congratulations. In our run 3 of 15 dated marketing leaders at small software companies had started in the past 12 months, so a new-leader trigger yields a few accounts per hundred, not a list.
 - **Ads running mean a budget and a growth goal.** A signal only when the offer serves advertisers or growth teams.
-- **Re-checking weekly** runs on the host's schedule, since no monitor covers job changes or hiring: the host stores what it saw last time and compares.
+- **Re-checking weekly** runs on the host's schedule, since no monitor covers job changes or postings: the host stores what it saw last time and compares.
 - **Deliver** a table: account, domain, score, each signal with its evidence, link and date, the person to contact, and a one-line "why now". Then hand the people to the reveal step in [lists](lists.md#a-lead-list).
 
 ## Job changes
