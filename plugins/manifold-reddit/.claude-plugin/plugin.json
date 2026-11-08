@@ -1,7 +1,7 @@
 {
   "name": "manifold-reddit",
   "displayName": "Reddit by Manifold",
-  "version": "1.0.1794165832",
+  "version": "1.0.1794168204",
   "description": "Search Reddit posts and comments, find the threads and subreddits where buyers ask for help, and pull pain points in their own words. No Reddit API app needed.",
   "author": {
     "name": "Manifold",

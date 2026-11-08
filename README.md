@@ -239,7 +239,7 @@ The same marketplace lists smaller plugins for one job each. Each carries the sk
 
 ## Credits
 
-Every tool call costs Manifold credits (1 to 2.5 US cents a credit, by plan), and the skills tell the agent what calls cost so it can say before the first paid one. Give a budget and the agent caps every call with it. Prices are at https://www.manifoldmcp.com/pricing.
+Every tool call costs Manifold credits (about 1.2 to 2.5 US cents a credit, by plan), and the skills tell the agent what calls cost so it can say before the first paid one. Give a budget and the agent caps every call with it. Prices are at https://www.manifoldmcp.com/pricing.
 
 ## What the plugin runs and sends
 
