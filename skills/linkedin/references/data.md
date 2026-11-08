@@ -22,7 +22,7 @@ All six tools read what LinkedIn shows the public, with no logged-in account. Th
 | One company page | `linkedin_get_company` | 1 | `followers`, `employees`, `industry`, `website`, `bio`, `topics` (specialties), `related` (similar pages), a few `people` |
 | A page's own posts | `linkedin_get_company_posts` | 1 a page of about 9 | Newest first, no engagement at all: `likes`, `comments`, `author_followers` and `top_comments` are empty |
 
-Searches, posts, comments and company feeds are cached 6 hours and profiles and pages 24 hours; a result this account already paid for is free inside that window. A typical job costs 30 to 50 credits; profiles and single posts are where the count grows, so fetch them for the shortlist only. Say the estimate before the first paid call, pass `max_credits` when the user set a budget and stop on `BudgetExceeded`; `dry_run: true` prices a call for free.
+Searches, posts, comments and company feeds are cached 6 hours and profiles and pages 24 hours; a result this account already paid for is free inside that window. A typical job costs 30 to 50 credits; profiles and single posts are where the count grows, so fetch them for the shortlist only. Say the estimate before the first paid call, set `max_credits` when the user set a budget and stop on `BudgetExceeded`; `dry_run: true` prices a call for free.
 
 ## Field traps
 

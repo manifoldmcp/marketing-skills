@@ -54,7 +54,7 @@ Open the one the question needs.
 - **Competitors:** `seo_get_serp_competitors` returns SERP competitors; drop publishers and marketplaces. `seo_get_keyword_gap` gives the gap (10 credits).
 - **AI answers:** `aeo_run_ai_answers`, 27 credits a prompt on five engines, never cached, kept 30 days; report a mention rate. `aeo_get_site_readiness` is free and catches a CDN that began blocking AI crawlers.
 - **Ads and social:** `ads_get_advertiser_ads` (1 credit) shows what runs and since when, never spend; profile tools (1 credit) give followers.
-- **Costs at defaults:** prospect audit about 134 credits, pitch data 523 (300 without history), onboarding 432, a monthly review 343 per client, a weekly digest 217 (487 in AI weeks). Search data is cached 7 days per account, so a pitch, onboarding and first review in one week pay once for repeated calls. `dry_run: true` prices any call; pass `max_credits` when the user names a budget.
+- **Costs at defaults:** prospect audit about 134 credits, pitch data 523 (300 without history), onboarding 432, a monthly review 343 per client, a weekly digest 217 (487 in AI weeks). Search data is cached 7 days per account, so a pitch, onboarding and first review in one week pay once for repeated calls. `dry_run: true` prices any call; set `max_credits` when the user names a budget.
 - **Never send, post or publish.** Deliver tables and documents; the host's tools send them if asked. The server stores and schedules nothing: the host keeps the client record and the schedule.
 
 ## Related skills

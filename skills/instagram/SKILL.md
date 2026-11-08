@@ -55,7 +55,7 @@ Open the one the question needs.
 - **A niche:** `instagram_search_posts` takes one hashtag and `since`, in Instagram's own order, and sees only tagged posts. Its rows carry `music` and `top_comments`, which listings lack.
 - **Words:** `instagram_get_transcript` (1 credit, reels up to two minutes) and `instagram_get_comments` (1 credit for 15, newest first; 15 credits with replies).
 - **Traps to know before any number:** `posts_count` is null and `kind` reads person for most brands; `likes` is null for hidden likes, except in hashtag search, where it reads 3; reel views exist only in the reels listing and search; `shares` and `saves` are always null; sends, reach and watch time are not in the tools at all. Read [the data notes](references/data.md) before any audit.
-- **Costs:** an audit is about 10 credits an account, a plan's research about 45, a hooks or trends read about 30. Cached results are free (6 hours for listings, 24 for profiles, 30 days for transcripts); `dry_run: true` prices a call. Pass `max_credits` when the user names a budget.
+- **Costs:** an audit is about 10 credits an account, a plan's research about 45, a hooks or trends read about 30. Cached results are free (6 hours for listings, 24 for profiles, 30 days for transcripts); `dry_run: true` prices a call. Set `max_credits` when the user names a budget.
 - **Never post, comment, like, follow, DM or schedule.** Deliver tables with a link to every post cited; write hooks or scripts only when asked, and never pass off a creator's words as the user's.
 
 ## Related skills

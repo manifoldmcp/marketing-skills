@@ -54,7 +54,7 @@ Open the one the question needs.
 - **What was said:** `tiktok_get_transcript`, 1 credit, cached 30 days. The `transcript` field on search and listing rows came back empty in our runs: call the tool. `NoData` (free) means no speech TikTok kept; `ai_fallback: true` adds 10 credits, videos under 2 minutes only.
 - **Comments:** `tiktok_get_comments`, about 20 top-level comments a page, 1 credit; replies themselves do not come back.
 - **Where the audience is:** `tiktok_get_audience`, 26 credits, from a sample of a few hundred followers: read `share`, never `count`. Use it on the user's own account when they sell in a few countries, on finalists only.
-- **Skip `tiktok_get_video`** (up to 10 credits) when a search or listing row already has the video. Pass `max_credits` on every call when the user names a budget; `dry_run: true` prices any call for free. Cached results are free: 6 hours for searches, listings and comments, 24 for profiles.
+- **Skip `tiktok_get_video`** (up to 10 credits) when a search or listing row already has the video. Set `max_credits` on every call when the user names a budget; `dry_run: true` prices any call for free. Cached results are free: 6 hours for searches, listings and comments, 24 for profiles.
 - **Not in the tools:** watch time, completion, traffic sources, profile visits and link clicks live in the account's own TikTok Studio, as do LIVE and TikTok Shop sales. Ask the user to read them; never estimate them.
 - **Never post, comment, like, follow, message or schedule.** Deliver tables with a link to every video and account cited. Write hooks or scripts only when asked, from a pattern the evidence shows, never passing off a creator's words as the user's.
 

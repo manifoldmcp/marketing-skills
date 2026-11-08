@@ -50,7 +50,7 @@ Open the one the question needs.
 - **One post by URL:** `twitter_get_tweet`, 1 credit, for a pinned, launch or remembered post the page does not reach.
 - **Read the rows right:** drop rows starting "RT @" (their numbers are not the account's) and replies; leave out posts under 48 hours old. `media` reads text, image or video; a link-card post reads text. `shares` is reposts plus quotes, `saves` is bookmarks, `comments` counts replies. A null `views` is a post from before X showed views (late 2022). An X Article shows as a lone x.com/i/article link, not an external link. `top_comments` and `is_ad` came back empty on every row.
 - **Cannot see:** search, replies, mentions of the brand by others, followers, impressions by source, link clicks, Premium status. Never post, reply, like, follow or message for the user.
-- **Budget:** about 2 credits an account. Pass `max_credits`; `dry_run: true` prices any call for free. The host keeps each run's table to compare against; new posts on watched accounts can be a `social_accounts` monitor.
+- **Budget:** about 2 credits an account. Set `max_credits`; `dry_run: true` prices any call for free. The host keeps each run's table to compare against; new posts on watched accounts can be a `social_accounts` monitor.
 
 ## Related skills
 

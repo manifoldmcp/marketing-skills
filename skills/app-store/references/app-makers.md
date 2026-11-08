@@ -28,4 +28,4 @@ Filter before anyone writes a message:
 
 ## Cost of a typical list
 
-A category search of 200 rows is 93 credits; qualifying from a chart of 100 and naming 50 of them is about 51. Price with `dry_run: true` first and pass `max_credits` when the user sets a budget.
+A category search of 200 rows is 93 credits; qualifying from a chart of 100 and naming 50 of them is about 51. Price with `dry_run: true` first and set `max_credits` when the user sets a budget.

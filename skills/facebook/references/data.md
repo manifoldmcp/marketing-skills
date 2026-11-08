@@ -46,7 +46,7 @@ Pages only: `kind` is always company. Personal profiles, including a founder pos
 
 - Every `facebook_*` call is 1 credit, per call for the lists. `ads_get_advertiser_ads` is 1 credit per call. `seo_get_serp` is 1 credit for the top 10 and 1 more with `ai_overview: true`.
 - Caches: page record 24 hours; posts, comments and single posts 6 hours; transcripts 30 days; ads 24 hours. A cached result this account already paid for is free.
-- Say the estimate before the first paid call. If the user names a budget, pass `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free.
+- Say the estimate before the first paid call. If the user names a budget, set `max_credits` on every call and stop when `BudgetExceeded` comes back. `dry_run: true` prices any call for free.
 - Typical costs: a page baseline (record, about 30 posts, three posts in full, one call of ads) about 15 credits a page, so about 60 for the user and three competitors. A comment mine (about 50 posts to pick from, then two calls on each of 15 posts), about 47. A group mine (three Google searches, five calls on each of three groups, 15 threads read with their comments), about 50.
 
 ## People in the data

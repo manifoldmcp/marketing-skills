@@ -53,7 +53,7 @@ The index is strongest on companies with a website and a LinkedIn presence, and 
 
 ## Credits
 
-- Say the estimate before the first paid call. If the user names a budget, pass `max_credits` on every call and stop at `BudgetExceeded`. `dry_run: true` prices any call for free.
+- Say the estimate before the first paid call. If the user names a budget, set `max_credits` on every call and stop at `BudgetExceeded`. `dry_run: true` prices any call for free.
 - Funnel prices: count or search 12 per 100 rows asked for (1 at `limit: 1`), company record 1, person record 3 by name and domain or 9 by profile URL (1 on a miss), reveal 7 (1 on a miss), verify 1, domain search 1 plus 30 when it returns addresses. A 50-contact list costs about 408: two company searches, two people searches, 50 reveals and ten re-checks.
 - A result this account already paid for is free while cached: people searches 7 days; company searches, company and person records, domain searches and verifications 30 days; reveals 90 days. Another account's cached result costs a quarter of the price.
 - The leads tools take one company or person per call. Run a few at a time; on `ConcurrencyLimit`, wait `retry_after_s` and send fewer.

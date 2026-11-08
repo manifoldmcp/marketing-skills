@@ -55,7 +55,7 @@ Open the one the question needs.
 - **Vet:** comments on three posts (1 credit a page; `include_replies: true` on Instagram costs 15), `tiktok_get_followers` (1 credit a page) and `tiktok_get_audience` (26 credits, cached 7 days, finalists only). Only TikTok publishes an audience split.
 - **Competitors' creators:** `ads_get_advertiser_ads` and `ads_search_ads` on Meta and TikTok (1 credit a page) show creator videos a brand paid to run.
 - **Traps:** `is_ad` is unreliable in both directions; TikTok's `collaborators` came back empty on every row we read; Instagram `posts_count` is null (the vendor sees only 12 posts); profile `email` is often null when the bio shows an address, so read the bio. Pinned old hits sit first in TikTok's latest listing: order by `created_at`.
-- **Cost:** a cross-platform shortlist of 20 is about 300 credits; vetting one creator on TikTok and Instagram about 41. Pass `max_credits` when the user names a budget; `dry_run: true` prices a call for free.
+- **Cost:** a cross-platform shortlist of 20 is about 300 credits; vetting one creator on TikTok and Instagram about 41. Set `max_credits` when the user names a budget; `dry_run: true` prices a call for free.
 - **Never** follow, message, comment on, email, contract or pay a creator, ship product, or suggest paying for a mention the creator will not disclose. Deliver tables and documents the user acts on.
 
 ## Related skills

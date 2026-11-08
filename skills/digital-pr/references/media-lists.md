@@ -17,7 +17,7 @@ A media list for one story: the reporters who already cover it, the article that
 4. **Find the person.** The article's byline is the best source: if the host can open the URL, read it. Otherwise `leads_get_domain_emails` with `department: ["communication"]` (editors and writers at publications sit there), 31 credits a domain that returns addresses, whatever the `limit`. For a named reporter not in the domain results, `leads_get_email` with the name and the outlet's domain (7 credits on a hit, 1 on none). For a beat with no reporter found, `linkedin_search_posts` on the topic (1 credit a page) shows who posts about it, and `linkedin_get_profile` (1 credit) shows their headline.
 5. **Verify only what will be sent.** `leads_get_email_status` on one address per reporter (1 credit). The full contact steps and how to read each status live in [link-building](../../link-building/SKILL.md); personal-data rules in [outbound](../../outbound/SKILL.md).
 
-A default list of 15 publications and 10 verified reporters costs about 2 × 18 + 5 × 2 + 10 + 15 × 31 + 10 = 531 credits. Say the estimate first, and pass `max_credits` when the user gives a budget.
+A default list of 15 publications and 10 verified reporters costs about 2 × 18 + 5 × 2 + 10 + 15 × 31 + 10 = 531 credits. Say the estimate first, and set `max_credits` when the user gives a budget.
 
 ## Reading the contact data
 

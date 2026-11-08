@@ -66,7 +66,7 @@ The public ad libraries of Meta, TikTok, LinkedIn and Google are the only outsid
 
 - Lists cost 1 credit a page, `ads_get_ad` and `ads_search_advertisers` 1 credit, Google `details: true` 25 a page, transcripts 1 (11 with `ai_fallback: true`). Three pages per library per advertiser covers what most advertisers run.
 - Lists are cached 24 hours, one ad and an advertiser search 7 days. A repeat this account already paid for is free; a cached result another account paid for costs a quarter of the price, at least 1 credit.
-- Say the estimate before the first paid call. On a budget, pass `max_credits` on every call and stop at BudgetExceeded; `dry_run: true` prices a call for free.
+- Say the estimate before the first paid call. On a budget, set `max_credits` on every call and stop at BudgetExceeded; `dry_run: true` prices a call for free.
 
 ## Handoff
 

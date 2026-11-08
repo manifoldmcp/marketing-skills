@@ -14,7 +14,7 @@ How the `instagram_*` tools behave, what their fields really hold, and how to tu
 | What is said in one reel | `instagram_get_transcript` | 1 | 30 days |
 | One post from a bare URL | `instagram_get_post` | estimated 10 (1 when the vendor need not fetch the media) | 6 hours |
 
-- A result this account already paid for is free while cached. `dry_run: true` prices any call for free; pass `max_credits` on every call when the user gave a budget, and stop at `BudgetExceeded`.
+- A result this account already paid for is free while cached. `dry_run: true` prices any call for free; set `max_credits` on every call when the user gave a budget, and stop at `BudgetExceeded`.
 - Skip `instagram_get_post` when a listing or search row already has the post: it carries the same numbers and caption.
 - `include_replies: true` is charged 15 even when no reply comes back. Use it only on a post whose top comments show many `replies` and where the thread matters.
 - No tool returns followers lists, audience demographics, stories, saves, sends, reach, watch time, skip rate or profile visits. For the user's own account those are in Instagram Insights: ask the user for them. For a creator also on TikTok, the TikTok audience data in the [creators](../../creators/SKILL.md) skill is the nearest proxy for who follows them.

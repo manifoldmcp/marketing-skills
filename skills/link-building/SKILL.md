@@ -54,7 +54,7 @@ Open the one the question needs.
 - **Rating a list:** `seo_get_domain_ratings`, up to 1,000 domains for 7 credits plus 2.5 per 100, with `domain_rank` and `ahrefs_dr` (show "Domain Rating by Ahrefs", linked, beside it). Never rate one at a time.
 - **Pages:** `seo_get_page`, free and rate limited, for live status, redirects and headings. `seo_get_serp` (1 credit per 10 results) for mentions and page-one prospects.
 - **Contacts:** `leads_get_domain_emails`, `leads_get_email` and `leads_get_email_status`, last and only for the shortlist ([contacts](references/contacts.md)).
-- **Costs and cache:** say the estimate before the first paid call; with a budget, pass `max_credits` on every call and stop at `BudgetExceeded`; `dry_run: true` prices a call for free. Backlink data is cached seven days and domain emails thirty for the account that paid, so a second pass is cheap. The index lags the live web by weeks.
+- **Costs and cache:** say the estimate before the first paid call; with a budget, set `max_credits` on every call and stop at `BudgetExceeded`; `dry_run: true` prices a call for free. Backlink data is cached seven days and domain emails thirty for the account that paid, so a second pass is cheap. The index lags the live web by weeks.
 - **Never send, post, buy links or fill in forms.** Deliver tables the user acts on.
 
 ## Related skills

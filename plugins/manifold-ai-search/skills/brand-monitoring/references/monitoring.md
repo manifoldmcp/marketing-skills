@@ -63,7 +63,7 @@ Two tiers keep alerts rare enough to read.
 | Weekly, quiet communities, `pages: 3`, two terms | 15 + 11 | about 26, 112 a month |
 | Reading a thread to triage | per call | 1 |
 
-Say both numbers before the schedule starts and pass `max_credits` on every call. Pages and threads that rank on Google for the brand are a cheap extra: `seo_get_serp` on the brand name once a week (1 credit), comparing URLs with last week's. New linking pages show up in `seo_get_backlinks` by `first_seen`; mentions without a link are a link-building job ([link-building](https://github.com/manifoldmcp/marketing-skills/blob/main/skills/link-building/SKILL.md)).
+Say both numbers before the schedule starts and set `max_credits` on every call. Pages and threads that rank on Google for the brand are a cheap extra: `seo_get_serp` on the brand name once a week (1 credit), comparing URLs with last week's. New linking pages show up in `seo_get_backlinks` by `first_seen`; mentions without a link are a link-building job ([link-building](https://github.com/manifoldmcp/marketing-skills/blob/main/skills/link-building/SKILL.md)).
 
 ## Without the connector
 
