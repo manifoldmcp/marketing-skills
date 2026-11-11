@@ -41,7 +41,7 @@ Every tool, with what it costs, is at https://www.manifoldmcp.com/docs/tools.
 
 ## Free every month
 
-- Every workspace gets free credits each month, with no card.
+- Every account gets free credits each month, with no card.
 - The Search Console, Bing Webmaster Tools and Google Analytics tools, the on-page snapshot and the AI readiness check cost nothing on any plan.
 - Every tool states its price before it runs. Your agent can check a price without paying it, and cap what a call may spend.
 - After the free credits, a monthly plan buys more. Prices are at https://www.manifoldmcp.com/pricing.
