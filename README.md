@@ -12,7 +12,7 @@ A remote MCP server over Streamable HTTP, with OAuth sign-in or a Manifold API k
 
 | Client | How |
 |--------|-----|
-| Claude | Settings, then Connectors: add a custom connector, paste the URL and sign in. |
+| Claude | Customize, then Connectors: add a custom connector, paste the URL and sign in. |
 | Claude Code | `claude mcp add --transport http manifold https://mcp.manifoldmcp.com/mcp`, then `/mcp` to sign in. |
 | ChatGPT | Open the [Manifold app in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6abd5e68b948819184d045610655ab8b) and click Connect. Then sign in. |
 | Codex | `codex mcp add manifold --url https://mcp.manifoldmcp.com/mcp`, then `codex mcp login manifold` to sign in. |

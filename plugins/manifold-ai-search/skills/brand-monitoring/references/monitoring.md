@@ -50,11 +50,13 @@ Two tiers keep alerts rare enough to read.
 
 ## State and schedule
 
-- **Offer a `mentions` monitor** (`monitoring_create_monitor`) with the terms as `keywords`, the platforms, the subreddits as `communities` and `pages`; show the monthly cost with `preview: true` first and create it only once the user agrees. Manifold then runs it daily (or hourly or weekly), keeps `next_since` and the ids seen, drops repeats, and reports new mentions and spikes (`monitoring_get_changes`), emailing urgent ones. Its first check is the baseline. Filtering namesakes, own accounts and seeded posts from what it returns is still the reading below. Instagram searches each keyword as one hashtag, and X is not covered.
+- **Offer a `mentions` monitor** (`monitoring_create_monitor`) with the terms as `keywords`, the platforms, the subreddits as `communities` and `pages`; preview it with `preview: true` first and create it only once the user agrees. Manifold then runs it daily (or hourly or weekly), keeps `next_since` and the ids seen, drops repeats, and reports new mentions and spikes (`monitoring_get_changes`), emailing urgent ones. Its first check is the baseline. Filtering namesakes, own accounts and seeded posts from what it returns is still the reading below. Instagram searches each keyword as one hashtag, and X is not covered.
 - **Without a monitor** (the user declines, or wants comment search, which the preset does not run), the host runs the schedule if it has a scheduler (a scheduled task, a routine, cron), and stores the settings (terms, communities, platforms, own accounts) and the state: `next_since`, the ids seen in the last 14 days (the widest search window plus a late run), each run's date and `meta.credits_charged`. Without it every run is a first run. A changed setting starts its own baseline.
 - Reddit searches are cached 1 hour and platform searches 6 hours, so a rerun inside that window returns the same rows for nothing and adds nothing. `reddit_get_new_posts` is never cached and charged in full.
 
 ## Cost
+
+A `mentions` monitor's checks spend no credits; the plan sets how many monitors a workspace keeps. The numbers below are for a schedule the host runs itself, without a monitor.
 
 | Run | Calls | Credits |
 |---|---|---|

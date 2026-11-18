@@ -52,7 +52,7 @@ Things the tools cannot see, said plainly when they matter: who replied and what
 
 ## Re-run
 
-An audit is a snapshot. Re-run on the same handles after four to six weeks; the host keeps this run's scorecard. A weekly watch of a rival's posts can be a `social_accounts` monitor on twitter (show the monthly cost with `preview: true` first and create it only once the user agrees); see [competitor-intel](../../competitor-intel/SKILL.md).
+An audit is a snapshot. Re-run on the same handles after four to six weeks; the host keeps this run's scorecard. A weekly watch of a rival's posts can be a `social_accounts` monitor on twitter (preview it with `preview: true` first and create it only once the user agrees); see [competitor-intel](../../competitor-intel/SKILL.md).
 
 ## Without the connector
 
