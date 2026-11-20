@@ -6,7 +6,7 @@
 https://mcp.manifoldmcp.com/mcp
 ```
 
-A remote MCP server over Streamable HTTP, with OAuth sign-in or a Manifold API key as a bearer token. [Manifold](https://www.manifoldmcp.com) hosts the server, and it is not open source. This repository holds the plugin manifests and the marketing skills that run on it, under the MIT license. Agents can read [llms.txt](https://www.manifoldmcp.com/llms.txt) for when to use it, what is free and its limits.
+A remote MCP server over Streamable HTTP, with OAuth sign-in. [Manifold](https://www.manifoldmcp.com) hosts the server, and it is not open source. This repository holds the plugin manifests and the marketing skills that run on it, under the MIT license. Agents can read [llms.txt](https://www.manifoldmcp.com/llms.txt) for when to use it, what is free and its limits.
 
 ## Connect
 
@@ -119,7 +119,7 @@ Run `/mcp auth manifold` in Gemini CLI to sign in, and `gemini extensions update
 
 **Cursor and other agents.** Use `npx skills add` and add the connector yourself; see [Quick start](#quick-start).
 
-**Cline.** See [llms-install.md](llms-install.md) for the server configuration and sign-in (OAuth or API key).
+**Cline.** See [llms-install.md](llms-install.md) for the server configuration and sign-in.
 
 ## The skills
 
