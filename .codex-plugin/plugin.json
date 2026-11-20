@@ -1,0 +1,55 @@
+{
+  "name": "manifold",
+  "version": "1.0.1795179114",
+  "description": "The free marketing data connector for AI agents, with marketing skills that run on it. Search and scrape Instagram posts and viral reels, TikTok videos, trends and hooks, YouTube videos, transcripts and comments, Reddit threads and subreddits. Keyword research, rankings, backlinks, Search Console, Google Analytics, Google Maps, AI visibility in ChatGPT and Perplexity, the Meta, Google, TikTok and LinkedIn ad libraries, influencers, leads and emails. One sign-in, no account with each platform.",
+  "author": {
+    "name": "Manifold",
+    "email": "jesse@manifoldmcp.com",
+    "url": "https://www.manifoldmcp.com"
+  },
+  "homepage": "https://www.manifoldmcp.com",
+  "repository": "https://github.com/manifoldmcp/marketing-skills",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "mcp",
+    "mcp-server",
+    "remote-mcp",
+    "seo",
+    "seo-mcp",
+    "geo",
+    "aeo",
+    "ai-search",
+    "ai-visibility",
+    "search-console",
+    "google-analytics",
+    "reddit",
+    "linkedin",
+    "tiktok",
+    "instagram",
+    "youtube",
+    "social-media",
+    "paid-ads",
+    "leads",
+    "link-building",
+    "influencers"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Manifold",
+    "shortDescription": "Free marketing data for your agent",
+    "longDescription": "The free marketing data connector for AI agents. One sign-in gives Codex live data from Google search, AI answers, your own Search Console and Google Analytics, Google Maps, Reddit, TikTok, Instagram, YouTube, Facebook, LinkedIn, the ad libraries, the app stores, Amazon, Google Shopping, and companies and people, without an account with each platform. The plugin adds the Manifold MCP server and marketing skills that run on it, starting with a get-started skill that writes down the business context the others read first. Every tool states its price in Manifold credits before it runs. Manifold looks things up: it does not post, send email or buy anything for you.",
+    "developerName": "Manifold",
+    "category": "Business & Operations",
+    "capabilities": [],
+    "websiteURL": "https://www.manifoldmcp.com",
+    "privacyPolicyURL": "https://www.manifoldmcp.com/privacy",
+    "termsOfServiceURL": "https://www.manifoldmcp.com/terms",
+    "defaultPrompt": [
+      "Where should I start with Manifold?",
+      "Does ChatGPT recommend us, and who does it cite?",
+      "Find sites that link to rivals but not to us."
+    ]
+  }
+}

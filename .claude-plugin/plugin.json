@@ -1,0 +1,40 @@
+{
+  "name": "manifold",
+  "displayName": "Manifold",
+  "version": "1.0.1795179114",
+  "description": "The free marketing data connector for AI agents, with marketing skills that run on it. Search and scrape Instagram posts and viral reels, TikTok videos, trends and hooks, YouTube videos, transcripts and comments, Reddit threads and subreddits. Keyword research, rankings, backlinks, Search Console, Google Analytics, Google Maps, AI visibility in ChatGPT and Perplexity, the Meta, Google, TikTok and LinkedIn ad libraries, influencers, leads and emails. One sign-in, no account with each platform.",
+  "author": {
+    "name": "Manifold",
+    "email": "jesse@manifoldmcp.com",
+    "url": "https://www.manifoldmcp.com"
+  },
+  "homepage": "https://www.manifoldmcp.com",
+  "documentationUrl": "https://www.manifoldmcp.com/docs",
+  "privacyPolicyUrl": "https://www.manifoldmcp.com/privacy",
+  "repository": "https://github.com/manifoldmcp/marketing-skills",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "mcp",
+    "mcp-server",
+    "remote-mcp",
+    "seo",
+    "seo-mcp",
+    "geo",
+    "aeo",
+    "ai-search",
+    "ai-visibility",
+    "search-console",
+    "google-analytics",
+    "reddit",
+    "linkedin",
+    "tiktok",
+    "instagram",
+    "youtube",
+    "social-media",
+    "paid-ads",
+    "leads",
+    "link-building",
+    "influencers"
+  ]
+}
