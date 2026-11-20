@@ -25,9 +25,9 @@ The server requires authentication. Choose one method:
 
 Sign in with your Manifold account through OAuth. The MCP client opens the authorization flow when it first connects.
 
-### API key fallback
+### If OAuth is unavailable
 
-If OAuth is unavailable, the server also accepts a Manifold API key. The steps are in the [authentication guide](https://www.manifoldmcp.com/docs/authentication).
+The [authentication guide](https://www.manifoldmcp.com/docs/authentication) covers the other way to connect.
 
 ## Usage
 
