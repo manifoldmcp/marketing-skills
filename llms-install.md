@@ -27,25 +27,7 @@ Sign in with your Manifold account through OAuth. The MCP client opens the autho
 
 ### API key fallback
 
-If OAuth is unavailable, use an API key from your Manifold account settings:
-
-1. Sign in to your Manifold account
-2. Generate an API key from account settings
-3. Paste the key into the authorization header, in place of `<your Manifold API key>`:
-
-```json
-{
-  "mcpServers": {
-    "manifold": {
-      "type": "streamableHttp",
-      "url": "https://mcp.manifoldmcp.com/mcp",
-      "headers": {
-        "Authorization": "Bearer <your Manifold API key>"
-      }
-    }
-  }
-}
-```
+If OAuth is unavailable, the server also accepts a Manifold API key. The steps are in the [authentication guide](https://www.manifoldmcp.com/docs/authentication).
 
 ## Usage
 
